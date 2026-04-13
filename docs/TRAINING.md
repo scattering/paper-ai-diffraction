@@ -79,6 +79,29 @@ Use those only if you need an exact record of the April 2026 TACC batch jobs.
 - `9rwv1qly`
   - Stage-2c no-PO baseline
 - `cscjfdwk`
+  - PO-only 1-epoch ablation
+- `dsi7ehiv`
+  - PO continuation / effective 2-epoch comparison
+- `eeru8svx`
+  - mixed-200k pilot
+- `82ept35h`
+  - final large mixed dual-source champion
+
+## Preferred-Orientation And Mixed-Curriculum Summary
+
+The public repo keeps only the essential paper-facing lineage.
+
+- Preferred orientation was implemented as exact March-Dollase reweighting in the active CFML powder-generation path.
+- The PO corpus remained a dirty Stage-2-style synthetic distribution rather than a clean texture-only corpus.
+- The final champion training path used a dual-source loader rather than physically merging giant HDF5 files.
+
+The practical implication is:
+
+- use the PO runs as ablations showing the effect of explicit texture modeling
+- use the dual-source large mixed run as the recommended final balanced model
+
+The detailed dated handoff notes remain in the private source repository, not in this public paper repo.
+- `cscjfdwk`
   - PO-only 1-epoch checkpoint
 - `dsi7ehiv`
   - PO continuation checkpoint

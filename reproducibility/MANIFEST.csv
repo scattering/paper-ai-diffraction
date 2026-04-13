@@ -34,8 +34,6 @@ scripts/make_topology_distance_figure.sh,script,Paper-facing topology-distance w
 scripts/make_calibration_figure.sh,script,Paper-facing calibration sweep wrapper,/tmp/paper-ai-diffraction/scripts/make_calibration_figure.sh,authored,,,
 scripts/make_main_tables.py,script,Paper-facing table-generation script,/tmp/paper-ai-diffraction/scripts/make_main_tables.py,authored,,,
 results/,directory,Compact JSON outputs used in paper; generated figures are intentionally excluded from git,/Users/williamratcliff/Library/CloudStorage/Box-Box/tasai_paper_clean/zenodo_paper_repro/results,copied,,,
-docs/po_dualsource_student_handoff_2026-04-06.md,doc,Short handoff note,/Users/williamratcliff/ai-diffraction/docs/review_notes/po_dualsource_student_handoff_2026-04-06.md,copied,,,
-docs/preferred_orientation_status_2026-04-04.md,doc,PO and mixed-curriculum status note,/Users/williamratcliff/ai-diffraction/docs/review_notes/preferred_orientation_status_2026-04-04.md,copied,,,
 docs/TRAINING.md,doc,Paper-facing training instructions,/tmp/paper-ai-diffraction/docs/TRAINING.md,authored,,,
 docs/EVALUATION.md,doc,Paper-facing evaluation instructions,/tmp/paper-ai-diffraction/docs/EVALUATION.md,authored,,,
 docs/FIGURES.md,doc,Paper-facing figure instructions,/tmp/paper-ai-diffraction/docs/FIGURES.md,authored,,,

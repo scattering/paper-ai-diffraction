@@ -30,6 +30,28 @@ The `results/` directory intentionally contains only compact JSON outputs for:
 
 These JSONs are enough to regenerate the main benchmark summaries without rerunning the models. Generated figures and derived summaries should be written under `results/figures/` and are not tracked.
 
+## Paper-Relevant Benchmark Summary
+
+The public repo keeps the essential benchmark outcomes needed to interpret the bundled JSONs.
+
+Final large mixed champion (`82ept35h`):
+
+- `RRUFF-325` calibrated Bayesian auxiliary `Top-1 / Top-5 = 10.46 / 43.69`
+- `RRUFF-473` calibrated Bayesian auxiliary `Top-1 / Top-5 = 9.94 / 50.74`
+- split-head validity:
+  - `RRUFF-325 = 47.38%`
+  - `RRUFF-473 = 49.26%`
+
+Mixed-200k pilot (`eeru8svx`):
+
+- `RRUFF-325` calibrated Bayesian auxiliary `Top-1 / Top-5 = 13.23 / 40.92`
+- `RRUFF-473` calibrated Bayesian auxiliary `Top-1 / Top-5 = 13.53 / 49.05`
+- split-head validity:
+  - `RRUFF-325 = 1.54%`
+  - `RRUFF-473 = 1.27%`
+
+These numbers are included here so the public repo still carries the minimal scientific lineage after removing the dated internal notes.
+
 ## Canonical Evaluation Wrapper
 
 Use:
