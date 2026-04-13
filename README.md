@@ -1,61 +1,19 @@
 # paper-ai-diffraction
 
-Clean paper-focused repository staging area for reproducing the main results from *Attention Is Not All You Need for Diffraction*.
+Paper-focused reproducibility repository for *Attention Is Not All You Need for Diffraction*.
 
-This directory was assembled as a curated extraction from the broader `ai-diffraction` project. It is intentionally narrower than the full lab repository and is intended to evolve into a dedicated paper code repository.
+This repo reproduces the paper-facing table rows and figure layer for the mixed-curriculum results:
+- benchmark summary rows from bundled JSON artifacts
+- topology-distance figure
+- topology-flow figure set
 
-Nothing in this directory is live-linked back to the source project. All files here were copied into `/tmp/paper-ai-diffraction`, so the original repository at `/Users/williamratcliff/ai-diffraction` remains unchanged.
+The repo does **not** bundle model checkpoints or benchmark HDF5 files. Those come from:
+- Zenodo checkpoints: see [reproducibility/checkpoint_manifest.csv](/tmp/paper-ai-diffraction/reproducibility/checkpoint_manifest.csv)
+- external benchmark/trainready datasets: see [reproducibility/dataset_manifest.csv](/tmp/paper-ai-diffraction/reproducibility/dataset_manifest.csv)
 
-## Current Contents
+## Install
 
-- `src/paper_ai_diffraction/core/`
-  - training, inference, model, and dataset loading code
-- `src/paper_ai_diffraction/eval/`
-  - calibration and split-validity evaluation code
-- `src/paper_ai_diffraction/topology/`
-  - topology comparison and topology-flow plotting code
-- `src/paper_ai_diffraction/utils/`
-  - extinction-group multilabel utilities
-- `configs/`
-  - paper-relevant training configs only
-- `scripts/`
-  - canonical training, evaluation, and figure wrappers
-- `scripts/tacc_archive/`
-  - preserved historical TACC campaign launchers
-- `results/`
-  - compact JSON artifacts used in the paper writeup
-- `docs/`
-  - concise run-lineage notes
-- `reproducibility/`
-  - manifests for checkpoints and datasets plus Zenodo linkage
-- `assets/`
-  - small figure-support assets such as the extinction-group topology graph
-- top-level environment files
-  - `environment.yml` for the light paper/figure environment
-  - `environment-train-eval.yml` for full training/evaluation reruns
-  - `pyproject.toml` for editable installation
-
-## What This Is Good For
-
-- identifying the minimal paper-facing file set
-- testing a cleaner repository layout
-- preparing a future dedicated GitHub paper repo
-
-## What Still Needs Work
-
-This is not yet a polished final paper repo. In particular:
-
-1. some wrappers still depend on external dataset paths that are not yet bundled here.
-2. the final repo should likely prune or rewrite some cluster-specific assumptions.
-
-The migrated Python files are syntax-valid as copied, but full runtime validation still depends on creating one of the documented environments:
-
-- [environment.yml](/tmp/paper-ai-diffraction/environment.yml) for paper figures and table regeneration
-- [environment-train-eval.yml](/tmp/paper-ai-diffraction/environment-train-eval.yml) for checkpoint evaluation and training reruns
-
-## Installation
-
-The intended setup is:
+For paper tables and figures:
 
 ```bash
 conda env create -f environment.yml
@@ -63,9 +21,7 @@ conda activate paper-ai-diffraction
 pip install -e .
 ```
 
-The canonical wrapper scripts now assume the package is importable and will prompt for `pip install -e .` if it is not.
-
-For full checkpoint evaluation or training reruns, use:
+For checkpoint evaluation or training reruns:
 
 ```bash
 conda env create -f environment-train-eval.yml
@@ -73,26 +29,48 @@ conda activate paper-ai-diffraction-train-eval
 pip install -e .
 ```
 
-See also:
-
+TACC-specific notes are in:
 - [TACC_ENV.md](/tmp/paper-ai-diffraction/docs/TACC_ENV.md)
 
-## Recommended Next Steps
+## Regenerate Paper Outputs
 
-1. add a real environment lockfile if Conda export alone is not sufficient
-2. point `reproducibility/` to the final Zenodo deposition
-3. validate the editable-install path from a fresh clone
+Table rows from bundled paper JSONs:
 
-## Reproducibility Manifests
+```bash
+python scripts/make_main_tables.py
+```
 
-Use these first:
+Topology-distance figure from bundled failure JSONs:
+
+```bash
+./scripts/make_topology_distance_figure.sh
+```
+
+Topology-flow figure set from bundled failure JSON plus external canonical CSV:
+
+```bash
+export CANONICAL_CSV=/path/to/canonical_extinction_to_space_group.csv
+./scripts/make_topology_flow_figure.sh
+```
+
+Calibration sweep figure from an external sweep JSON:
+
+```bash
+export CAL_SWEEP_JSON=/path/to/decoder_temp_sweep.json
+./scripts/make_calibration_figure.sh
+```
+
+## Repo Contract
+
+- `results/` contains only compact paper-backed JSON artifacts.
+- `results/figures/` is generated output and is not tracked.
+- `scripts/` contains the canonical paper-facing wrappers.
+- `scripts/tacc_archive/` contains preserved historical campaign launchers for provenance only.
+
+## Key References
 
 - [reproducibility/checkpoint_manifest.csv](/tmp/paper-ai-diffraction/reproducibility/checkpoint_manifest.csv)
 - [reproducibility/dataset_manifest.csv](/tmp/paper-ai-diffraction/reproducibility/dataset_manifest.csv)
 - [reproducibility/zenodo_files.md](/tmp/paper-ai-diffraction/reproducibility/zenodo_files.md)
-
-These files separate:
-
-- checkpoints that should be downloaded from Zenodo
-- external datasets that must be provided locally
-- bundled compact JSON artifacts that are already in this repo
+- [docs/EVALUATION.md](/tmp/paper-ai-diffraction/docs/EVALUATION.md)
+- [docs/FIGURES.md](/tmp/paper-ai-diffraction/docs/FIGURES.md)

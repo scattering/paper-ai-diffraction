@@ -30,6 +30,8 @@ For the validated Stampede figure path, see:
 - [make_topology_distance_figure.sh](/tmp/paper-ai-diffraction/scripts/make_topology_distance_figure.sh)
 - [make_calibration_figure.sh](/tmp/paper-ai-diffraction/scripts/make_calibration_figure.sh)
 
+Generated outputs are written under `results/figures/` and are intentionally not tracked in git.
+
 ## Current Gaps
 
 Current external inputs still needed for figure regeneration are:

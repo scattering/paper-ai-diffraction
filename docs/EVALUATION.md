@@ -23,12 +23,12 @@ For TACC-specific notes, see:
 
 ## Included Evaluation Results
 
-The `results/` directory already contains compact JSON outputs for:
+The `results/` directory intentionally contains only compact JSON outputs for:
 
 - final mixed champion (`82ept35h`)
 - mixed-200k pilot (`eeru8svx`)
 
-These JSONs are enough to regenerate the main benchmark summaries without rerunning the models.
+These JSONs are enough to regenerate the main benchmark summaries without rerunning the models. Generated figures and derived summaries should be written under `results/figures/` and are not tracked.
 
 ## Canonical Evaluation Wrapper
 
