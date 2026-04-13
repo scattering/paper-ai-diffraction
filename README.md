@@ -11,6 +11,11 @@ The repo does **not** bundle model checkpoints or benchmark HDF5 files. Those co
 - Zenodo checkpoints: see [reproducibility/checkpoint_manifest.csv](/tmp/paper-ai-diffraction/reproducibility/checkpoint_manifest.csv)
 - external benchmark/trainready datasets: see [reproducibility/dataset_manifest.csv](/tmp/paper-ai-diffraction/reproducibility/dataset_manifest.csv)
 
+Current Zenodo draft:
+- [zenodo.org/deposit/19558452](https://zenodo.org/deposit/19558452)
+
+After publication, replace the draft link above with the final Zenodo DOI and record URL.
+
 ## Install
 
 For paper tables and figures:
@@ -31,6 +36,20 @@ pip install -e .
 
 TACC-specific notes are in:
 - [TACC_ENV.md](/tmp/paper-ai-diffraction/docs/TACC_ENV.md)
+
+## Checkpoints And Data
+
+Checkpoints are downloaded from Zenodo and should be placed under:
+
+```text
+external/checkpoints/
+```
+
+The exact filenames expected by the wrappers are listed in:
+- [reproducibility/checkpoint_manifest.csv](/tmp/paper-ai-diffraction/reproducibility/checkpoint_manifest.csv)
+
+External benchmark and trainready datasets are not redistributed in this repo. Their required environment variables and example source paths are listed in:
+- [reproducibility/dataset_manifest.csv](/tmp/paper-ai-diffraction/reproducibility/dataset_manifest.csv)
 
 ## Regenerate Paper Outputs
 
