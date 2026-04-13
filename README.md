@@ -31,7 +31,8 @@ Nothing in this directory is live-linked back to the source project. All files h
 - `assets/`
   - small figure-support assets such as the extinction-group topology graph
 - top-level environment files
-  - `environment.yml` based on the original ViT_NVIDIA campaign environment and treated as the current environment source of truth
+  - `environment.yml` for the light paper/figure environment
+  - `environment-train-eval.yml` for full training/evaluation reruns
   - `pyproject.toml` for editable installation
 
 ## What This Is Good For
@@ -47,7 +48,10 @@ This is not yet a polished final paper repo. In particular:
 1. some wrappers still depend on external dataset paths that are not yet bundled here.
 2. the final repo should likely prune or rewrite some cluster-specific assumptions.
 
-The migrated Python files are syntax-valid as copied, but full runtime validation still depends on creating the Conda environment described in [environment.yml](/tmp/paper-ai-diffraction/environment.yml).
+The migrated Python files are syntax-valid as copied, but full runtime validation still depends on creating one of the documented environments:
+
+- [environment.yml](/tmp/paper-ai-diffraction/environment.yml) for paper figures and table regeneration
+- [environment-train-eval.yml](/tmp/paper-ai-diffraction/environment-train-eval.yml) for checkpoint evaluation and training reruns
 
 ## Installation
 
@@ -60,6 +64,18 @@ pip install -e .
 ```
 
 The canonical wrapper scripts now assume the package is importable and will prompt for `pip install -e .` if it is not.
+
+For full checkpoint evaluation or training reruns, use:
+
+```bash
+conda env create -f environment-train-eval.yml
+conda activate paper-ai-diffraction-train-eval
+pip install -e .
+```
+
+See also:
+
+- [TACC_ENV.md](/tmp/paper-ai-diffraction/docs/TACC_ENV.md)
 
 ## Recommended Next Steps
 

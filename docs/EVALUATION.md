@@ -5,10 +5,14 @@ This prototype contains both the raw evaluation code and the compact JSON output
 Before using the wrappers below:
 
 ```bash
-conda env create -f environment.yml
-conda activate paper-ai-diffraction
+conda env create -f environment-train-eval.yml
+conda activate paper-ai-diffraction-train-eval
 pip install -e .
 ```
+
+For TACC-specific notes, see:
+
+- [TACC_ENV.md](/tmp/paper-ai-diffraction/docs/TACC_ENV.md)
 
 ## Included Evaluation Code
 

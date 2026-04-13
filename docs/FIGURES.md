@@ -10,6 +10,10 @@ conda activate paper-ai-diffraction
 pip install -e .
 ```
 
+For the validated Stampede figure path, see:
+
+- [TACC_ENV.md](/tmp/paper-ai-diffraction/docs/TACC_ENV.md)
+
 ## Included Figure Scripts
 
 - [plot_extinction_topology_flow.py](/tmp/paper-ai-diffraction/src/paper_ai_diffraction/topology/plot_extinction_topology_flow.py)

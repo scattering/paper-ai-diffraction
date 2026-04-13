@@ -5,10 +5,14 @@ This repository is designed so that the paper code lives here while the checkpoi
 Before using the wrappers below:
 
 ```bash
-conda env create -f environment.yml
-conda activate paper-ai-diffraction
+conda env create -f environment-train-eval.yml
+conda activate paper-ai-diffraction-train-eval
 pip install -e .
 ```
+
+For TACC-specific notes, see:
+
+- [TACC_ENV.md](/tmp/paper-ai-diffraction/docs/TACC_ENV.md)
 
 Expected local checkpoint placement:
 
