@@ -39,6 +39,12 @@ Current external inputs still needed for figure regeneration are:
 - `CANONICAL_CSV` for topology-flow rendering
 - `CAL_SWEEP_JSON` for calibration-sweep rendering
 
+Validated Stampede example for `CANONICAL_CSV`:
+
+```bash
+export CANONICAL_CSV=/scratch/$USER/ai-diffraction/Code/Post_Processing/canonical_extinction_to_space_group.csv
+```
+
 Those inputs are documented in:
 
 - [dataset_manifest.csv](/tmp/paper-ai-diffraction/reproducibility/dataset_manifest.csv)
