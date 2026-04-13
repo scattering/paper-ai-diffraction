@@ -1,0 +1,10 @@
+# Placeholder environment file for the paper-focused repository.
+# Replace this with a pinned requirements set during migration.
+
+numpy
+scipy
+torch
+h5py
+matplotlib
+networkx
+wandb

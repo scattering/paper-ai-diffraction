@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="620" viewBox="0 0 1180 620">
+<text x="320.0" y="34.0" font-size="18" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">A. Error distance</text>
+<text x="860.0" y="34.0" font-size="18" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">B. Error direction</text>
+<line x1="85" y1="485.0" x2="555" y2="485.0" stroke="#dddddd" stroke-width="1" />
+<text x="73.0" y="489.0" font-size="12" text-anchor="end" font-weight="normal" font-family="Arial, sans-serif">0%</text>
+<line x1="85" y1="402.0" x2="555" y2="402.0" stroke="#dddddd" stroke-width="1" />
+<text x="73.0" y="406.0" font-size="12" text-anchor="end" font-weight="normal" font-family="Arial, sans-serif">20%</text>
+<line x1="85" y1="319.0" x2="555" y2="319.0" stroke="#dddddd" stroke-width="1" />
+<text x="73.0" y="323.0" font-size="12" text-anchor="end" font-weight="normal" font-family="Arial, sans-serif">40%</text>
+<line x1="85" y1="236.0" x2="555" y2="236.0" stroke="#dddddd" stroke-width="1" />
+<text x="73.0" y="240.0" font-size="12" text-anchor="end" font-weight="normal" font-family="Arial, sans-serif">60%</text>
+<line x1="85" y1="153.0" x2="555" y2="153.0" stroke="#dddddd" stroke-width="1" />
+<text x="73.0" y="157.0" font-size="12" text-anchor="end" font-weight="normal" font-family="Arial, sans-serif">80%</text>
+<line x1="85" y1="70.0" x2="555" y2="70.0" stroke="#dddddd" stroke-width="1" />
+<text x="73.0" y="74.0" font-size="12" text-anchor="end" font-weight="normal" font-family="Arial, sans-serif">100%</text>
+<rect x="85.0" y="398.2" width="224.0" height="86.8" fill="#4C78A8" />
+<rect x="85.0" y="279.0" width="224.0" height="119.2" fill="#72B7B2" />
+<rect x="85.0" y="159.8" width="224.0" height="119.2" fill="#F2CF5B" />
+<rect x="85.0" y="70.0" width="224.0" height="89.8" fill="#E45756" />
+<rect x="85.0" y="70.0" width="224.0" height="0.0" fill="#B279A2" />
+<text x="197.0" y="507.0" font-size="13" text-anchor="middle" font-weight="normal" font-family="Arial, sans-serif">eeru8svx aux bayes t5</text>
+<text x="197.0" y="525.0" font-size="11" text-anchor="middle" font-weight="normal" font-family="Arial, sans-serif">13.2% top-1</text>
+<rect x="331.0" y="392.3" width="224.0" height="92.7" fill="#4C78A8" />
+<rect x="331.0" y="271.1" width="224.0" height="121.2" fill="#72B7B2" />
+<rect x="331.0" y="137.0" width="224.0" height="134.1" fill="#F2CF5B" />
+<rect x="331.0" y="70.0" width="224.0" height="67.0" fill="#E45756" />
+<rect x="331.0" y="70.0" width="224.0" height="0.0" fill="#B279A2" />
+<text x="443.0" y="507.0" font-size="13" text-anchor="middle" font-weight="normal" font-family="Arial, sans-serif">mixed2500k 655279 aux bayes t5</text>
+<text x="443.0" y="525.0" font-size="11" text-anchor="middle" font-weight="normal" font-family="Arial, sans-serif">10.5% top-1</text>
+<text x="615.0" y="170.8" font-size="13" text-anchor="end" font-weight="normal" font-family="Arial, sans-serif">eeru8svx aux bayes t5</text>
+<rect x="625.0" y="70.0" width="255.0" height="193.5" fill="#4C78A8" />
+<rect x="880.0" y="70.0" width="50.0" height="193.5" fill="#E45756" />
+<rect x="930.0" y="70.0" width="165.0" height="193.5" fill="#9D755D" />
+<text x="1103.0" y="170.8" font-size="11" text-anchor="start" font-weight="normal" font-family="Arial, sans-serif">13.2%</text>
+<text x="615.0" y="392.2" font-size="13" text-anchor="end" font-weight="normal" font-family="Arial, sans-serif">mixed2500k 655279 aux bayes t5</text>
+<rect x="625.0" y="291.5" width="266.5" height="193.5" fill="#4C78A8" />
+<rect x="891.5" y="291.5" width="50.1" height="193.5" fill="#E45756" />
+<rect x="941.6" y="291.5" width="153.4" height="193.5" fill="#9D755D" />
+<text x="1103.0" y="392.2" font-size="11" text-anchor="start" font-weight="normal" font-family="Arial, sans-serif">10.5%</text>
+<rect x="85.0" y="566.0" width="18.0" height="18.0" fill="#4C78A8" />
+<text x="111.0" y="580.0" font-size="12" text-anchor="start" font-weight="normal" font-family="Arial, sans-serif">1 hop</text>
+<rect x="185.0" y="566.0" width="18.0" height="18.0" fill="#72B7B2" />
+<text x="211.0" y="580.0" font-size="12" text-anchor="start" font-weight="normal" font-family="Arial, sans-serif">2 hops</text>
+<rect x="285.0" y="566.0" width="18.0" height="18.0" fill="#F2CF5B" />
+<text x="311.0" y="580.0" font-size="12" text-anchor="start" font-weight="normal" font-family="Arial, sans-serif">3 hops</text>
+<rect x="385.0" y="566.0" width="18.0" height="18.0" fill="#E45756" />
+<text x="411.0" y="580.0" font-size="12" text-anchor="start" font-weight="normal" font-family="Arial, sans-serif">4+</text>
+<rect x="485.0" y="566.0" width="18.0" height="18.0" fill="#B279A2" />
+<text x="511.0" y="580.0" font-size="12" text-anchor="start" font-weight="normal" font-family="Arial, sans-serif">disc.</text>
+<rect x="625.0" y="566.0" width="18.0" height="18.0" fill="#4C78A8" />
+<text x="651.0" y="580.0" font-size="12" text-anchor="start" font-weight="normal" font-family="Arial, sans-serif">descendant</text>
+<rect x="775.0" y="566.0" width="18.0" height="18.0" fill="#E45756" />
+<text x="801.0" y="580.0" font-size="12" text-anchor="start" font-weight="normal" font-family="Arial, sans-serif">ancestor</text>
+<rect x="925.0" y="566.0" width="18.0" height="18.0" fill="#9D755D" />
+<text x="951.0" y="580.0" font-size="12" text-anchor="start" font-weight="normal" font-family="Arial, sans-serif">branch jump</text>
+</svg>

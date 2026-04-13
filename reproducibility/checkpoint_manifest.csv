@@ -1,0 +1,9 @@
+checkpoint_role,zenodo_filename,expected_local_path,notes
+stage1_base,xrd_model_ic6gfmvm_best.pth,external/checkpoints/xrd_model_ic6gfmvm_best.pth,base initialization for later realism runs
+stage2c_baseline,xrd_model_9rwv1qly_best.pth,external/checkpoints/xrd_model_9rwv1qly_best.pth,non-PO baseline used in paper
+po_1epoch,xrd_model_cscjfdwk_best.pth,external/checkpoints/xrd_model_cscjfdwk_best.pth,best Top-1 PO ablation
+po_resume2,xrd_model_dsi7ehiv_best.pth,external/checkpoints/xrd_model_dsi7ehiv_best.pth,PO continuation comparison
+mixed_200k_pilot,xrd_model_eeru8svx_best.pth,external/checkpoints/xrd_model_eeru8svx_best.pth,small mixed pilot
+final_mixed_champion,xrd_model_82ept35h_best.pth,external/checkpoints/xrd_model_82ept35h_best.pth,final large mixed champion
+wiseft_a03_optional,xrd_model_wiseft_9rwv1qly_cscjfdwk_a03_best.pth,external/checkpoints/xrd_model_wiseft_9rwv1qly_cscjfdwk_a03_best.pth,optional WiSE-FT ablation
+wiseft_a05_optional,xrd_model_wiseft_9rwv1qly_cscjfdwk_a05_best.pth,external/checkpoints/xrd_model_wiseft_9rwv1qly_cscjfdwk_a05_best.pth,optional WiSE-FT ablation

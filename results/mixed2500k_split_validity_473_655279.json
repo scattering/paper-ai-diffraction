@@ -1,0 +1,263 @@
+{
+  "checkpoint": "/scratch/09870/williamratcliff/ai_diffraction_models/xrd_model_82ept35h_best.pth",
+  "eval_data_path": "/work2/09870/williamratcliff/rruff-benchmark/RRUFF_option1_473_with_buckets_maxnorm.hdf5",
+  "counts": {
+    "n": 473,
+    "valid_single_match": 233,
+    "ambiguous_multi_match": 146,
+    "invalid_zero_match": 94,
+    "single_match_correct": 4
+  },
+  "rates_pct": {
+    "valid_single_match": 49.2600422832981,
+    "ambiguous_multi_match": 30.866807610993657,
+    "invalid_zero_match": 19.873150105708245,
+    "single_match_correct_within_all": 0.8456659619450317
+  },
+  "examples": {
+    "ambiguous": [
+      {
+        "index": 5,
+        "true_eg": 62,
+        "matched_egs": [
+          69,
+          93
+        ]
+      },
+      {
+        "index": 6,
+        "true_eg": 62,
+        "matched_egs": [
+          69,
+          93
+        ]
+      },
+      {
+        "index": 7,
+        "true_eg": 62,
+        "matched_egs": [
+          69,
+          93
+        ]
+      },
+      {
+        "index": 16,
+        "true_eg": 73,
+        "matched_egs": [
+          69,
+          93
+        ]
+      },
+      {
+        "index": 17,
+        "true_eg": 73,
+        "matched_egs": [
+          69,
+          93
+        ]
+      },
+      {
+        "index": 130,
+        "true_eg": 5,
+        "matched_egs": [
+          69,
+          93
+        ]
+      },
+      {
+        "index": 134,
+        "true_eg": 4,
+        "matched_egs": [
+          69,
+          93
+        ]
+      },
+      {
+        "index": 135,
+        "true_eg": 4,
+        "matched_egs": [
+          69,
+          93
+        ]
+      },
+      {
+        "index": 136,
+        "true_eg": 12,
+        "matched_egs": [
+          69,
+          93
+        ]
+      },
+      {
+        "index": 146,
+        "true_eg": 6,
+        "matched_egs": [
+          69,
+          93
+        ]
+      },
+      {
+        "index": 257,
+        "true_eg": 45,
+        "matched_egs": [
+          69,
+          93
+        ]
+      },
+      {
+        "index": 258,
+        "true_eg": 45,
+        "matched_egs": [
+          69,
+          93
+        ]
+      },
+      {
+        "index": 262,
+        "true_eg": 17,
+        "matched_egs": [
+          69,
+          93
+        ]
+      },
+      {
+        "index": 263,
+        "true_eg": 17,
+        "matched_egs": [
+          69,
+          93
+        ]
+      },
+      {
+        "index": 269,
+        "true_eg": 5,
+        "matched_egs": [
+          46,
+          73
+        ]
+      },
+      {
+        "index": 385,
+        "true_eg": 17,
+        "matched_egs": [
+          69,
+          93
+        ]
+      },
+      {
+        "index": 386,
+        "true_eg": 17,
+        "matched_egs": [
+          69,
+          93
+        ]
+      },
+      {
+        "index": 391,
+        "true_eg": 6,
+        "matched_egs": [
+          69,
+          93
+        ]
+      },
+      {
+        "index": 392,
+        "true_eg": 6,
+        "matched_egs": [
+          69,
+          93
+        ]
+      },
+      {
+        "index": 396,
+        "true_eg": 80,
+        "matched_egs": [
+          46,
+          73
+        ]
+      }
+    ],
+    "invalid": [
+      {
+        "index": 22,
+        "true_eg": 80
+      },
+      {
+        "index": 23,
+        "true_eg": 80
+      },
+      {
+        "index": 35,
+        "true_eg": 70
+      },
+      {
+        "index": 46,
+        "true_eg": 6
+      },
+      {
+        "index": 64,
+        "true_eg": 17
+      },
+      {
+        "index": 132,
+        "true_eg": 2
+      },
+      {
+        "index": 133,
+        "true_eg": 2
+      },
+      {
+        "index": 145,
+        "true_eg": 73
+      },
+      {
+        "index": 154,
+        "true_eg": 17
+      },
+      {
+        "index": 155,
+        "true_eg": 4
+      },
+      {
+        "index": 270,
+        "true_eg": 5
+      },
+      {
+        "index": 277,
+        "true_eg": 17
+      },
+      {
+        "index": 278,
+        "true_eg": 17
+      },
+      {
+        "index": 279,
+        "true_eg": 17
+      },
+      {
+        "index": 283,
+        "true_eg": 6
+      },
+      {
+        "index": 387,
+        "true_eg": 99
+      },
+      {
+        "index": 393,
+        "true_eg": 75
+      },
+      {
+        "index": 397,
+        "true_eg": 35
+      },
+      {
+        "index": 401,
+        "true_eg": 2
+      },
+      {
+        "index": 402,
+        "true_eg": 2
+      }
+    ]
+  }
+}

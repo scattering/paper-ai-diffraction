@@ -1,0 +1,26 @@
+{
+  "graph_json": "/tmp/paper-ai-diffraction/assets/topology/extinction_group_adjacency.json",
+  "failure_json": "/tmp/paper-ai-diffraction/results/mixed2500k_compare_325_failure_modes_655279.json",
+  "models": {
+    "mixed2500k_655279_aux_bayes_t5": {
+      "top1_pct": 10.461538461538462,
+      "correct": 34,
+      "wrong_n": 291,
+      "distance_buckets": {
+        "1": 65,
+        "2": 85,
+        "3": 94,
+        "4plus": 47,
+        "inf": 0
+      },
+      "pct_wrong_le2": 51.54639175257732,
+      "mean_wrong_dist": 2.457044673539519,
+      "directionality": {
+        "branch_jump": 95,
+        "descendant_pred_lower_sym": 165,
+        "ancestor_pred_higher_sym": 31,
+        "correct": 34
+      }
+    }
+  }
+}
