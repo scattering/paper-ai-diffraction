@@ -16,13 +16,20 @@ The strongest figure-generation path currently migrated into this prototype is t
 
 - [make_topology_flow_figure.sh](/tmp/paper-ai-diffraction/scripts/make_topology_flow_figure.sh)
 - [make_topology_distance_figure.sh](/tmp/paper-ai-diffraction/scripts/make_topology_distance_figure.sh)
+- [make_calibration_figure.sh](/tmp/paper-ai-diffraction/scripts/make_calibration_figure.sh)
 
 ## Current Gaps
 
-This prototype still needs a final paper-facing wrapper layer for:
+Current external inputs still needed for figure regeneration are:
 
-- calibration sweep figures
-- topological distance summary figures
-- any attention or curriculum plots retained in the manuscript
+- `CANONICAL_CSV` for topology-flow rendering
+- `CAL_SWEEP_JSON` for calibration-sweep rendering
 
-The underlying analysis code exists in the source project, but only the topology-flow path is wired cleanly here so far.
+Those inputs are documented in:
+
+- [dataset_manifest.csv](/tmp/paper-ai-diffraction/reproducibility/dataset_manifest.csv)
+
+What still remains incomplete:
+
+- attention or curriculum plots retained in the manuscript
+- any figure paths that still depend on unreduced source-project scripts

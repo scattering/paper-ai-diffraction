@@ -32,6 +32,11 @@ This script expects:
 - `RRUFF_473_H5`
 - `PRIOR_H5`
 
+Those variables and their intended roles are documented in:
+
+- [dataset_manifest.csv](/tmp/paper-ai-diffraction/reproducibility/dataset_manifest.csv)
+- [checkpoint_manifest.csv](/tmp/paper-ai-diffraction/reproducibility/checkpoint_manifest.csv)
+
 and then runs:
 
 1. calibration metrics on `RRUFF-325`
@@ -43,6 +48,15 @@ and then runs:
 Use:
 
 - [make_topology_flow_figure.sh](/tmp/paper-ai-diffraction/scripts/make_topology_flow_figure.sh)
+- [make_calibration_figure.sh](/tmp/paper-ai-diffraction/scripts/make_calibration_figure.sh)
 - [make_main_tables.py](/tmp/paper-ai-diffraction/scripts/make_main_tables.py)
 
-The first renders the topology-flow graphic. The second prints compact CSV rows for the mixed-200k and final mixed champion paper numbers.
+The topology-flow wrapper renders the staged DAG figure set. The calibration wrapper renders a Top-1/Top-5 versus temperature SVG from a compatible sweep JSON. The table script prints compact CSV rows for the mixed-200k and final mixed champion paper numbers.
+
+## Historical TACC Evaluation Launchers
+
+The original cluster-bound evaluation launchers are preserved under:
+
+- [/tmp/paper-ai-diffraction/scripts/tacc_archive]( /tmp/paper-ai-diffraction/scripts/tacc_archive )
+
+Those scripts are retained for provenance, not as the preferred public interface.

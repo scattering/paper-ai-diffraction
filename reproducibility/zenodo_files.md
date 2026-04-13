@@ -20,7 +20,16 @@ Expected local placement for downloaded checkpoints:
 
 - `external/checkpoints/`
 
-Use [checkpoint_manifest.csv](/tmp/paper-ai-diffraction/reproducibility/checkpoint_manifest.csv) as the mapping from paper roles to Zenodo filenames and expected local paths.
+Use:
+
+- [checkpoint_manifest.csv](/tmp/paper-ai-diffraction/reproducibility/checkpoint_manifest.csv)
+- [dataset_manifest.csv](/tmp/paper-ai-diffraction/reproducibility/dataset_manifest.csv)
+
+as the mapping from paper roles to:
+
+- Zenodo checkpoint filenames
+- expected local checkpoint paths
+- required external datasets and environment variables
 
 When the final paper-only GitHub repo exists, update this file with:
 
