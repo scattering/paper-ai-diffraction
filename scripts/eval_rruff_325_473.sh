@@ -2,7 +2,11 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-export PYTHONPATH="$ROOT/src/core:$ROOT/src/eval:$ROOT/src/topology:$ROOT/src/utils${PYTHONPATH:+:$PYTHONPATH}"
+cd "$ROOT"
+python3 -c "import paper_ai_diffraction" >/dev/null 2>&1 || {
+  echo "Install the repo first with: pip install -e ." >&2
+  exit 2
+}
 
 CHECKPOINT_PATH="${CHECKPOINT_PATH:-$ROOT/external/checkpoints/xrd_model_82ept35h_best.pth}"
 CONFIG_PATH="${CONFIG_PATH:-$ROOT/configs/final_mixed_2500k_dualsource.json}"
@@ -21,7 +25,7 @@ if [[ -z "$RRUFF_325_H5" || -z "$RRUFF_473_H5" || -z "$PRIOR_H5" ]]; then
   exit 2
 fi
 
-python3 "$ROOT/src/eval/evaluate_calibration_metrics.py" \
+python3 -m paper_ai_diffraction.eval.evaluate_calibration_metrics \
   --checkpoint "$CHECKPOINT_PATH" \
   --config "$CONFIG_PATH" \
   --eval-data-path "$RRUFF_325_H5" \
@@ -31,7 +35,7 @@ python3 "$ROOT/src/eval/evaluate_calibration_metrics.py" \
   --bootstrap "$BOOTSTRAP" \
   --output-json "$OUTDIR/rruff325_calibration.json"
 
-python3 "$ROOT/src/eval/evaluate_calibration_metrics.py" \
+python3 -m paper_ai_diffraction.eval.evaluate_calibration_metrics \
   --checkpoint "$CHECKPOINT_PATH" \
   --config "$CONFIG_PATH" \
   --eval-data-path "$RRUFF_473_H5" \
@@ -41,13 +45,13 @@ python3 "$ROOT/src/eval/evaluate_calibration_metrics.py" \
   --bootstrap "$BOOTSTRAP" \
   --output-json "$OUTDIR/rruff473_calibration.json"
 
-python3 "$ROOT/src/eval/evaluate_split_head_validity.py" \
+python3 -m paper_ai_diffraction.eval.evaluate_split_head_validity \
   --checkpoint "$CHECKPOINT_PATH" \
   --config "$CONFIG_PATH" \
   --eval-data-path "$RRUFF_325_H5" \
   --output-json "$OUTDIR/rruff325_split_validity.json"
 
-python3 "$ROOT/src/eval/evaluate_split_head_validity.py" \
+python3 -m paper_ai_diffraction.eval.evaluate_split_head_validity \
   --checkpoint "$CHECKPOINT_PATH" \
   --config "$CONFIG_PATH" \
   --eval-data-path "$RRUFF_473_H5" \

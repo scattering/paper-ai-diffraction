@@ -7,9 +7,9 @@ import numpy as np
 import torch
 import torch.nn as nn
 
-from dataset import get_dataloaders_test
-from extinction_multilabel import build_template_bank
-from model import VIT_model, adapt_patch_embed_input_channels
+from paper_ai_diffraction.core.dataset import get_dataloaders_test
+from paper_ai_diffraction.utils.extinction_multilabel import build_template_bank
+from paper_ai_diffraction.core.model import VIT_model, adapt_patch_embed_input_channels
 
 
 def parse_args():

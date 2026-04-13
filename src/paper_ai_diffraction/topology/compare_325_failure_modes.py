@@ -8,9 +8,13 @@ import torch
 import torch.nn as nn
 from tqdm import tqdm
 
-from dataset import get_dataloaders_test
-from extinction_multilabel import build_template_bank, score_split_head_templates, template_mask_from_ext_groups
-from model import VIT_model, adapt_patch_embed_input_channels
+from paper_ai_diffraction.core.dataset import get_dataloaders_test
+from paper_ai_diffraction.utils.extinction_multilabel import (
+    build_template_bank,
+    score_split_head_templates,
+    template_mask_from_ext_groups,
+)
+from paper_ai_diffraction.core.model import VIT_model, adapt_patch_embed_input_channels
 
 
 def parse_args():

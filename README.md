@@ -8,13 +8,13 @@ Nothing in this directory is live-linked back to the source project. All files h
 
 ## Current Contents
 
-- `src/core/`
+- `src/paper_ai_diffraction/core/`
   - training, inference, model, and dataset loading code
-- `src/eval/`
+- `src/paper_ai_diffraction/eval/`
   - calibration and split-validity evaluation code
-- `src/topology/`
+- `src/paper_ai_diffraction/topology/`
   - topology comparison and topology-flow plotting code
-- `src/utils/`
+- `src/paper_ai_diffraction/utils/`
   - extinction-group multilabel utilities
 - `configs/`
   - paper-relevant training configs only
@@ -32,6 +32,7 @@ Nothing in this directory is live-linked back to the source project. All files h
   - small figure-support assets such as the extinction-group topology graph
 - top-level environment files
   - `environment.yml` based on the original ViT_NVIDIA campaign environment and treated as the current environment source of truth
+  - `pyproject.toml` for editable installation
 
 ## What This Is Good For
 
@@ -43,18 +44,28 @@ Nothing in this directory is live-linked back to the source project. All files h
 
 This is not yet a polished final paper repo. In particular:
 
-1. imports in `src/` have not been rewritten into a coherent package layout.
-2. some wrappers still depend on external dataset paths that are not yet bundled here.
-3. the final repo should likely prune or rewrite some cluster-specific assumptions.
+1. some wrappers still depend on external dataset paths that are not yet bundled here.
+2. the final repo should likely prune or rewrite some cluster-specific assumptions.
 
 The migrated Python files are syntax-valid as copied, but full runtime validation still depends on creating the Conda environment described in [environment.yml](/tmp/paper-ai-diffraction/environment.yml).
 
+## Installation
+
+The intended setup is:
+
+```bash
+conda env create -f environment.yml
+conda activate paper-ai-diffraction
+pip install -e .
+```
+
+The canonical wrapper scripts now assume the package is importable and will prompt for `pip install -e .` if it is not.
+
 ## Recommended Next Steps
 
-1. convert `src/` into a consistent importable package
-2. add a real environment lockfile if Conda export alone is not sufficient
-3. point `reproducibility/` to the final Zenodo deposition
-4. initialize this as a fresh GitHub repo once the file set is finalized
+1. add a real environment lockfile if Conda export alone is not sufficient
+2. point `reproducibility/` to the final Zenodo deposition
+3. validate the editable-install path from a fresh clone
 
 ## Reproducibility Manifests
 

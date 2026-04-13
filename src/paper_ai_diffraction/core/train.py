@@ -2,8 +2,8 @@ import torch
 import wandb
 import json
 import argparse
-from model import VIT_model, adapt_patch_embed_input_channels
-from dataset import get_dataloaders, get_mixed_dataloaders
+from paper_ai_diffraction.core.model import VIT_model, adapt_patch_embed_input_channels
+from paper_ai_diffraction.core.dataset import get_dataloaders, get_mixed_dataloaders
 import torch.optim as optim
 from tqdm import tqdm
 import torch.nn as nn
@@ -22,7 +22,7 @@ from functools import partial
 import h5py
 from torchvision.ops import sigmoid_focal_loss
 
-from extinction_multilabel import (
+from paper_ai_diffraction.utils.extinction_multilabel import (
     build_template_bank,
     decode_multilabel_logits,
     decode_split_head_logits,
@@ -31,7 +31,7 @@ from extinction_multilabel import (
     topk_decoded_ext_groups,
     topk_decoded_split_head_ext_groups,
 )
-from streaming_dataset import StreamingConfig, get_streaming_dataloader
+from paper_ai_diffraction.core.streaming_dataset import StreamingConfig, get_streaming_dataloader
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Training Script")

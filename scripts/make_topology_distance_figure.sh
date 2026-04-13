@@ -2,7 +2,11 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-export PYTHONPATH="$ROOT/src/core:$ROOT/src/eval:$ROOT/src/topology:$ROOT/src/utils${PYTHONPATH:+:$PYTHONPATH}"
+cd "$ROOT"
+python3 -c "import paper_ai_diffraction" >/dev/null 2>&1 || {
+  echo "Install the repo first with: pip install -e ." >&2
+  exit 2
+}
 
 GRAPH_JSON="${GRAPH_JSON:-$ROOT/assets/topology/extinction_group_adjacency.json}"
 MIXED200K_FAILURE_JSON="${MIXED200K_FAILURE_JSON:-$ROOT/results/mixed200k_compare_325_failure_modes_eeru8svx.json}"
@@ -11,12 +15,12 @@ OUTDIR="${OUTDIR:-$ROOT/results/figures}"
 
 mkdir -p "$OUTDIR"
 
-python3 "$ROOT/src/topology/analyze_topological_error_distance.py" \
+python3 -m paper_ai_diffraction.topology.analyze_topological_error_distance \
   --graph-json "$GRAPH_JSON" \
   --failure-json "$MIXED200K_FAILURE_JSON" \
   --output-json "$OUTDIR/mixed200k_topology_summary.json" >/dev/null
 
-python3 "$ROOT/src/topology/analyze_topological_error_distance.py" \
+python3 -m paper_ai_diffraction.topology.analyze_topological_error_distance \
   --graph-json "$GRAPH_JSON" \
   --failure-json "$MIXED2500K_FAILURE_JSON" \
   --output-json "$OUTDIR/mixed2500k_topology_summary.json" >/dev/null
@@ -31,7 +35,7 @@ for p in paths:
 pathlib.Path(sys.argv[3]).write_text(json.dumps(combined, indent=2))
 PY
 
-python3 "$ROOT/src/topology/plot_topological_error_distance.py" \
+python3 -m paper_ai_diffraction.topology.plot_topological_error_distance \
   --summary-json "$OUTDIR/combined_topology_summary.json" \
   --output-svg "$OUTDIR/topological_error_distance.svg"
 

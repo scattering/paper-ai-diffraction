@@ -2,12 +2,20 @@
 
 This prototype contains both the raw evaluation code and the compact JSON outputs used in the paper.
 
+Before using the wrappers below:
+
+```bash
+conda env create -f environment.yml
+conda activate paper-ai-diffraction
+pip install -e .
+```
+
 ## Included Evaluation Code
 
-- [evaluate_calibration_metrics.py](/tmp/paper-ai-diffraction/src/eval/evaluate_calibration_metrics.py)
-- [evaluate_split_head_validity.py](/tmp/paper-ai-diffraction/src/eval/evaluate_split_head_validity.py)
-- [compare_325_failure_modes.py](/tmp/paper-ai-diffraction/src/topology/compare_325_failure_modes.py)
-- [analyze_topological_error_distance.py](/tmp/paper-ai-diffraction/src/topology/analyze_topological_error_distance.py)
+- [evaluate_calibration_metrics.py](/tmp/paper-ai-diffraction/src/paper_ai_diffraction/eval/evaluate_calibration_metrics.py)
+- [evaluate_split_head_validity.py](/tmp/paper-ai-diffraction/src/paper_ai_diffraction/eval/evaluate_split_head_validity.py)
+- [compare_325_failure_modes.py](/tmp/paper-ai-diffraction/src/paper_ai_diffraction/topology/compare_325_failure_modes.py)
+- [analyze_topological_error_distance.py](/tmp/paper-ai-diffraction/src/paper_ai_diffraction/topology/analyze_topological_error_distance.py)
 
 ## Included Evaluation Results
 

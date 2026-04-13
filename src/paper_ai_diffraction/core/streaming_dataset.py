@@ -8,7 +8,7 @@ import numpy as np
 import torch
 from torch.utils.data import DataLoader, IterableDataset, get_worker_info
 
-from extinction_multilabel import (
+from paper_ai_diffraction.utils.extinction_multilabel import (
     DEFAULT_FINAL_TABLE,
     build_extinction_templates,
     ext_group_to_multilabel_target,

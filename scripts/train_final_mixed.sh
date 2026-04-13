@@ -2,7 +2,11 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-export PYTHONPATH="$ROOT/src/core:$ROOT/src/eval:$ROOT/src/topology:$ROOT/src/utils${PYTHONPATH:+:$PYTHONPATH}"
+cd "$ROOT"
+python3 -c "import paper_ai_diffraction" >/dev/null 2>&1 || {
+  echo "Install the repo first with: pip install -e ." >&2
+  exit 2
+}
 
 BASE_CONFIG="${BASE_CONFIG:-$ROOT/configs/final_mixed_2500k_dualsource.json}"
 STANDARD_TRAINREADY_H5="${STANDARD_TRAINREADY_H5:-}"
@@ -36,4 +40,4 @@ ARGS=(
 [[ -n "$SG_LOOKUP_CSV" ]] && ARGS+=(--set "sg_lookup_path=$SG_LOOKUP_CSV")
 
 python3 "$ROOT/scripts/_write_overridden_config.py" "${ARGS[@]}"
-python3 "$ROOT/src/core/train.py" --config "$TMP_CONFIG" ${TRAIN_EXTRA_ARGS}
+python3 -m paper_ai_diffraction.core.train --config "$TMP_CONFIG" ${TRAIN_EXTRA_ARGS}

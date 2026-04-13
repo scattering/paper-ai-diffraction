@@ -4,7 +4,10 @@ import numpy as np
 from torch.utils.data import Dataset, DataLoader, DistributedSampler
 from torch.utils.data import TensorDataset
 
-from extinction_multilabel import build_extinction_templates, ext_group_to_multilabel_target
+from paper_ai_diffraction.utils.extinction_multilabel import (
+    build_extinction_templates,
+    ext_group_to_multilabel_target,
+)
 
 # # ====== Custom Dataset Loader ======
 # def get_dataloaders(h5_file="xrd_data.h5", batch_size=32, world_size=1, rank=0, num_workers=8, num_classes=230, prefetch_factor=4):

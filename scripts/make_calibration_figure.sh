@@ -2,7 +2,11 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-export PYTHONPATH="$ROOT/src/core:$ROOT/src/eval:$ROOT/src/topology:$ROOT/src/utils${PYTHONPATH:+:$PYTHONPATH}"
+cd "$ROOT"
+python3 -c "import paper_ai_diffraction" >/dev/null 2>&1 || {
+  echo "Install the repo first with: pip install -e ." >&2
+  exit 2
+}
 
 CAL_SWEEP_JSON="${CAL_SWEEP_JSON:-}"
 OUTDIR="${OUTDIR:-$ROOT/results/figures}"
@@ -16,7 +20,7 @@ if [[ -z "$CAL_SWEEP_JSON" ]]; then
   exit 2
 fi
 
-python3 "$ROOT/src/eval/plot_calibration_sweep.py" \
+python3 -m paper_ai_diffraction.eval.plot_calibration_sweep \
   --input-json "$CAL_SWEEP_JSON" \
   --output-svg "$OUTPUT_SVG" \
   --title "$TITLE"

@@ -2,6 +2,14 @@
 
 This repository is designed so that the paper code lives here while the checkpoint binaries live in Zenodo.
 
+Before using the wrappers below:
+
+```bash
+conda env create -f environment.yml
+conda activate paper-ai-diffraction
+pip install -e .
+```
+
 Expected local checkpoint placement:
 
 ```text
@@ -50,7 +58,7 @@ Use these first:
 - [train_mixed_200k.sh](/tmp/paper-ai-diffraction/scripts/train_mixed_200k.sh)
 - [train_final_mixed.sh](/tmp/paper-ai-diffraction/scripts/train_final_mixed.sh)
 
-These wrappers accept data and checkpoint locations through environment variables, write a temporary config with local overrides, and then call [train.py](/tmp/paper-ai-diffraction/src/core/train.py) without assuming a specific cluster path layout.
+These wrappers accept data and checkpoint locations through environment variables, write a temporary config with local overrides, and then call [train.py](/tmp/paper-ai-diffraction/src/paper_ai_diffraction/core/train.py) through the installed package without assuming a specific cluster path layout.
 
 ## Historical TACC Launchers
 

@@ -2,11 +2,19 @@
 
 The strongest figure-generation path currently migrated into this prototype is the topology/DAG path.
 
+Before using the wrappers below:
+
+```bash
+conda env create -f environment.yml
+conda activate paper-ai-diffraction
+pip install -e .
+```
+
 ## Included Figure Scripts
 
-- [plot_extinction_topology_flow.py](/tmp/paper-ai-diffraction/src/topology/plot_extinction_topology_flow.py)
-- [plot_topological_error_distance.py](/tmp/paper-ai-diffraction/src/topology/plot_topological_error_distance.py)
-- [plot_calibration_sweep.py](/tmp/paper-ai-diffraction/src/eval/plot_calibration_sweep.py)
+- [plot_extinction_topology_flow.py](/tmp/paper-ai-diffraction/src/paper_ai_diffraction/topology/plot_extinction_topology_flow.py)
+- [plot_topological_error_distance.py](/tmp/paper-ai-diffraction/src/paper_ai_diffraction/topology/plot_topological_error_distance.py)
+- [plot_calibration_sweep.py](/tmp/paper-ai-diffraction/src/paper_ai_diffraction/eval/plot_calibration_sweep.py)
 
 ## Included Figure Asset
 

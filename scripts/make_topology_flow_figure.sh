@@ -2,7 +2,11 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-export PYTHONPATH="$ROOT/src/core:$ROOT/src/eval:$ROOT/src/topology:$ROOT/src/utils${PYTHONPATH:+:$PYTHONPATH}"
+cd "$ROOT"
+python3 -c "import paper_ai_diffraction" >/dev/null 2>&1 || {
+  echo "Install the repo first with: pip install -e ." >&2
+  exit 2
+}
 
 GRAPH_JSON="${GRAPH_JSON:-$ROOT/assets/topology/extinction_group_adjacency.json}"
 CANONICAL_CSV="${CANONICAL_CSV:-}"
@@ -17,7 +21,7 @@ if [[ -z "$CANONICAL_CSV" ]]; then
   exit 2
 fi
 
-python3 "$ROOT/src/topology/plot_extinction_topology_flow.py" \
+python3 -m paper_ai_diffraction.topology.plot_extinction_topology_flow \
   --graph-json "$GRAPH_JSON" \
   --canonical-csv "$CANONICAL_CSV" \
   --model "${LABEL}:${FAILURE_JSON}" \

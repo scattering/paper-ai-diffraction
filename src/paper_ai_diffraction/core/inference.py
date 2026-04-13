@@ -7,8 +7,8 @@ import os
 import torch.nn as nn
 from tqdm import tqdm
 
-from model import VIT_model  
-from dataset import get_dataloaders, get_dataloaders_test  
+from paper_ai_diffraction.core.model import VIT_model
+from paper_ai_diffraction.core.dataset import get_dataloaders, get_dataloaders_test
 
 import h5py
 
@@ -27,7 +27,11 @@ HKL_LABEL_Y_STEP = 40          # vertical spacing
 HKL_LABEL_Y_MAX = 300          # clamp label height
 
 from scipy.signal import find_peaks
-from extinction_multilabel import build_template_bank, decode_multilabel_logits, topk_decoded_ext_groups
+from paper_ai_diffraction.utils.extinction_multilabel import (
+    build_template_bank,
+    decode_multilabel_logits,
+    topk_decoded_ext_groups,
+)
 
 def parse_args():
     parser = argparse.ArgumentParser(description="ViT Inference")
