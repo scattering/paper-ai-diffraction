@@ -52,6 +52,9 @@ def main():
     panel_h = height - top - bottom
     left2 = left1 + panel_w + panel_gap
     right2 = 55
+    panel2_label_w = 120
+    panel2_bar_left = left2 + panel2_label_w
+    panel2_bar_w = panel_w - panel2_label_w - right2
     bar_gap = 22
     bar_w = (panel_w - bar_gap * (len(names) - 1)) / len(names)
 
@@ -97,15 +100,15 @@ def main():
         model = summary[name]
         wrong_n = max(int(model["wrong_n"]), 1)
         y = top + idx * (row_h + row_gap)
-        parts.append(svg_text(left2 - 10, y + row_h / 2 + 4, display_names.get(name, name.replace("_", " ")), size=13, anchor="end"))
-        x = left2
+        parts.append(svg_text(left2 + 6, y + row_h / 2 + 4, display_names.get(name, name.replace("_", " ")), size=13, anchor="start"))
+        x = panel2_bar_left
         for key in dir_keys:
             frac = model["directionality"].get(key, 0) / wrong_n
-            w = frac * panel_w
+            w = frac * panel2_bar_w
             if w > 0:
                 parts.append(svg_rect(x, y, w, row_h, DIRECTION_COLORS[key]))
             x += w
-        parts.append(svg_text(left2 + panel_w + 8, y + row_h / 2 + 4, f"{model['top1_pct']:.1f}%", size=11, anchor="start"))
+        parts.append(svg_text(panel2_bar_left + panel2_bar_w + 8, y + row_h / 2 + 4, f"{model['top1_pct']:.1f}%", size=11, anchor="start"))
 
     legend_x = left1
     legend_y = height - 42
