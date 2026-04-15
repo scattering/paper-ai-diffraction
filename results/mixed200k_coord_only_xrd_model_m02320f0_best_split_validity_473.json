@@ -1,0 +1,102 @@
+{
+  "checkpoint": "/scratch/09870/williamratcliff/ai_diffraction_models/xrd_model_m02320f0_best.pth",
+  "eval_data_path": "/work2/09870/williamratcliff/rruff-benchmark/RRUFF_option1_473_with_buckets_maxnorm.hdf5",
+  "counts": {
+    "n": 473,
+    "valid_single_match": 0,
+    "ambiguous_multi_match": 0,
+    "invalid_zero_match": 473,
+    "single_match_correct": 0
+  },
+  "rates_pct": {
+    "valid_single_match": 0.0,
+    "ambiguous_multi_match": 0.0,
+    "invalid_zero_match": 100.0,
+    "single_match_correct_within_all": 0.0
+  },
+  "examples": {
+    "ambiguous": [],
+    "invalid": [
+      {
+        "index": 0,
+        "true_eg": 2
+      },
+      {
+        "index": 1,
+        "true_eg": 2
+      },
+      {
+        "index": 2,
+        "true_eg": 2
+      },
+      {
+        "index": 3,
+        "true_eg": 2
+      },
+      {
+        "index": 4,
+        "true_eg": 2
+      },
+      {
+        "index": 128,
+        "true_eg": 99
+      },
+      {
+        "index": 129,
+        "true_eg": 99
+      },
+      {
+        "index": 130,
+        "true_eg": 5
+      },
+      {
+        "index": 131,
+        "true_eg": 5
+      },
+      {
+        "index": 132,
+        "true_eg": 2
+      },
+      {
+        "index": 256,
+        "true_eg": 45
+      },
+      {
+        "index": 257,
+        "true_eg": 45
+      },
+      {
+        "index": 258,
+        "true_eg": 45
+      },
+      {
+        "index": 259,
+        "true_eg": 10
+      },
+      {
+        "index": 260,
+        "true_eg": 10
+      },
+      {
+        "index": 384,
+        "true_eg": 3
+      },
+      {
+        "index": 385,
+        "true_eg": 17
+      },
+      {
+        "index": 386,
+        "true_eg": 17
+      },
+      {
+        "index": 387,
+        "true_eg": 99
+      },
+      {
+        "index": 388,
+        "true_eg": 99
+      }
+    ]
+  }
+}

@@ -4,6 +4,7 @@ Paper-focused reproducibility repository for *Attention Is Not All You Need for 
 
 This repo reproduces the paper-facing table rows and figure layer for the mixed-curriculum results:
 - benchmark summary rows from bundled JSON artifacts
+- supplemental positional-ablation benchmark rows from bundled JSON artifacts
 - topology-distance figure
 - topology-flow figure set
 

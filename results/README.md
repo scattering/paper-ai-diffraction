@@ -4,6 +4,8 @@ This directory intentionally contains only compact JSON artifacts that back the 
 
 - mixed-200k pilot calibration metrics
 - mixed-200k pilot split-validity summaries
+- mixed-200k positional-ablation calibration metrics
+- mixed-200k positional-ablation split-validity summaries
 - mixed-200k pilot failure-mode JSON
 - final mixed champion calibration metrics
 - final mixed champion split-validity summaries

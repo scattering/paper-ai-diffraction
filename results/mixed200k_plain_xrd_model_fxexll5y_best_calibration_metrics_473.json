@@ -1,0 +1,79 @@
+{
+  "checkpoint": "/scratch/09870/williamratcliff/ai_diffraction_models/xrd_model_fxexll5y_best.pth",
+  "eval_data_path": "/work2/09870/williamratcliff/rruff-benchmark/RRUFF_option1_473_with_buckets_maxnorm.hdf5",
+  "prior_data_path": "/scratch/09870/williamratcliff/ai_diffraction_generated/rruff_conditioned_mixed_200k_v1_trainready.hdf5",
+  "aux_temperature": 5.0,
+  "n_samples": 473,
+  "uncalibrated_aux": {
+    "point_estimate": {
+      "top1": 0.1331923890063425,
+      "top5": 0.4799154334038055,
+      "ece": 0.056354740945657775,
+      "nll": 3.553506851196289,
+      "brier": 0.9466392993927002
+    },
+    "bootstrap": {
+      "top1": {
+        "mean": 0.13341014799154333,
+        "ci95_low": 0.10359408033826638,
+        "ci95_high": 0.1649048625792812
+      },
+      "top5": {
+        "mean": 0.48009936575052853,
+        "ci95_low": 0.4376321353065539,
+        "ci95_high": 0.5264270613107822
+      },
+      "ece": {
+        "mean": 0.05928732414595609,
+        "ci95_low": 0.03151662287442112,
+        "ci95_high": 0.08823357679729545
+      },
+      "nll": {
+        "mean": 3.5519013493061067,
+        "ci95_low": 3.3922319412231445,
+        "ci95_high": 3.7017585694789887
+      },
+      "brier": {
+        "mean": 0.9465438114404678,
+        "ci95_low": 0.9348826378583908,
+        "ci95_high": 0.957226786017418
+      }
+    }
+  },
+  "calibrated_bayesian_aux": {
+    "point_estimate": {
+      "top1": 0.12896405919661733,
+      "top5": 0.5116279069767442,
+      "ece": 0.04538663887826384,
+      "nll": 3.4404296875,
+      "brier": 0.940420389175415
+    },
+    "bootstrap": {
+      "top1": {
+        "mean": 0.12916279069767445,
+        "ci95_low": 0.1014799154334038,
+        "ci95_high": 0.15856236786469344
+      },
+      "top5": {
+        "mean": 0.5122832980972516,
+        "ci95_low": 0.4693446088794926,
+        "ci95_high": 0.5581395348837209
+      },
+      "ece": {
+        "mean": 0.04509473445154648,
+        "ci95_low": 0.014305529163768368,
+        "ci95_high": 0.07206649951967578
+      },
+      "nll": {
+        "mean": 3.4373874425888062,
+        "ci95_low": 3.260737657546997,
+        "ci95_high": 3.6423654675483705
+      },
+      "brier": {
+        "mean": 0.9402181700468063,
+        "ci95_low": 0.9303772523999214,
+        "ci95_high": 0.9498053252696991
+      }
+    }
+  }
+}

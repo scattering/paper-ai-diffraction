@@ -1,0 +1,82 @@
+{
+  "checkpoint": "/scratch/09870/williamratcliff/ai_diffraction_models/xrd_model_fxexll5y_best.pth",
+  "eval_data_path": "/work2/09870/williamratcliff/rruff-benchmark/RRUFF_usable_plus_recoverable_325_with_labels_maxnorm.hdf5",
+  "counts": {
+    "n": 325,
+    "valid_single_match": 0,
+    "ambiguous_multi_match": 0,
+    "invalid_zero_match": 325,
+    "single_match_correct": 0
+  },
+  "rates_pct": {
+    "valid_single_match": 0.0,
+    "ambiguous_multi_match": 0.0,
+    "invalid_zero_match": 100.0,
+    "single_match_correct_within_all": 0.0
+  },
+  "examples": {
+    "ambiguous": [],
+    "invalid": [
+      {
+        "index": 0,
+        "true_eg": 5
+      },
+      {
+        "index": 1,
+        "true_eg": 5
+      },
+      {
+        "index": 2,
+        "true_eg": 5
+      },
+      {
+        "index": 3,
+        "true_eg": 18
+      },
+      {
+        "index": 4,
+        "true_eg": 6
+      },
+      {
+        "index": 128,
+        "true_eg": 76
+      },
+      {
+        "index": 129,
+        "true_eg": 3
+      },
+      {
+        "index": 130,
+        "true_eg": 3
+      },
+      {
+        "index": 131,
+        "true_eg": 3
+      },
+      {
+        "index": 132,
+        "true_eg": 3
+      },
+      {
+        "index": 256,
+        "true_eg": 89
+      },
+      {
+        "index": 257,
+        "true_eg": 76
+      },
+      {
+        "index": 258,
+        "true_eg": 76
+      },
+      {
+        "index": 259,
+        "true_eg": 72
+      },
+      {
+        "index": 260,
+        "true_eg": 68
+      }
+    ]
+  }
+}
