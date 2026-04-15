@@ -41,13 +41,13 @@ def main():
 
     names = list(summary.keys())
     buckets = ["1", "2", "3", "4plus", "inf"]
-    width = 1180
+    width = 1240
     height = 620
     top = 70
     bottom = 135
     left1 = 85
     right1 = 40
-    panel_gap = 70
+    panel_gap = 110
     panel_w = 470
     panel_h = height - top - bottom
     left2 = left1 + panel_w + panel_gap
