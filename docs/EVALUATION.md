@@ -27,7 +27,10 @@ The `results/` directory intentionally contains only compact JSON outputs for:
 
 - final mixed champion (`82ept35h`)
 - mixed-200k pilot (`eeru8svx`)
-- mixed-200k positional ablations (`tdcywn8i`, `m02320f0`, `fxexll5y`)
+- mixed-200k positional ablations:
+  - physics-aware PE only (`tdcywn8i`)
+  - coordinate channel only (`m02320f0`)
+  - no explicit positional mechanism (`fxexll5y`)
 
 These JSONs are enough to regenerate the main benchmark summaries without rerunning the models. Generated figures and derived summaries should be written under `results/figures/` and are not tracked.
 
@@ -53,19 +56,19 @@ Mixed-200k pilot (`eeru8svx`):
 
 Mixed-200k positional ablation:
 
-- `physpe_only` (`tdcywn8i`)
+- `Physics-aware PE only` (`tdcywn8i`)
   - `RRUFF-325` calibrated Bayesian auxiliary `Top-1 / Top-5 / ECE = 13.85 / 39.38 / 3.34`
   - `RRUFF-473` calibrated Bayesian auxiliary `Top-1 / Top-5 / ECE = 13.95 / 47.57 / 1.85`
   - split-head validity:
     - `RRUFF-325 = 1.23%`
     - `RRUFF-473 = 1.48%`
-- `coord_only` (`m02320f0`)
+- `Coordinate channel only` (`m02320f0`)
   - `RRUFF-325` calibrated Bayesian auxiliary `Top-1 / Top-5 / ECE = 12.62 / 41.85 / 4.29`
   - `RRUFF-473` calibrated Bayesian auxiliary `Top-1 / Top-5 / ECE = 12.68 / 48.41 / 3.01`
   - split-head validity:
     - `RRUFF-325 = 0.00%`
     - `RRUFF-473 = 0.00%`
-- `plain` (`fxexll5y`)
+- `No explicit positional mechanism` (`fxexll5y`)
   - `RRUFF-325` calibrated Bayesian auxiliary `Top-1 / Top-5 / ECE = 12.62 / 43.38 / 4.97`
   - `RRUFF-473` calibrated Bayesian auxiliary `Top-1 / Top-5 / ECE = 12.90 / 51.16 / 4.54`
   - split-head validity:
