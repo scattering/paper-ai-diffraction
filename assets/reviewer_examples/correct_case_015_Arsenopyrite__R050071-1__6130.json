@@ -1,0 +1,27 @@
+{
+  "tag": "correct_case",
+  "benchmark_index": 15,
+  "case_id": "Arsenopyrite__R050071-1__6130",
+  "mineral": "Arsenopyrite",
+  "severity": "recoverable",
+  "fit_bucket": "fail",
+  "rwp": 0.12289926409721375,
+  "true_eg": 99,
+  "true_space_group": 2,
+  "true_space_group_symbol": "P-1",
+  "true_space_group_source": "rruff_fit_dif",
+  "paper_model_summary": {
+    "index": 15,
+    "true_eg": 99,
+    "pred_eg": 99,
+    "top5_eg": [
+      99,
+      4,
+      6,
+      5,
+      17
+    ],
+    "correct": true
+  },
+  "csv_path": "assets/reviewer_examples/correct_case_015_Arsenopyrite__R050071-1__6130.csv"
+}

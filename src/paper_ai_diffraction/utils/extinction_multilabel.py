@@ -53,9 +53,10 @@ SYSTEM_SLICE = slice(0, 7)
 LATTICE_SLICE = slice(7, 12)
 OPERATOR_SLICE = slice(12, len(FEATURES))
 
-DEFAULT_CANONICAL_TABLE = Path(__file__).resolve().parents[1] / "Post_Processing" / "canonical_extinction_to_space_group.csv"
-DEFAULT_FINAL_TABLE = Path(__file__).resolve().parents[1] / "Post_Processing" / "FINAL_SPG_ExtG_CrysS_Table.csv"
-DEFAULT_SG_LOOKUP = Path(__file__).resolve().parents[1] / "Post_Processing" / "spacegroup_lookup.csv"
+_ASSET_LOOKUP_DIR = Path(__file__).resolve().parents[3] / "assets" / "lookups"
+DEFAULT_CANONICAL_TABLE = _ASSET_LOOKUP_DIR / "canonical_extinction_to_space_group.csv"
+DEFAULT_FINAL_TABLE = _ASSET_LOOKUP_DIR / "FINAL_SPG_ExtG_CrysS_Table.csv"
+DEFAULT_SG_LOOKUP = _ASSET_LOOKUP_DIR / "spacegroup_lookup.csv"
 
 
 @dataclass(frozen=True)

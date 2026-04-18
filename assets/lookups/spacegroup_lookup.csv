@@ -1,0 +1,231 @@
+Space Group Number,Canonical Extinction Group,Index,Laue Group,Crystal System
+1,P -,28,-1,Triclinic
+2,P -,28,-1,Triclinic
+3,"P - 1 1 (equiv: P 1 - 1, P 1 1 -)",35,2/m,Monoclinic
+4,"P 21 1 1 (equiv: P 1 21 1, P 1 1 21)",52,2/m,Monoclinic
+5,"C - 1 1 (equiv: B - 1 1, I - 1 1, C 1 - 1, A 1 - 1, I 1 - 1, B 1 1 -, A 1 1 -, I 1 1 -)",3,2/m,Monoclinic
+6,"P - 1 1 (equiv: P 1 - 1, P 1 1 -)",35,2/m,Monoclinic
+7,"P b 1 1 (equiv: P c 1 1, P n 1 1, P 1 a 1, P 1 c 1, P 1 n 1, P 1 1 a, P 1 1 b, P 1 1 n)",65,2/m,Monoclinic
+8,"C - 1 1 (equiv: B - 1 1, I - 1 1, C 1 - 1, A 1 - 1, I 1 - 1, B 1 1 -, A 1 1 -, I 1 1 -)",3,2/m,Monoclinic
+9,"C n 1 1 (equiv: B b 1 1, I c 1 1, C 1 c 1, A 1 n 1, I 1 a 1, B 1 1 n, A 1 1 a, I 1 1 b)",8,2/m,Monoclinic
+10,"P - 1 1 (equiv: P 1 - 1, P 1 1 -)",35,2/m,Monoclinic
+11,"P 21 1 1 (equiv: P 1 21 1, P 1 1 21)",52,2/m,Monoclinic
+12,"C - 1 1 (equiv: B - 1 1, I - 1 1, C 1 - 1, A 1 - 1, I 1 - 1, B 1 1 -, A 1 1 -, I 1 1 -)",3,2/m,Monoclinic
+13,"P b 1 1 (equiv: P c 1 1, P n 1 1, P 1 a 1, P 1 c 1, P 1 n 1, P 1 1 a, P 1 1 b, P 1 1 n)",65,2/m,Monoclinic
+14,"P 21/b 1 1 (equiv: P 21/c 1 1, P 21/n 1 1, P 1 21/a 1, P 1 21/c 1, P 1 21/n 1, P 1 1 21/a, P 1 1 21/b, P 1 1 21/n)",54,2/m,Monoclinic
+15,"C n 1 1 (equiv: B b 1 1, I c 1 1, C 1 c 1, A 1 n 1, I 1 a 1, B 1 1 n, A 1 1 a, I 1 1 b)",8,2/m,Monoclinic
+16,P - - -,29,mmm,Orthorhombic
+17,"P - - 21 (equiv: P - 21 -, P 21 - -)",30,mmm,Orthorhombic
+18,"P - 21 21 (equiv: P 21 - 21, P 21 21 -)",37,mmm,Orthorhombic
+19,P 21 21 21,53,mmm,Orthorhombic
+20,"C - - 21 (equiv: B - 21 -, A 21 - -)",2,mmm,Orthorhombic
+21,"C - - - (equiv: B - - -, A - - -)",1,mmm,Orthorhombic
+22,F - - -,9,mmm,Orthorhombic
+23,I - - -,17,mmm,Orthorhombic
+24,I - - -,17,mmm,Orthorhombic
+25,P - - -,29,mmm,Orthorhombic
+26,"P - - a (equiv: P - - b, P - a -, P - c -, P b - -, P c - -)",31,mmm,Orthorhombic
+27,"P - a a (equiv: P b - b, P c c -)",39,mmm,Orthorhombic
+28,"P - - a (equiv: P - - b, P - a -, P - c -, P b - -, P c - -)",31,mmm,Orthorhombic
+29,"P - a b (equiv: P - c a, P b - a, P b c -, P c - b, P c a -)",40,mmm,Orthorhombic
+30,"P - a n (equiv: P - n a, P b - n, P c n -, P n - b, P n c -)",41,mmm,Orthorhombic
+31,"P - - n (equiv: P - n -, P n - -)",34,mmm,Orthorhombic
+32,"P - c b (equiv: P b a -, P c - a)",45,mmm,Orthorhombic
+33,"P - c n (equiv: P - n b, P b n -, P c - n, P n - a, P n a -)",47,mmm,Orthorhombic
+34,"P - n n (equiv: P n - n, P n n -)",50,mmm,Orthorhombic
+35,"C - - - (equiv: B - - -, A - - -)",1,mmm,Orthorhombic
+36,"C - c - (equiv: C c - -, B - - b, B b - -, A - - a, A - a -)",5,mmm,Orthorhombic
+37,"C c c - (equiv: B b - b, A - a a)",7,mmm,Orthorhombic
+38,"C - - - (equiv: B - - -, A - - -)",1,mmm,Orthorhombic
+39,"C - - (ab) (equiv: B - (ac)-, A(bc)- -)",0,mmm,Orthorhombic
+40,"C - c - (equiv: C c - -, B - - b, B b - -, A - - a, A - a -)",5,mmm,Orthorhombic
+41,"C - c (ab) (equiv: C c - (ab), B - (ac)b, B b (ac)-, A(bc)- a, A(bc)a -)",4,mmm,Orthorhombic
+42,F - - -,9,mmm,Orthorhombic
+43,"F - d d (equiv: F d - d, F d d -)",11,mmm,Orthorhombic
+44,I - - -,17,mmm,Orthorhombic
+45,"I - c b (equiv: I c - a, I b a -)",20,mmm,Orthorhombic
+46,"I - - (ab) (equiv: I - (ac)-, I(bc)- -)",16,mmm,Orthorhombic
+47,P - - -,29,mmm,Orthorhombic
+48,P n n n,81,mmm,Orthorhombic
+49,"P - a a (equiv: P b - b, P c c -)",39,mmm,Orthorhombic
+50,"P b a n (equiv: P c n a, P n c b)",67,mmm,Orthorhombic
+51,"P - - a (equiv: P - - b, P - a -, P - c -, P b - -, P c - -)",31,mmm,Orthorhombic
+52,"P b n n (equiv: P c n n, P n a n, P n c n, P n n a, P n n b)",71,mmm,Orthorhombic
+53,"P - a n (equiv: P - n a, P b - n, P c n -, P n - b, P n c -)",41,mmm,Orthorhombic
+54,"P b a a (equiv: P b a b, P b c b, P c a a, P c c a, P c c b)",66,mmm,Orthorhombic
+55,"P - c b (equiv: P b a -, P c - a)",45,mmm,Orthorhombic
+56,"P b n b (equiv: P c c n, P n a a)",70,mmm,Orthorhombic
+57,"P - a b (equiv: P - c a, P b - a, P b c -, P c - b, P c a -)",40,mmm,Orthorhombic
+58,"P - n n (equiv: P n - n, P n n -)",50,mmm,Orthorhombic
+59,"P - - n (equiv: P - n -, P n - -)",34,mmm,Orthorhombic
+60,"P b c n (equiv: P b n a, P c a n, P c n b, P n a b, P n c a)",69,mmm,Orthorhombic
+61,P b c a (equiv: P c a b),68,mmm,Orthorhombic
+62,"P - c n (equiv: P - n b, P b n -, P c - n, P n - a, P n a -)",47,mmm,Orthorhombic
+63,"C - c - (equiv: C c - -, B - - b, B b - -, A - - a, A - a -)",5,mmm,Orthorhombic
+64,"C - c (ab) (equiv: C c - (ab), B - (ac)b, B b (ac)-, A(bc)- a, A(bc)a -)",4,mmm,Orthorhombic
+65,"C - - - (equiv: B - - -, A - - -)",1,mmm,Orthorhombic
+66,"C c c - (equiv: B b - b, A - a a)",7,mmm,Orthorhombic
+67,"C - - (ab) (equiv: B - (ac)-, A(bc)- -)",0,mmm,Orthorhombic
+68,"C c c (ab) (equiv: B b (ac)b, A(bc)a a)",6,mmm,Orthorhombic
+69,F - - -,9,mmm,Orthorhombic
+70,F d d d,15,mmm,Orthorhombic
+71,I - - -,17,mmm,Orthorhombic
+72,"I - c b (equiv: I c - a, I b a -)",20,mmm,Orthorhombic
+73,I b c a,27,mmm,Orthorhombic
+74,"I - - (ab) (equiv: I - (ac)-, I(bc)- -)",16,mmm,Orthorhombic
+75,P - - -,29,4/m,Tetragonal
+76,P 41 - -,56,4/m,Tetragonal
+77,P 42 - -,58,4/m,Tetragonal
+78,P 41 - -,56,4/m,Tetragonal
+79,I - - -,17,4/m,Tetragonal
+80,I 41 - -,22,4/m,Tetragonal
+81,P - - -,29,4/m,Tetragonal
+82,I - - -,17,4/m,Tetragonal
+83,P - - -,29,4/m,Tetragonal
+84,P 42 - -,58,4/m,Tetragonal
+85,P n - -,72,4/m,Tetragonal
+86,P 42/n - -,60,4/m,Tetragonal
+87,I - - -,17,4/m,Tetragonal
+88,I 41/a - -,23,4/m,Tetragonal
+89,P - - -,29,4/mmm,Tetragonal
+90,P - 21 -,36,4/mmm,Tetragonal
+91,P 41 - -,56,4/mmm,Tetragonal
+92,P 41 21 -,57,4/mmm,Tetragonal
+93,P 42 - -,58,4/mmm,Tetragonal
+94,P 42 21 -,59,4/mmm,Tetragonal
+95,P 41 - -,56,4/mmm,Tetragonal
+96,P 41 21 -,57,4/mmm,Tetragonal
+97,I - - -,17,4/mmm,Tetragonal
+98,I 41 - -,22,4/mmm,Tetragonal
+99,P - - -,29,4/mmm,Tetragonal
+100,P - b -,42,4/mmm,Tetragonal
+101,P - c -,44,4/mmm,Tetragonal
+102,P - n -,48,4/mmm,Tetragonal
+103,P - c c,46,4/mmm,Tetragonal
+104,P - n c,49,4/mmm,Tetragonal
+105,P - - c,32,4/mmm,Tetragonal
+106,P - b c,43,4/mmm,Tetragonal
+107,I - - -,17,4/mmm,Tetragonal
+108,I - c -,19,4/mmm,Tetragonal
+109,I - - d,18,4/mmm,Tetragonal
+110,I - c d,21,4/mmm,Tetragonal
+111,P - - -,29,4/mmm,Tetragonal
+112,P - - c,32,4/mmm,Tetragonal
+113,P - 21 -,36,4/mmm,Tetragonal
+114,P - 21 c,38,4/mmm,Tetragonal
+115,P - - -,29,4/mmm,Tetragonal
+116,P - c -,44,4/mmm,Tetragonal
+117,P - b -,42,4/mmm,Tetragonal
+118,P - n -,48,4/mmm,Tetragonal
+119,I - - -,17,4/mmm,Tetragonal
+120,I - c -,19,4/mmm,Tetragonal
+121,I - - -,17,4/mmm,Tetragonal
+122,I - - d,18,4/mmm,Tetragonal
+123,P - - -,29,4/mmm,Tetragonal
+124,P - c c,46,4/mmm,Tetragonal
+125,P n b -,75,4/mmm,Tetragonal
+126,P n n c,80,4/mmm,Tetragonal
+127,P - b -,42,4/mmm,Tetragonal
+128,P - n c,49,4/mmm,Tetragonal
+129,P n - -,72,4/mmm,Tetragonal
+130,P n c c,78,4/mmm,Tetragonal
+131,P - - c,32,4/mmm,Tetragonal
+132,P - c -,44,4/mmm,Tetragonal
+133,P n b c,76,4/mmm,Tetragonal
+134,P n n -,79,4/mmm,Tetragonal
+135,P - b c,43,4/mmm,Tetragonal
+136,P - n -,48,4/mmm,Tetragonal
+137,P n - c,73,4/mmm,Tetragonal
+138,P n c -,77,4/mmm,Tetragonal
+139,I - - -,17,4/mmm,Tetragonal
+140,I - c -,19,4/mmm,Tetragonal
+141,I a - d,25,4/mmm,Tetragonal
+142,I a c d,26,4/mmm,Tetragonal
+143,P - - -,29,-3,Trigonal
+144,P 31 - -,55,-3,Trigonal
+145,P 31 - -,55,-3,Trigonal
+146,"R (obv) - - (equiv: R (rev) - -, R - - -)",82,-3,Trigonal
+147,P - - -,29,-3,Trigonal
+148,"R (obv) - - (equiv: R (rev) - -, R - - -)",82,-3,Trigonal
+149,P - - -,29,-3m,Trigonal
+150,P - - -,29,-3m,Trigonal
+151,P 31 - -,55,-3m,Trigonal
+152,P 31 - -,55,-3m,Trigonal
+153,P 31 - -,55,-3m,Trigonal
+154,P 31 - -,55,-3m,Trigonal
+155,"R (obv) - - (equiv: R (rev) - -, R - - -)",82,-3m,Trigonal
+156,P - - -,29,-3m,Trigonal
+157,P - - -,29,-3m,Trigonal
+158,P - c -,44,-3m,Trigonal
+159,P - - c,32,-3m,Trigonal
+160,"R (obv) - - (equiv: R (rev) - -, R - - -)",82,-3m,Trigonal
+161,"R (obv)- - c (equiv: R (rev)- - c, R - - c)",83,-3m,Trigonal
+162,P - - -,29,-3m,Trigonal
+163,P - - c,32,-3m,Trigonal
+164,P - - -,29,-3m,Trigonal
+165,P - c -,44,-3m,Trigonal
+166,"R (obv) - - (equiv: R (rev) - -, R - - -)",82,-3m,Trigonal
+167,"R (obv)- - c (equiv: R (rev)- - c, R - - c)",83,-3m,Trigonal
+168,P - - -,29,6/m,Hexagonal
+169,P 61 - -,61,6/m,Hexagonal
+170,P 61 - -,61,6/m,Hexagonal
+171,P 62 - -,62,6/m,Hexagonal
+172,P 62 - -,62,6/m,Hexagonal
+173,P 63 - -,63,6/m,Hexagonal
+174,P - - -,29,6/m,Hexagonal
+175,P - - -,29,6/m,Hexagonal
+176,P 63 - -,63,6/m,Hexagonal
+177,P - - -,29,6/mmm,Hexagonal
+178,P 61 - -,61,6/mmm,Hexagonal
+179,P 61 - -,61,6/mmm,Hexagonal
+180,P 62 - -,62,6/mmm,Hexagonal
+181,P 62 - -,62,6/mmm,Hexagonal
+182,P 63 - -,63,6/mmm,Hexagonal
+183,P - - -,29,6/mmm,Hexagonal
+184,P - c c,46,6/mmm,Hexagonal
+185,P - c -,44,6/mmm,Hexagonal
+186,P - - c,32,6/mmm,Hexagonal
+187,P - - -,29,6/mmm,Hexagonal
+188,P - c -,44,6/mmm,Hexagonal
+189,P - - -,29,6/mmm,Hexagonal
+190,P - - c,32,6/mmm,Hexagonal
+191,P - - -,29,6/mmm,Hexagonal
+192,P - c c,46,6/mmm,Hexagonal
+193,P - c -,44,6/mmm,Hexagonal
+194,P - - c,32,6/mmm,Hexagonal
+195,P - - -,29,m-3,Cubic
+196,F - - -,9,m-3,Cubic
+197,I - - -,17,m-3,Cubic
+198,P 21 - -,51,m-3,Cubic
+199,I - - -,17,m-3,Cubic
+200,P - - -,29,m-3,Cubic
+201,P n - -,72,m-3,Cubic
+202,F - - -,9,m-3,Cubic
+203,F d - -,13,m-3,Cubic
+204,I - - -,17,m-3,Cubic
+205,P a - -,64,m-3,Cubic
+206,I a - -,24,m-3,Cubic
+207,P - - -,29,m-3m,Cubic
+208,P 42 - -,58,m-3m,Cubic
+209,F - - -,9,m-3m,Cubic
+210,F 41 - -,12,m-3m,Cubic
+211,I - - -,17,m-3m,Cubic
+212,P 41 - -,56,m-3m,Cubic
+213,P 41 - -,56,m-3m,Cubic
+214,I 41 - -,22,m-3m,Cubic
+215,P - - -,29,m-3m,Cubic
+216,F - - -,9,m-3m,Cubic
+217,I - - -,17,m-3m,Cubic
+218,P - - n,33,m-3m,Cubic
+219,F - - c,10,m-3m,Cubic
+220,I - - d,18,m-3m,Cubic
+221,P - - -,29,m-3m,Cubic
+222,P n - n,74,m-3m,Cubic
+223,P - - n,33,m-3m,Cubic
+224,P n - -,72,m-3m,Cubic
+225,F - - -,9,m-3m,Cubic
+226,F - - c,10,m-3m,Cubic
+227,F d - -,13,m-3m,Cubic
+228,F d - c,14,m-3m,Cubic
+229,I - - -,17,m-3m,Cubic
+230,I a - d,25,m-3m,Cubic

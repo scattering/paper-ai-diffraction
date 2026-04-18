@@ -1,0 +1,20 @@
+{
+  "benchmark_h5_basename": "RRUFF_usable_plus_recoverable_325_with_labels_maxnorm.hdf5",
+  "failure_json": "results/mixed2500k_compare_325_failure_modes_655279.json",
+  "model_key": null,
+  "metadata_csv": "reviewer_case_metadata.csv",
+  "examples": {
+    "correct_case": {
+      "csv_path": "assets/reviewer_examples/correct_case_015_Arsenopyrite__R050071-1__6130.csv",
+      "json_path": "assets/reviewer_examples/correct_case_015_Arsenopyrite__R050071-1__6130.json",
+      "case_id": "Arsenopyrite__R050071-1__6130",
+      "true_eg": 99
+    },
+    "failure_case": {
+      "csv_path": "assets/reviewer_examples/failure_case_000_Actinolite__R050336-1__5330.csv",
+      "json_path": "assets/reviewer_examples/failure_case_000_Actinolite__R050336-1__5330.json",
+      "case_id": "Actinolite__R050336-1__5330",
+      "true_eg": 5
+    }
+  }
+}

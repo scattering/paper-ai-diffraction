@@ -1,0 +1,39 @@
+"""Reviewer-facing single-pattern inference helpers."""
+
+from paper_ai_diffraction.reviewer.notebook_support import (
+    REVIEWER_LOOKUP_DIR,
+    REVIEWER_TOPOLOGY_JSON,
+    build_model_bundle,
+    decode_bytes,
+    describe_topology_relation,
+    ext_group_to_space_groups,
+    infer_single_pattern,
+    load_example_manifest,
+    load_example_metadata,
+    load_extinction_resources,
+    load_precomputed_benchmark_summary,
+    load_topology_assets,
+    normalize_and_interpolate_pattern,
+    normalize_prediction_record,
+    read_pattern_csv,
+    space_group_to_ext_group,
+)
+
+__all__ = [
+    "REVIEWER_LOOKUP_DIR",
+    "REVIEWER_TOPOLOGY_JSON",
+    "build_model_bundle",
+    "decode_bytes",
+    "describe_topology_relation",
+    "ext_group_to_space_groups",
+    "infer_single_pattern",
+    "load_example_manifest",
+    "load_example_metadata",
+    "load_extinction_resources",
+    "load_precomputed_benchmark_summary",
+    "load_topology_assets",
+    "normalize_and_interpolate_pattern",
+    "normalize_prediction_record",
+    "read_pattern_csv",
+    "space_group_to_ext_group",
+]

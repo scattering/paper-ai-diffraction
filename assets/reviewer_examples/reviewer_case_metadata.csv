@@ -1,0 +1,3 @@
+case_id,dif_filename,space_group_symbol,space_group_number,mapped_extinction_group,space_group_source
+Arsenopyrite__R050071-1__6130,Arsenopyrite__R050071-1__Powder__DIF_File__6130.txt,P-1,2,99,rruff_fit_dif
+Actinolite__R050336-1__5330,Actinolite__R050336-1__Powder__DIF_File__5330.txt,C2/m,12,5,rruff_fit_dif

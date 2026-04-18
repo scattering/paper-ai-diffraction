@@ -12,6 +12,18 @@ The repo does **not** bundle model checkpoints or benchmark HDF5 files. Those co
 - Zenodo checkpoints: see [reproducibility/checkpoint_manifest.csv](/tmp/paper-ai-diffraction/reproducibility/checkpoint_manifest.csv)
 - external benchmark/trainready datasets: see [reproducibility/dataset_manifest.csv](/tmp/paper-ai-diffraction/reproducibility/dataset_manifest.csv)
 
+The repo *does* bundle compact reviewer-facing artifacts:
+- two example diffraction CSVs derived from the paper benchmark
+- their paired JSON metadata
+- SG/EG lookup CSVs
+- a compact prior JSON/CSV
+- a compact precomputed `RRUFF-325` summary JSON
+
+Those are sufficient for the shipped notebook walkthrough without Box or the full RRUFF benchmark.
+
+Reviewer-facing notebook support is documented in:
+- [REVIEWER_NOTEBOOK.md](/tmp/paper-ai-diffraction/docs/REVIEWER_NOTEBOOK.md)
+
 Current Zenodo draft:
 - [zenodo.org/deposit/19558452](https://zenodo.org/deposit/19558452)
 
@@ -79,6 +91,16 @@ Calibration sweep figure from an external sweep JSON:
 export CAL_SWEEP_JSON=/path/to/decoder_temp_sweep.json
 ./scripts/make_calibration_figure.sh
 ```
+
+Reviewer-support artifact generation:
+
+```bash
+python scripts/export_prior_asset.py --prior-h5 /path/to/trainready.hdf5 --output-csv results/reviewer/ext_group_priors.csv --output-json results/reviewer/ext_group_priors.json
+python scripts/export_rruff_examples.py --benchmark-h5 /path/to/RRUFF_usable_plus_recoverable_325_with_labels_maxnorm.hdf5 --failure-json results/mixed2500k_compare_325_failure_modes_655279.json --output-dir assets/reviewer_examples
+python scripts/precompute_benchmark_inference.py --checkpoint external/checkpoints/xrd_model_82ept35h_best.pth --config configs/final_mixed_2500k_dualsource.json --benchmark-h5 /path/to/RRUFF_usable_plus_recoverable_325_with_labels_maxnorm.hdf5 --prior-h5 /path/to/trainready.hdf5 --output-json results/reviewer/rruff325_precomputed_inference.json
+```
+
+If `results/reviewer/rruff325_precomputed_inference.json` is present, the reviewer notebook can browse the full paper-backed 325-example summary directly instead of recomputing it inside Jupyter.
 
 ## Repo Contract
 

@@ -1,0 +1,27 @@
+{
+  "tag": "failure_case",
+  "benchmark_index": 0,
+  "case_id": "Actinolite__R050336-1__5330",
+  "mineral": "Actinolite",
+  "severity": "recoverable",
+  "fit_bucket": "fail",
+  "rwp": 0.16142818331718445,
+  "true_eg": 5,
+  "true_space_group": 12,
+  "true_space_group_symbol": "C2/m",
+  "true_space_group_source": "rruff_fit_dif",
+  "paper_model_summary": {
+    "index": 0,
+    "true_eg": 5,
+    "pred_eg": 4,
+    "top5_eg": [
+      4,
+      5,
+      75,
+      99,
+      17
+    ],
+    "correct": false
+  },
+  "csv_path": "assets/reviewer_examples/failure_case_000_Actinolite__R050336-1__5330.csv"
+}
