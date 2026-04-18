@@ -15,6 +15,10 @@ from paper_ai_diffraction.reviewer.notebook_support import (
     load_topology_assets,
     normalize_and_interpolate_pattern,
     normalize_prediction_record,
+    plot_pattern_overlay,
+    plot_precomputed_summary,
+    plot_topk_probabilities,
+    plot_topology_path,
     read_pattern_csv,
     space_group_to_ext_group,
 )
@@ -34,6 +38,10 @@ __all__ = [
     "load_topology_assets",
     "normalize_and_interpolate_pattern",
     "normalize_prediction_record",
+    "plot_pattern_overlay",
+    "plot_precomputed_summary",
+    "plot_topk_probabilities",
+    "plot_topology_path",
     "read_pattern_csv",
     "space_group_to_ext_group",
 ]

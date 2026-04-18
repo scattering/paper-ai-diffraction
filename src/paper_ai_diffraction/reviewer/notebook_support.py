@@ -7,6 +7,7 @@ from pathlib import Path
 from typing import Any
 
 import h5py
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import torch
@@ -475,3 +476,146 @@ def ext_group_to_space_groups(ext_group: int, resources_or_bundle: dict[str, Any
 def space_group_to_ext_group(space_group: int, resources_or_bundle: dict[str, Any] | ModelBundle) -> int | None:
     mapping = resources_or_bundle.sg_to_eg if isinstance(resources_or_bundle, ModelBundle) else resources_or_bundle["sg_to_eg"]
     return mapping.get(int(space_group))
+
+
+def plot_pattern_overlay(prep: dict[str, Any]) -> tuple[Any, Any]:
+    fig, ax = plt.subplots(figsize=(10, 4))
+    ax.plot(prep["source_two_theta"], prep["source_intensity"], label="source CSV", alpha=0.7)
+    ax.plot(
+        prep["target_two_theta"],
+        prep["target_intensity"],
+        label="model-grid interpolation",
+        linewidth=1.2,
+    )
+    ax.set_xlabel("2theta")
+    ax.set_ylabel("normalized intensity")
+    ax.set_title("Pattern preprocessing: original vs. resampled")
+    ax.legend()
+    ax.grid(alpha=0.2)
+    fig.tight_layout()
+    return fig, ax
+
+
+def plot_topk_probabilities(result: dict[str, Any]) -> tuple[Any, Any]:
+    selected = result["decoders"][result["selected_decoder"]]
+    labels = [f"EG {int(eg)}" for eg in selected["top5_eg"]]
+    probs = [float(v) for v in selected["top5_prob"]]
+
+    fig, ax = plt.subplots(figsize=(8, 3.5))
+    bars = ax.bar(labels, probs, color=["#1f77b4"] + ["#9ecae1"] * max(len(labels) - 1, 0))
+    ax.set_ylabel("probability")
+    ax.set_title(f"Top-k extinction-group probabilities ({result['selected_decoder']})")
+    ax.set_ylim(0.0, max(probs) * 1.2 if probs else 1.0)
+    ax.grid(axis="y", alpha=0.2)
+    for bar, prob in zip(bars, probs):
+        ax.text(
+            bar.get_x() + bar.get_width() / 2,
+            bar.get_height() + 0.005,
+            f"{prob:.3f}",
+            ha="center",
+            va="bottom",
+            fontsize=9,
+        )
+    fig.tight_layout()
+    return fig, ax
+
+
+def plot_topology_path(
+    relation_info: dict[str, Any],
+    topology_assets: dict[str, Any],
+    *,
+    true_eg: int | None = None,
+    pred_eg: int | None = None,
+) -> tuple[Any, Any]:
+    path = relation_info.get("path") or []
+    nodes = topology_assets["nodes"]
+
+    labels: list[str] = []
+    colors: list[str] = []
+    for idx, node in enumerate(path):
+        merged = [int(v) + 1 for v in nodes.get(node, {}).get("merged_from", [])]
+        label = f"node {node}\nEG {', '.join(str(v) for v in merged)}"
+        if idx == 0:
+            label += "\ntrue"
+            colors.append("#2ca02c")
+        elif idx == len(path) - 1:
+            label += "\npred"
+            colors.append("#d62728")
+        else:
+            colors.append("#bdbdbd")
+        labels.append(label)
+
+    if not labels:
+        fig, ax = plt.subplots(figsize=(6, 1.8))
+        ax.text(0.5, 0.5, "No topology path available", ha="center", va="center")
+        ax.axis("off")
+        fig.tight_layout()
+        return fig, ax
+
+    x = np.arange(len(labels))
+    y = np.zeros_like(x, dtype=float)
+    fig_w = max(6.0, 1.8 * len(labels))
+    fig, ax = plt.subplots(figsize=(fig_w, 2.6))
+    ax.plot(x, y, color="#6b6b6b", linewidth=2, zorder=1)
+    ax.scatter(x, y, s=400, c=colors, edgecolors="black", zorder=2)
+    for xi, label in zip(x, labels):
+        ax.text(xi, 0.15, label, ha="center", va="bottom", fontsize=9)
+
+    title = f"Condensed DAG path: {relation_info.get('relation', 'unknown')}"
+    if true_eg is not None and pred_eg is not None:
+        title += f" (true EG {true_eg} -> predicted EG {pred_eg})"
+    ax.set_title(title)
+    ax.set_ylim(-0.35, 0.9)
+    ax.set_xlim(-0.5, len(labels) - 0.5)
+    ax.axis("off")
+    fig.tight_layout()
+    return fig, ax
+
+
+def plot_precomputed_summary(precomputed: dict[str, Any], topology_assets: dict[str, Any]) -> tuple[Any, Any]:
+    examples = precomputed.get("examples", [])
+    if not examples:
+        fig, ax = plt.subplots(figsize=(6, 2.5))
+        ax.text(0.5, 0.5, "No precomputed examples available", ha="center", va="center")
+        ax.axis("off")
+        fig.tight_layout()
+        return fig, ax
+
+    rows = []
+    for ex in examples:
+        relation = describe_topology_relation(int(ex["top1_eg"]), int(ex["true_eg"]), topology_assets)
+        rows.append(
+            {
+                "correct": int(ex["top1_eg"]) == int(ex["true_eg"]),
+                "top1_probability": float(ex.get("top1_probability", 0.0)),
+                "relation": relation["relation"],
+            }
+        )
+    df = pd.DataFrame(rows)
+
+    relation_order = ["exact", "descendant", "ancestor", "branch_jump", "unmapped"]
+    counts = df["relation"].value_counts().reindex(relation_order, fill_value=0)
+    exact_conf = df.loc[df["correct"], "top1_probability"].to_numpy(dtype=float)
+    wrong_conf = df.loc[~df["correct"], "top1_probability"].to_numpy(dtype=float)
+
+    fig, axes = plt.subplots(1, 2, figsize=(11, 3.8))
+
+    axes[0].bar(counts.index, counts.values, color=["#2ca02c", "#1f77b4", "#ffbf00", "#d62728", "#7f7f7f"])
+    axes[0].set_title("RRUFF-325 topology relation counts")
+    axes[0].set_ylabel("examples")
+    axes[0].tick_params(axis="x", rotation=20)
+    axes[0].grid(axis="y", alpha=0.2)
+
+    bins = np.linspace(0.0, 1.0, 16)
+    if len(exact_conf):
+        axes[1].hist(exact_conf, bins=bins, alpha=0.6, label="exact", color="#2ca02c")
+    if len(wrong_conf):
+        axes[1].hist(wrong_conf, bins=bins, alpha=0.6, label="wrong", color="#d62728")
+    axes[1].set_title("Top-1 confidence on precomputed RRUFF-325 set")
+    axes[1].set_xlabel("top-1 probability")
+    axes[1].set_ylabel("examples")
+    axes[1].legend()
+    axes[1].grid(alpha=0.2)
+
+    fig.tight_layout()
+    return fig, axes
