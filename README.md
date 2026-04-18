@@ -24,6 +24,12 @@ Those are sufficient for the shipped notebook walkthrough without Box or the ful
 Reviewer-facing notebook support is documented in:
 - [REVIEWER_NOTEBOOK.md](/tmp/paper-ai-diffraction/docs/REVIEWER_NOTEBOOK.md)
 
+Supported notebook usage paths:
+- local machine with the train/eval environment and a released checkpoint
+- TACC TAP on Stampede3 with the same repo checkout and checkpoint placement
+
+Google Colab is plausible for the lightweight checkpoint-only reviewer demo, but it is not the primary validated path.
+
 Current Zenodo draft:
 - [zenodo.org/deposit/19558452](https://zenodo.org/deposit/19558452)
 

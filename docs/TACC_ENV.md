@@ -57,3 +57,39 @@ The important practical constraint is:
 
 - do not rely on older shared Python 3.9 environments for this repo
 - use a fresh Python 3.12 environment for reproducible results
+
+## Reviewer Notebook On TAP
+
+For the interactive reviewer notebook, the intended TACC path is TAP on Stampede3.
+
+Minimal sequence:
+
+```bash
+module purge
+module load gcc/13.2.0
+module load python/3.12.11
+
+python3 -m venv /scratch/$USER/venvs/paper-ai-diffraction-train-eval-py312
+source /scratch/$USER/venvs/paper-ai-diffraction-train-eval-py312/bin/activate
+
+python -m pip install --upgrade pip setuptools wheel
+cd /path/to/paper-ai-diffraction
+python -m pip install -e .
+mkdir -p external/checkpoints
+```
+
+Then place the released checkpoint at:
+
+```text
+external/checkpoints/xrd_model_82ept35h_best.pth
+```
+
+After that:
+
+1. open [tap.tacc.utexas.edu](https://tap.tacc.utexas.edu)
+2. launch Jupyter on Stampede3
+3. open [reviewer_walkthrough.ipynb](/tmp/paper-ai-diffraction/notebooks/reviewer_walkthrough.ipynb)
+
+The shipped notebook walkthrough on TAP works with the compact repo assets plus checkpoint alone. It does not require the full benchmark HDF5s.
+
+Only set `PRIOR_H5` if you want paper-faithful calibrated inference rather than checkpoint-only inference.
