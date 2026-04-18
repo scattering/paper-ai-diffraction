@@ -479,6 +479,12 @@ def space_group_to_ext_group(space_group: int, resources_or_bundle: dict[str, An
 
 
 def plot_pattern_overlay(prep: dict[str, Any]) -> tuple[Any, Any]:
+    """Plot the raw input pattern against the model-grid resampling.
+
+    Color convention:
+    - blue: cleaned and normalized source CSV on its native 2theta grid
+    - orange: interpolated pattern on the model's fixed input grid
+    """
     fig, ax = plt.subplots(figsize=(10, 4))
     ax.plot(prep["source_two_theta"], prep["source_intensity"], label="source CSV", alpha=0.7)
     ax.plot(
@@ -497,6 +503,12 @@ def plot_pattern_overlay(prep: dict[str, Any]) -> tuple[Any, Any]:
 
 
 def plot_topk_probabilities(result: dict[str, Any]) -> tuple[Any, Any]:
+    """Plot the selected decoder's top-k extinction-group probabilities.
+
+    Color convention:
+    - dark blue: top-1 extinction-group prediction
+    - light blue: lower-ranked candidates in the same top-k list
+    """
     selected = result["decoders"][result["selected_decoder"]]
     labels = [f"EG {int(eg)}" for eg in selected["top5_eg"]]
     probs = [float(v) for v in selected["top5_prob"]]
@@ -527,6 +539,13 @@ def plot_topology_path(
     true_eg: int | None = None,
     pred_eg: int | None = None,
 ) -> tuple[Any, Any]:
+    """Plot the condensed-DAG path between the true and predicted extinction groups.
+
+    Color convention:
+    - green: true extinction-group node
+    - red: predicted extinction-group node
+    - gray: intermediate condensed-DAG nodes on the shortest path
+    """
     path = relation_info.get("path") or []
     nodes = topology_assets["nodes"]
 
@@ -573,6 +592,19 @@ def plot_topology_path(
 
 
 def plot_precomputed_summary(precomputed: dict[str, Any], topology_assets: dict[str, Any]) -> tuple[Any, Any]:
+    """Summarize the frozen RRUFF-325 benchmark results with two compact plots.
+
+    Left panel color convention:
+    - green: exact predictions
+    - blue: descendant-local errors
+    - yellow: ancestor-local errors
+    - red: branch jumps
+    - gray: unmapped cases
+
+    Right panel color convention:
+    - green histogram: exact predictions
+    - red histogram: wrong predictions
+    """
     examples = precomputed.get("examples", [])
     if not examples:
         fig, ax = plt.subplots(figsize=(6, 2.5))
