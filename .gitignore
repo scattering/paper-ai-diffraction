@@ -5,3 +5,8 @@ __pycache__/
 results/figures/
 venv/
 oryx-build-commands.txt
+notebooks/reviewer_walkthrough_eval_dchansew.ipynb
+external/checkpoints/zenodo_paper_repro.tar.gz
+notebooks/reviewer_walkthrough.html
+notebooks/reviewer_walkthrough.pdf
+notebooks/reviewer_walkthrough_eval.ipynb
