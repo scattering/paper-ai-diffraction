@@ -95,6 +95,8 @@ def main():
         parts.append(f'<line x1="{px:.1f}" y1="{top+plot_h}" x2="{px:.1f}" y2="{top+plot_h+6}" stroke="#222" />')
         parts.append(f'<text x="{px:.1f}" y="{top+plot_h+22}" text-anchor="middle" font-size="12" font-family="Helvetica,Arial,sans-serif">{label}</text>')
 
+    legend_x = left + 20
+
     parts.extend(
         [
             polyline(top1_pts, "#1f77b4"),
@@ -103,12 +105,12 @@ def main():
             circles(top5_pts, "#d62728"),
             f'<text x="{width/2:.1f}" y="{height-20}" text-anchor="middle" font-size="14" font-family="Helvetica,Arial,sans-serif">Temperature</text>',
             f'<text x="20" y="{height/2:.1f}" transform="rotate(-90 20 {height/2:.1f})" text-anchor="middle" font-size="14" font-family="Helvetica,Arial,sans-serif">Accuracy (%)</text>',
-            f'<line x1="{width-180}" y1="70" x2="{width-150}" y2="70" stroke="#1f77b4" stroke-width="2" />',
-            f'<circle cx="{width-165}" cy="70" r="4" fill="#1f77b4" />',
-            f'<text x="{width-140}" y="75" font-size="12" font-family="Helvetica,Arial,sans-serif">Top-1</text>',
-            f'<line x1="{width-180}" y1="95" x2="{width-150}" y2="95" stroke="#d62728" stroke-width="2" />',
-            f'<circle cx="{width-165}" cy="95" r="4" fill="#d62728" />',
-            f'<text x="{width-140}" y="100" font-size="12" font-family="Helvetica,Arial,sans-serif">Top-5</text>',
+            f'<line x1="{legend_x}" y1="70" x2="{legend_x+30}" y2="70" stroke="#1f77b4" stroke-width="2" />',
+            f'<circle cx="{legend_x+15}" cy="70" r="4" fill="#1f77b4" />',
+            f'<text x="{legend_x+40}" y="75" font-size="12" font-family="Helvetica,Arial,sans-serif">Top-1</text>',
+            f'<line x1="{legend_x}" y1="95" x2="{legend_x+30}" y2="95" stroke="#d62728" stroke-width="2" />',
+            f'<circle cx="{legend_x+15}" cy="95" r="4" fill="#d62728" />',
+            f'<text x="{legend_x+40}" y="100" font-size="12" font-family="Helvetica,Arial,sans-serif">Top-5</text>',
         ]
     )
     parts.append("</svg>")

@@ -8,15 +8,15 @@ python3 -c "import paper_ai_diffraction" >/dev/null 2>&1 || {
   exit 2
 }
 
-CAL_SWEEP_JSON="${CAL_SWEEP_JSON:-}"
+CAL_SWEEP_JSON="${CAL_SWEEP_JSON:-$ROOT/assets/figure_data/stage2c_r325_temp_sweep.json}"
 OUTDIR="${OUTDIR:-$ROOT/results/figures}"
 OUTPUT_SVG="${OUTPUT_SVG:-$OUTDIR/calibration_sweep.svg}"
 TITLE="${TITLE:-Calibration Sweep on Real RRUFF}"
 
 mkdir -p "$OUTDIR"
 
-if [[ -z "$CAL_SWEEP_JSON" ]]; then
-  echo "Set CAL_SWEEP_JSON to a compatible decoder temperature sweep JSON before running." >&2
+if [[ ! -f "$CAL_SWEEP_JSON" ]]; then
+  echo "Calibration sweep JSON not found: $CAL_SWEEP_JSON" >&2
   exit 2
 fi
 

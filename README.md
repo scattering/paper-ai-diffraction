@@ -91,11 +91,28 @@ export CANONICAL_CSV=/path/to/canonical_extinction_to_space_group.csv
 ./scripts/make_topology_flow_figure.sh
 ```
 
-Calibration sweep figure from an external sweep JSON:
+Calibration sweep figure from the bundled Stage-2c sweep JSON:
 
 ```bash
-export CAL_SWEEP_JSON=/path/to/decoder_temp_sweep.json
 ./scripts/make_calibration_figure.sh
+```
+
+Curriculum holdout figure from bundled paper values:
+
+```bash
+python scripts/make_curriculum_real_holdout.py
+```
+
+RRUFF-473 decoder-tradeoff figure from bundled paper values:
+
+```bash
+python scripts/make_stage_decoder_tradeoffs_rruff473.py
+```
+
+Physics-PE supplementary ruler figure from the bundled checkpoint-curve JSON:
+
+```bash
+python scripts/make_physics_pe_q2_ruler.py
 ```
 
 Reviewer-support artifact generation:

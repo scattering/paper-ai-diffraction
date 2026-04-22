@@ -19,10 +19,18 @@ For the validated Stampede figure path, see:
 - [plot_extinction_topology_flow.py](/tmp/paper-ai-diffraction/src/paper_ai_diffraction/topology/plot_extinction_topology_flow.py)
 - [plot_topological_error_distance.py](/tmp/paper-ai-diffraction/src/paper_ai_diffraction/topology/plot_topological_error_distance.py)
 - [plot_calibration_sweep.py](/tmp/paper-ai-diffraction/src/paper_ai_diffraction/eval/plot_calibration_sweep.py)
+- [make_curriculum_real_holdout.py](/tmp/paper-ai-diffraction/scripts/make_curriculum_real_holdout.py)
+- [make_stage_decoder_tradeoffs_rruff473.py](/tmp/paper-ai-diffraction/scripts/make_stage_decoder_tradeoffs_rruff473.py)
+- [make_physics_pe_q2_ruler.py](/tmp/paper-ai-diffraction/scripts/make_physics_pe_q2_ruler.py)
 
 ## Included Figure Asset
 
 - [extinction_group_adjacency.json](/tmp/paper-ai-diffraction/assets/topology/extinction_group_adjacency.json)
+
+## Included Compact Figure Inputs
+
+- [stage2c_r325_temp_sweep.json](/tmp/paper-ai-diffraction/assets/figure_data/stage2c_r325_temp_sweep.json)
+- [physics_pe_curve_82ept35h.json](/tmp/paper-ai-diffraction/assets/figure_data/physics_pe_curve_82ept35h.json)
 
 ## Figure Wrappers
 
@@ -37,7 +45,6 @@ Generated outputs are written under `results/figures/` and are intentionally not
 Current external inputs still needed for figure regeneration are:
 
 - `CANONICAL_CSV` for topology-flow rendering
-- `CAL_SWEEP_JSON` for calibration-sweep rendering
 
 Validated Stampede example for `CANONICAL_CSV`:
 
@@ -53,3 +60,10 @@ What still remains incomplete:
 
 - attention or curriculum plots retained in the manuscript
 - any figure paths that still depend on unreduced source-project scripts
+
+Current paper plots now source-backed directly in this repo are:
+
+- curriculum holdout
+- RRUFF-473 decoder tradeoffs
+- calibration sweep from the bundled Stage-2c JSON
+- physics-PE ruler supplementary figure

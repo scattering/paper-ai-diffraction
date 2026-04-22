@@ -1,0 +1,110 @@
+{
+  "split_checkpoint": "/scratch/09870/williamratcliff/ai_diffraction_models/xrd_model_9rwv1qly_best.pth",
+  "aux_checkpoint": "/scratch/09870/williamratcliff/ai_diffraction_models/xrd_model_9rwv1qly_best.pth",
+  "eval_data_path": "/work2/09870/williamratcliff/rruff-benchmark/RRUFF_usable_plus_recoverable_325_with_labels_maxnorm.hdf5",
+  "prior_data_path": "/scratch/09870/williamratcliff/ai_diffraction_generated/rruff_conditioned_2346k_v1_trainready.hdf5",
+  "seen_train_eg_count": 70,
+  "total_test_samples": 325,
+  "results": {
+    "aux_temp_1": {
+      "top1": 3.076923076923077,
+      "top3": 13.538461538461538,
+      "top5": 23.076923076923077
+    },
+    "frankenstein_temp_1_alpha_0.25": {
+      "top1": 2.769230769230769,
+      "top3": 12.307692307692308,
+      "top5": 21.23076923076923
+    },
+    "frankenstein_temp_1_alpha_0.50": {
+      "top1": 3.076923076923077,
+      "top3": 13.23076923076923,
+      "top5": 18.46153846153846
+    },
+    "frankenstein_temp_1_alpha_0.75": {
+      "top1": 3.3846153846153846,
+      "top3": 11.384615384615385,
+      "top5": 16.0
+    },
+    "aux_temp_1.5": {
+      "top1": 4.3076923076923075,
+      "top3": 16.615384615384617,
+      "top5": 27.692307692307693
+    },
+    "frankenstein_temp_1.5_alpha_0.25": {
+      "top1": 3.3846153846153846,
+      "top3": 13.23076923076923,
+      "top5": 21.53846153846154
+    },
+    "frankenstein_temp_1.5_alpha_0.50": {
+      "top1": 2.769230769230769,
+      "top3": 13.538461538461538,
+      "top5": 19.076923076923077
+    },
+    "frankenstein_temp_1.5_alpha_0.75": {
+      "top1": 4.0,
+      "top3": 11.384615384615385,
+      "top5": 16.307692307692307
+    },
+    "aux_temp_2": {
+      "top1": 4.3076923076923075,
+      "top3": 18.153846153846153,
+      "top5": 31.692307692307693
+    },
+    "frankenstein_temp_2_alpha_0.25": {
+      "top1": 4.0,
+      "top3": 14.461538461538462,
+      "top5": 22.153846153846153
+    },
+    "frankenstein_temp_2_alpha_0.50": {
+      "top1": 2.769230769230769,
+      "top3": 13.23076923076923,
+      "top5": 20.307692307692307
+    },
+    "frankenstein_temp_2_alpha_0.75": {
+      "top1": 4.0,
+      "top3": 11.384615384615385,
+      "top5": 16.307692307692307
+    },
+    "aux_temp_3": {
+      "top1": 5.230769230769231,
+      "top3": 22.46153846153846,
+      "top5": 38.15384615384615
+    },
+    "frankenstein_temp_3_alpha_0.25": {
+      "top1": 3.6923076923076925,
+      "top3": 14.76923076923077,
+      "top5": 23.384615384615383
+    },
+    "frankenstein_temp_3_alpha_0.50": {
+      "top1": 3.076923076923077,
+      "top3": 12.307692307692308,
+      "top5": 20.0
+    },
+    "frankenstein_temp_3_alpha_0.75": {
+      "top1": 4.0,
+      "top3": 11.384615384615385,
+      "top5": 16.615384615384617
+    },
+    "aux_temp_5": {
+      "top1": 9.538461538461538,
+      "top3": 27.384615384615383,
+      "top5": 43.07692307692308
+    },
+    "frankenstein_temp_5_alpha_0.25": {
+      "top1": 5.538461538461538,
+      "top3": 14.76923076923077,
+      "top5": 23.692307692307693
+    },
+    "frankenstein_temp_5_alpha_0.50": {
+      "top1": 3.076923076923077,
+      "top3": 12.923076923076923,
+      "top5": 20.0
+    },
+    "frankenstein_temp_5_alpha_0.75": {
+      "top1": 4.0,
+      "top3": 11.076923076923077,
+      "top5": 16.307692307692307
+    }
+  }
+}
