@@ -1,7 +1,7 @@
 # Zenodo Assets
 
-Current Zenodo draft:
-- [zenodo.org/deposit/19558452](https://zenodo.org/deposit/19558452)
+Zenodo archival package:
+- pending public record / DOI
 
 Final paper repo:
 - [github.com/scattering/paper-ai-diffraction](https://github.com/scattering/paper-ai-diffraction)

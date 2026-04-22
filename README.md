@@ -30,10 +30,10 @@ Supported notebook usage paths:
 
 Google Colab is plausible for the lightweight checkpoint-only reviewer demo, but it is not the primary validated path.
 
-Current Zenodo draft:
-- [zenodo.org/deposit/19558452](https://zenodo.org/deposit/19558452)
+Zenodo archival package:
+- pending public record / DOI
 
-After publication, replace the draft link above with the final Zenodo DOI and record URL.
+After publication, replace this placeholder with the final Zenodo DOI and public record URL.
 
 ## Install
 
