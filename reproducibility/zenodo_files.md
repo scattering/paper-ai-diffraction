@@ -31,6 +31,11 @@ Archive contents:
 
 These reviewer assets are small, derived, and paper-backed. They are intended to support the public notebook walkthrough without redistributing the full RRUFF benchmark.
 
+Benchmark note:
+- this package releases the paper-facing benchmark-construction scripts and documentation
+- it does not redistribute the upstream RRUFF-derived benchmark HDF5s or raw source files
+- see [docs/BENCHMARKS.md](/tmp/paper-ai-diffraction-fresh/docs/BENCHMARKS.md)
+
 Expected local placement for downloaded checkpoints:
 
 ```text

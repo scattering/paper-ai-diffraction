@@ -12,6 +12,12 @@ The repo does **not** bundle model checkpoints or benchmark HDF5 files. Those co
 - Zenodo checkpoints: see [reproducibility/checkpoint_manifest.csv](reproducibility/checkpoint_manifest.csv)
 - external benchmark/trainready datasets: see [reproducibility/dataset_manifest.csv](reproducibility/dataset_manifest.csv)
 
+Because the upstream RRUFF-derived benchmark files are not redistributed here, this repo
+publishes the benchmark-construction algorithms instead:
+- [docs/BENCHMARKS.md](docs/BENCHMARKS.md)
+- [scripts/reconstruct_rruff_473.py](scripts/reconstruct_rruff_473.py)
+- [scripts/build_rruff_325_from_473.py](scripts/build_rruff_325_from_473.py)
+
 The repo *does* bundle compact reviewer-facing artifacts:
 - two example diffraction CSVs derived from the paper benchmark
 - their paired JSON metadata
@@ -118,6 +124,18 @@ Physics-PE supplementary ruler figure from the bundled checkpoint-curve JSON:
 python scripts/make_physics_pe_q2_ruler.py
 ```
 
+Reconstruct the frozen `RRUFF-473` benchmark from an upstream manifest plus raw XY files:
+
+```bash
+python scripts/reconstruct_rruff_473.py --manifest-json /path/to/rruff_cukalpha_manifest.json --xy-dir /path/to/xy_raw --reference-manifest-json /path/to/option1_metadata_manifest.json --output-json results/rruff473_reconstruction_summary.json
+```
+
+Rebuild `RRUFF-325` deterministically from frozen `RRUFF-473`:
+
+```bash
+python scripts/build_rruff_325_from_473.py --input-h5 /path/to/RRUFF_option1_473_with_buckets_maxnorm.hdf5 --output-h5 /path/to/RRUFF_usable_plus_recoverable_325_with_labels_maxnorm.hdf5
+```
+
 Reviewer-support artifact generation:
 
 ```bash
@@ -140,5 +158,6 @@ If `results/reviewer/rruff325_precomputed_inference.json` is present, the review
 - [reproducibility/checkpoint_manifest.csv](reproducibility/checkpoint_manifest.csv)
 - [reproducibility/dataset_manifest.csv](reproducibility/dataset_manifest.csv)
 - [reproducibility/zenodo_files.md](reproducibility/zenodo_files.md)
+- [docs/BENCHMARKS.md](docs/BENCHMARKS.md)
 - [docs/EVALUATION.md](docs/EVALUATION.md)
 - [docs/FIGURES.md](docs/FIGURES.md)
