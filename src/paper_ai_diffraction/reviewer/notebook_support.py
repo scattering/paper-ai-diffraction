@@ -549,42 +549,85 @@ def plot_topology_path(
     path = relation_info.get("path") or []
     nodes = topology_assets["nodes"]
 
-    labels: list[str] = []
-    colors: list[str] = []
-    for idx, node in enumerate(path):
-        merged = [int(v) + 1 for v in nodes.get(node, {}).get("merged_from", [])]
-        label = f"node {node}\nEG {', '.join(str(v) for v in merged)}"
-        if idx == 0:
-            label += "\ntrue"
-            colors.append("#2ca02c")
-        elif idx == len(path) - 1:
-            label += "\npred"
-            colors.append("#d62728")
-        else:
-            colors.append("#bdbdbd")
-        labels.append(label)
-
-    if not labels:
+    if not path:
         fig, ax = plt.subplots(figsize=(6, 1.8))
         ax.text(0.5, 0.5, "No topology path available", ha="center", va="center")
         ax.axis("off")
         fig.tight_layout()
         return fig, ax
 
-    x = np.arange(len(labels))
-    y = np.zeros_like(x, dtype=float)
+    def _eg_label(node: str) -> str:
+        merged = [int(v) + 1 for v in nodes.get(node, {}).get("merged_from", [])]
+        return f"EG {', '.join(str(v) for v in merged)}"
+
+    # exact match: single node
+    if len(path) == 1:
+        eg_str = _eg_label(path[0])
+        fig, ax = plt.subplots(figsize=(4, 3))
+        ax.scatter([0], [0], s=800, c="#2ca02c", edgecolors="black", zorder=2)
+        ax.text(0, 0.22, eg_str, ha="center", va="bottom", fontsize=11, fontweight="bold")
+        ax.text(0, -0.22, "exact match", ha="center", va="top", fontsize=10, color="#2ca02c")
+        title = "Condensed DAG path: exact"
+        if true_eg is not None:
+            title += f" (EG {true_eg})"
+        ax.set_title(title)
+        ax.set_xlim(-1, 1)
+        ax.set_ylim(-0.6, 0.6)
+        ax.axis("off")
+        fig.tight_layout()
+        return fig, ax
+
+    # multi-node path
+    labels: list[str] = []
+    colors: list[str] = []
+    roles: list[str] = []
+    for idx, node in enumerate(path):
+        if idx == 0:
+            labels.append(_eg_label(node))
+            colors.append("#2ca02c")
+            roles.append("true")
+        elif idx == len(path) - 1:
+            labels.append(_eg_label(node))
+            colors.append("#d62728")
+            roles.append("pred")
+        else:
+            labels.append(_eg_label(node))
+            colors.append("#bdbdbd")
+            roles.append("mid")
+
+    x = np.arange(len(labels), dtype=float)
+    y = np.zeros_like(x)
     fig_w = max(6.0, 1.8 * len(labels))
     fig, ax = plt.subplots(figsize=(fig_w, 2.6))
-    ax.plot(x, y, color="#6b6b6b", linewidth=2, zorder=1)
+
+    for i in range(len(x) - 1):
+        ax.annotate(
+            "",
+            xy=(x[i + 1], 0),
+            xytext=(x[i], 0),
+            arrowprops=dict(
+                arrowstyle="-|>",
+                color="#6b6b6b",
+                lw=1.5,
+                shrinkA=12,
+                shrinkB=12,
+            ),
+            zorder=3,
+        )
+
     ax.scatter(x, y, s=400, c=colors, edgecolors="black", zorder=2)
-    for xi, label in zip(x, labels):
-        ax.text(xi, 0.15, label, ha="center", va="bottom", fontsize=9)
+    for xi, label, role in zip(x, labels, roles):
+        if role in ("true", "pred"):
+            ax.text(xi, 0.30, role, ha="center", va="bottom", fontsize=9, fontweight="bold")
+            ax.text(xi, 0.15, label, ha="center", va="bottom", fontsize=9)
+        else:
+            ax.text(xi, 0.15, label, ha="center", va="bottom", fontsize=9)
 
     title = f"Condensed DAG path: {relation_info.get('relation', 'unknown')}"
     if true_eg is not None and pred_eg is not None:
-        title += f" (true EG {true_eg} -> predicted EG {pred_eg})"
+        title += f" (true EG {true_eg} \u2192 predicted EG {pred_eg})"
     ax.set_title(title)
-    ax.set_ylim(-0.35, 0.9)
+    ax.set_ylim(-0.35, 1.0)
     ax.set_xlim(-0.5, len(labels) - 0.5)
     ax.axis("off")
     fig.tight_layout()
@@ -639,10 +682,10 @@ def plot_precomputed_summary(precomputed: dict[str, Any], topology_assets: dict[
     axes[0].grid(axis="y", alpha=0.2)
 
     bins = np.linspace(0.0, 1.0, 16)
-    if len(exact_conf):
-        axes[1].hist(exact_conf, bins=bins, alpha=0.6, label="exact", color="#2ca02c")
     if len(wrong_conf):
-        axes[1].hist(wrong_conf, bins=bins, alpha=0.6, label="wrong", color="#d62728")
+        axes[1].hist(wrong_conf, bins=bins, alpha=0.7, label="wrong", color="#d62728")
+    if len(exact_conf):
+        axes[1].hist(exact_conf, bins=bins, alpha=0.7, label="exact", color="#2ca02c")
     axes[1].set_title("Top-1 confidence on precomputed RRUFF-325 set")
     axes[1].set_xlabel("top-1 probability")
     axes[1].set_ylabel("examples")

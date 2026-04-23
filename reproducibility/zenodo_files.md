@@ -13,7 +13,7 @@ Reviewer archive:
 - `reviewer_compact_assets.tar.gz`
 
 Archive contents:
-- selected paper checkpoints
+- all checkpoints explicitly named in the manuscript main text or supplement
 - compact result JSONs
 - paper configs
 - canonical and archived launchers
@@ -40,7 +40,7 @@ external/checkpoints/
 Expected workflow:
 1. Download the Zenodo archive or selected checkpoint files.
 2. Place the checkpoint files under `external/checkpoints/`.
-3. Use [checkpoint_manifest.csv](/tmp/paper-ai-diffraction/reproducibility/checkpoint_manifest.csv) to match paper roles to checkpoint filenames.
+3. Use [checkpoint_manifest.csv](/tmp/paper-ai-diffraction/reproducibility/checkpoint_manifest.csv) to match every manuscript-named checkpoint to its archival filename.
 4. Use [dataset_manifest.csv](/tmp/paper-ai-diffraction/reproducibility/dataset_manifest.csv) to provide required external benchmark and trainready datasets.
 
 Reviewer workflow from the archival package:

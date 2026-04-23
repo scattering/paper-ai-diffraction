@@ -45,3 +45,5 @@ docs/FIGURES.md,doc,Paper-facing figure instructions,/tmp/paper-ai-diffraction/d
 assets/topology/extinction_group_adjacency.json,asset,Condensed extinction-group topology graph,/Users/williamratcliff/ai-diffraction/artifacts/topology_graphs/extinction_group_adjacency.json,copied,,,
 reproducibility/checkpoint_manifest.csv,metadata,Checkpoint linkage manifest,/tmp/paper-ai-diffraction/reproducibility/checkpoint_manifest.csv,generated,,,
 reproducibility/dataset_manifest.csv,metadata,Dataset and external-asset manifest,/tmp/paper-ai-diffraction/reproducibility/dataset_manifest.csv,generated,,,
+docs/PROVENANCE_NOTEBOOKS.md,doc,Notebook-level provenance notes,/tmp/paper-ai-diffraction/docs/PROVENANCE_NOTEBOOKS.md,authored,,,
+notebooks/provenance/wandb_confusion_matrix_from_table.ipynb,notebook,Provenance notebook for the supplemental ViT confusion matrix from a W&B table artifact,/Users/williamratcliff/Downloads/ViT_WandB_Confusion_Matrix.ipynb,adapted,,,

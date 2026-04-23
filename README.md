@@ -23,6 +23,7 @@ Those are sufficient for the shipped notebook walkthrough without Box or the ful
 
 Reviewer-facing notebook support is documented in:
 - [REVIEWER_NOTEBOOK.md](docs/REVIEWER_NOTEBOOK.md)
+- [PROVENANCE_NOTEBOOKS.md](docs/PROVENANCE_NOTEBOOKS.md)
 
 Supported notebook usage paths:
 - local machine with the train/eval environment and a released checkpoint
@@ -66,6 +67,8 @@ external/checkpoints/
 
 The exact filenames expected by the wrappers are listed in:
 - [reproducibility/checkpoint_manifest.csv](reproducibility/checkpoint_manifest.csv)
+
+This manifest includes every checkpoint explicitly named in the manuscript main text or supplement. Exploratory checkpoints are still archived, but are labeled accordingly in the notes column.
 
 External benchmark and trainready datasets are not redistributed in this repo. Their required environment variables and example source paths are listed in:
 - [reproducibility/dataset_manifest.csv](reproducibility/dataset_manifest.csv)
