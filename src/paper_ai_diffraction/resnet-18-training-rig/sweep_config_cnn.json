@@ -1,0 +1,91 @@
+{
+    "name":"RRUFFPyXtal-Training",
+    "method": "bayes",
+    "metric": {
+        "name": "val_loss",
+        "goal": "minimize"
+    },
+    "parameters": {
+       "num_epochs": {
+            "min": 80,
+            "max": 150,
+            "distribution": "int_uniform"
+        },
+        "batch_size": {
+            "min": 20,
+            "max": 500,
+            "distribution": "int_uniform"
+        },
+        "learning_rate": {
+            "min": 0.00001,
+            "max": 0.005,
+            "distribution": "uniform"
+        },
+        "weight_decay": {
+            "min": 0.000001,
+            "max": 0.001,
+            "distribution": "uniform"
+        },
+        "checkpoint_dir": {
+            "value": "Models/checkpoints" 
+        },
+        "data_path": {
+            "value":"/wrk/egf3/Data/FinalData/RRUFF_Type_Data/10Million_pyxtal_RRUFFF-type_repacked.hdf5"
+        },
+        "model_path": {
+            "value": "Models/" 
+        },
+        "optimizer": {
+            "value": "Adam" 
+        },
+        "model":{
+            "value":"resnet18"
+        },
+        "num_workers": {
+            "value": 8
+        },
+        "input_dim":{
+            "value":1
+        },
+        "res_dims":{"value": [32, 64, 64, 64]},
+        "res_kernel":{ "value": [5, 7, 17, 13]},
+        "res_stride":{ "value": [4, 4, 5, 3]},
+        "num_blocks":{
+            "value": [2, 2, 2, 2]
+        },
+        "first_kernel_size":{
+            "value": 13
+        },
+        "first_stride":{
+            "value": 1
+        },
+        "first_pool_kernel_size":{
+            "value": 7
+        },
+        "first_pool_stride":{
+            "value": 7
+        },
+        "num_devices": {
+            "value": 1
+        },
+        "num_precision": {
+            "value": 16
+        },
+        "is_sweep": {
+            "value": true
+        },
+        "spec_length": {
+            "value": 1000
+        },
+        "num_classes": {
+            "value": 99
+        },
+        "model_type":{"value":"resnet"},
+        "prefetch_factor": {
+            "value": 4
+        }
+    }
+}
+
+
+
