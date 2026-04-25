@@ -29,7 +29,7 @@ Those are sufficient for the shipped notebook walkthrough without Box or the ful
 
 Reviewer-facing notebook support is documented in:
 - [REVIEWER_NOTEBOOK.md](docs/REVIEWER_NOTEBOOK.md)
-- [PROVENANCE_NOTEBOOKS.md](docs/PROVENANCE_NOTEBOOKS.md)
+- [SUPPLEMENTAL.md](docs/SUPPLEMENTAL.md)
 
 Supported notebook usage paths:
 - local machine with the train/eval environment and a released checkpoint
@@ -68,10 +68,11 @@ TACC-specific notes are in:
 Checkpoints are downloaded from Zenodo and should be placed under:
 
 ```text
-external/checkpoints/
+external/checkpoints/                         # core paper checkpoints (flat)
+external/checkpoints/supplemental/Models/     # supplemental ViT checkpoints (Tables S3–S7, Figs S3/S5)
 ```
 
-The exact filenames expected by the wrappers are listed in:
+The exact filenames and expected local paths are listed in:
 - [reproducibility/checkpoint_manifest.csv](reproducibility/checkpoint_manifest.csv)
 
 This manifest includes every checkpoint explicitly named in the manuscript main text or supplement. Exploratory checkpoints are still archived, but are labeled accordingly in the notes column.

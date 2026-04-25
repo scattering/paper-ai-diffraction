@@ -12,7 +12,7 @@ pip install -e .
 
 For TACC-specific notes, see:
 
-- [TACC_ENV.md](/tmp/paper-ai-diffraction/docs/TACC_ENV.md)
+- [TACC_ENV.md](TACC_ENV.md)
 
 Expected local checkpoint placement:
 
@@ -28,15 +28,15 @@ external/checkpoints/
 
 See:
 
-- [checkpoint_manifest.csv](/tmp/paper-ai-diffraction/reproducibility/checkpoint_manifest.csv)
-- [dataset_manifest.csv](/tmp/paper-ai-diffraction/reproducibility/dataset_manifest.csv)
-- [zenodo_files.md](/tmp/paper-ai-diffraction/reproducibility/zenodo_files.md)
+- [checkpoint_manifest.csv](../reproducibility/checkpoint_manifest.csv)
+- [dataset_manifest.csv](../reproducibility/dataset_manifest.csv)
+- [zenodo_files.md](../reproducibility/zenodo_files.md)
 
 ## External Data
 
 The original paper campaign used external HDF5 datasets that are not bundled here. The current prototype now records them in:
 
-- [dataset_manifest.csv](/tmp/paper-ai-diffraction/reproducibility/dataset_manifest.csv)
+- [dataset_manifest.csv](../reproducibility/dataset_manifest.csv)
 
 The main expected dataset roles are:
 
@@ -48,27 +48,27 @@ The main expected dataset roles are:
 
 ## Included Training Configs
 
-- [final_mixed_2500k_dualsource.json](/tmp/paper-ai-diffraction/configs/final_mixed_2500k_dualsource.json)
-- [mixed_200k_pilot.json](/tmp/paper-ai-diffraction/configs/mixed_200k_pilot.json)
-- [po_1epoch.json](/tmp/paper-ai-diffraction/configs/po_1epoch.json)
-- [po_resume2.json](/tmp/paper-ai-diffraction/configs/po_resume2.json)
+- [final_mixed_2500k_dualsource.json](../configs/final_mixed_2500k_dualsource.json)
+- [mixed_200k_pilot.json](../configs/mixed_200k_pilot.json)
+- [po_1epoch.json](../configs/po_1epoch.json)
+- [po_resume2.json](../configs/po_resume2.json)
 
 ## Canonical Training Wrappers
 
 Use these first:
 
-- [train_po_1epoch.sh](/tmp/paper-ai-diffraction/scripts/train_po_1epoch.sh)
-- [train_po_resume2.sh](/tmp/paper-ai-diffraction/scripts/train_po_resume2.sh)
-- [train_mixed_200k.sh](/tmp/paper-ai-diffraction/scripts/train_mixed_200k.sh)
-- [train_final_mixed.sh](/tmp/paper-ai-diffraction/scripts/train_final_mixed.sh)
+- [train_po_1epoch.sh](../scripts/train_po_1epoch.sh)
+- [train_po_resume2.sh](../scripts/train_po_resume2.sh)
+- [train_mixed_200k.sh](../scripts/train_mixed_200k.sh)
+- [train_final_mixed.sh](../scripts/train_final_mixed.sh)
 
-These wrappers accept data and checkpoint locations through environment variables, write a temporary config with local overrides, and then call [train.py](/tmp/paper-ai-diffraction/src/paper_ai_diffraction/core/train.py) through the installed package without assuming a specific cluster path layout.
+These wrappers accept data and checkpoint locations through environment variables, write a temporary config with local overrides, and then call [train.py](../src/paper_ai_diffraction/core/train.py) through the installed package without assuming a specific cluster path layout.
 
 ## Historical TACC Launchers
 
 The original campaign launchers are preserved under:
 
-- [/tmp/paper-ai-diffraction/scripts/tacc_archive]( /tmp/paper-ai-diffraction/scripts/tacc_archive )
+- [../scripts/tacc_archive]( ../scripts/tacc_archive )
 
 Use those only if you need an exact record of the April 2026 TACC batch jobs.
 

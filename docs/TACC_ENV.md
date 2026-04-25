@@ -2,10 +2,10 @@
 
 This repo has two environment tiers:
 
-1. [environment.yml](/tmp/paper-ai-diffraction/environment.yml)
+1. [environment.yml](../environment.yml)
    - light paper/figure environment
    - intended for editable install, table regeneration, and topology figures
-2. [environment-train-eval.yml](/tmp/paper-ai-diffraction/environment-train-eval.yml)
+2. [environment-train-eval.yml](../environment-train-eval.yml)
    - full training/evaluation environment
    - intended for checkpoint evaluation and training reruns
 
@@ -51,7 +51,7 @@ source /scratch/$USER/venvs/paper-ai-diffraction-train-eval-py312/bin/activate
 python -m pip install --upgrade pip setuptools wheel
 ```
 
-Then install the packages from [environment-train-eval.yml](/tmp/paper-ai-diffraction/environment-train-eval.yml) using your preferred Conda or pip workflow.
+Then install the packages from [environment-train-eval.yml](../environment-train-eval.yml) using your preferred Conda or pip workflow.
 
 The important practical constraint is:
 
@@ -88,7 +88,7 @@ After that:
 
 1. open [tap.tacc.utexas.edu](https://tap.tacc.utexas.edu)
 2. launch Jupyter on Stampede3
-3. open [reviewer_walkthrough.ipynb](/tmp/paper-ai-diffraction/notebooks/reviewer_walkthrough.ipynb)
+3. open [reviewer_walkthrough.ipynb](../notebooks/reviewer_walkthrough.ipynb)
 
 The shipped notebook walkthrough on TAP works with the compact repo assets plus checkpoint alone. It does not require the full benchmark HDF5s.
 

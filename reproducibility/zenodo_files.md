@@ -14,7 +14,11 @@ Reviewer archive:
 
 Archive contents:
 - all checkpoints explicitly named in the manuscript main text or supplement
-- compact result JSONs
+- compact result JSONs (under `results/`)
+- supplemental notebook assets (under `assets/figure_data/` and `results/supplemental/`):
+  - `assets/figure_data/1k_structures.csv` — 1,000 crystal structures for Fig S5 notebook
+  - `assets/figure_data/interp_metadata_clean.csv` — HDF5-index-to-structure_id map for Fig S5 notebook
+  - `assets/figure_data/confusion_matrix_smqmqi14.table.json` — W&B confusion matrix table artifact for Fig S3 notebook
 - paper configs
 - canonical and archived launchers
 - short reproducibility notes
@@ -34,7 +38,7 @@ These reviewer assets are small, derived, and paper-backed. They are intended to
 Benchmark note:
 - this package releases the paper-facing benchmark-construction scripts and documentation
 - it does not redistribute the upstream RRUFF-derived benchmark HDF5s or raw source files
-- see [docs/BENCHMARKS.md](/tmp/paper-ai-diffraction-fresh/docs/BENCHMARKS.md)
+- see [docs/BENCHMARKS.md](../docs/BENCHMARKS.md)
 
 Expected local placement for downloaded checkpoints:
 
@@ -45,8 +49,8 @@ external/checkpoints/
 Expected workflow:
 1. Download the Zenodo archive or selected checkpoint files.
 2. Place the checkpoint files under `external/checkpoints/`.
-3. Use [checkpoint_manifest.csv](/tmp/paper-ai-diffraction/reproducibility/checkpoint_manifest.csv) to match every manuscript-named checkpoint to its archival filename.
-4. Use [dataset_manifest.csv](/tmp/paper-ai-diffraction/reproducibility/dataset_manifest.csv) to provide required external benchmark and trainready datasets.
+3. Use [checkpoint_manifest.csv](checkpoint_manifest.csv) to match every manuscript-named checkpoint to its archival filename.
+4. Use [dataset_manifest.csv](dataset_manifest.csv) to provide required external benchmark and trainready datasets.
 
 Reviewer workflow from the archival package:
 1. Extract `reviewer_compact_assets.tar.gz` into the repo root, or inspect the same files directly in the GitHub repo.
