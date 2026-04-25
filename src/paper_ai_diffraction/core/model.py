@@ -1,5 +1,3 @@
-# Adapted from source: https://github.com/linresearchgroup/ViT_Materials_Spectra
-
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
