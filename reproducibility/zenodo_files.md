@@ -15,13 +15,14 @@ Reviewer archive:
 Archive contents:
 - all checkpoints explicitly named in the manuscript main text or supplement
 - compact result JSONs (under `results/`)
-- supplemental notebook assets (under `assets/figure_data/` and `results/supplemental/`):
-  - `assets/figure_data/1k_structures.csv` — 1,000 crystal structures for Fig S5 notebook
-  - `assets/figure_data/interp_metadata_clean.csv` — HDF5-index-to-structure_id map for Fig S5 notebook
-  - `assets/figure_data/confusion_matrix_smqmqi14.table.json` — W&B confusion matrix table artifact for Fig S3 notebook
 - paper configs
 - canonical and archived launchers
 - short reproducibility notes
+
+Supplemental notebook assets (`assets/figure_data/`) are **bundled in the git repo**, not in the Zenodo archive:
+  - `assets/figure_data/1k_structures.csv` — 1,000 crystal structures for Fig S5 notebook
+  - `assets/figure_data/interp_metadata_clean.csv` — HDF5-index-to-structure_id map for Fig S5 notebook
+  - `assets/figure_data/conf_mat_top1_inference_xrd_model_smqmqi14_table_2_6491e754dbab738e58a0.table.json` — W&B confusion matrix table artifact for Fig S3 notebook
 - compact reviewer assets, packaged separately in `reviewer_compact_assets.tar.gz`:
   - `assets/reviewer_examples/correct_case_015_Arsenopyrite__R050071-1__6130.csv`
   - `assets/reviewer_examples/correct_case_015_Arsenopyrite__R050071-1__6130.json`
