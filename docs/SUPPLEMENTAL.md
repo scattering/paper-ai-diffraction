@@ -15,7 +15,7 @@ These notebooks are retained as archival provenance artifacts explaining how sup
 
 - [notebooks/provenance/supplemental_vit_inference.ipynb](../notebooks/provenance/supplemental_vit_inference.ipynb)
   - purpose: batch inference for any of the 11 supplemental ViT checkpoints against its matching RRUFF benchmark HDF5; reproduces top-1/3/5 accuracy numbers for Tables S3–S7
-  - expected inputs: a supplemental checkpoint from `external/checkpoints/supplemental/Models/` and the corresponding RRUFF HDF5 on Stampede3 (see `reproducibility/dataset_manifest.csv`)
+  - expected inputs: a supplemental checkpoint from `external/checkpoints/` and the corresponding RRUFF HDF5 on Stampede3 (see `reproducibility/dataset_manifest.csv`)
 
 - [notebooks/provenance/wandb_confusion_matrix_from_table.ipynb](../notebooks/provenance/wandb_confusion_matrix_from_table.ipynb)
   - purpose: reconstruct the supplemental ViT confusion matrix (Fig S3) from the bundled W&B table artifact
@@ -23,7 +23,7 @@ These notebooks are retained as archival provenance artifacts explaining how sup
 
 - [notebooks/provenance/csv_to_db_with_bravais_vit_model.ipynb](../notebooks/provenance/csv_to_db_with_bravais_vit_model.ipynb)
   - purpose: generate Fig S5 — VIT attention overlay with HKL annotations using checkpoint `pi7r8pah`
-  - expected inputs: `assets/figure_data/1k_structures.csv`, `assets/figure_data/interp_metadata_clean.csv`, `external/checkpoints/supplemental/Models/xrd_model_pi7r8pah.pth`
+  - expected inputs: `assets/figure_data/1k_structures.csv`, `assets/figure_data/interp_metadata_clean.csv`, `external/checkpoints/xrd_model_pi7r8pah.pth`
 
 ### RT
 

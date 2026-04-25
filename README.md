@@ -69,7 +69,7 @@ Checkpoints are downloaded from Zenodo and should be placed under:
 
 ```text
 external/checkpoints/                         # core paper checkpoints (flat)
-external/checkpoints/supplemental/Models/     # supplemental ViT checkpoints (Tables S3–S7, Figs S3/S5)
+external/checkpoints/                         # supplemental ViT checkpoints (Tables S3–S7, Figs S3/S5)
 ```
 
 The exact filenames and expected local paths are listed in:
