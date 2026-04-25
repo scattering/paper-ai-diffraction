@@ -22,7 +22,7 @@ Archive contents:
 Supplemental notebook assets (`assets/figure_data/`) are **bundled in the git repo**, not in the Zenodo archive:
   - `assets/figure_data/1k_structures.csv` — 1,000 crystal structures for Fig S5 notebook
   - `assets/figure_data/interp_metadata_clean.csv` — HDF5-index-to-structure_id map for Fig S5 notebook
-  - `assets/figure_data/conf_mat_top1_inference_xrd_model_smqmqi14_table_2_6491e754dbab738e58a0.table.json` — W&B confusion matrix table artifact for Fig S3 notebook
+  - `assets/figure_data/conf_mat_top5_copper-sweep-1_table_103_ff53214644fd32c50e63.table.json` — W&B confusion matrix table artifact for Fig S3 notebook
 - compact reviewer assets, packaged separately in `reviewer_compact_assets.tar.gz`:
   - `assets/reviewer_examples/correct_case_015_Arsenopyrite__R050071-1__6130.csv`
   - `assets/reviewer_examples/correct_case_015_Arsenopyrite__R050071-1__6130.json`

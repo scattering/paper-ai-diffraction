@@ -19,7 +19,7 @@ These notebooks are retained as archival provenance artifacts explaining how sup
 
 - [notebooks/provenance/wandb_confusion_matrix_from_table.ipynb](../notebooks/provenance/wandb_confusion_matrix_from_table.ipynb)
   - purpose: reconstruct the supplemental ViT confusion matrix (Fig S3) from the bundled W&B table artifact
-  - expected input: `assets/figure_data/conf_mat_top1_inference_xrd_model_smqmqi14_table_2_6491e754dbab738e58a0.table.json`
+  - expected input: `assets/figure_data/conf_mat_top5_copper-sweep-1_table_103_ff53214644fd32c50e63.table.json`
 
 - [notebooks/provenance/csv_to_db_with_bravais_vit_model.ipynb](../notebooks/provenance/csv_to_db_with_bravais_vit_model.ipynb)
   - purpose: generate Fig S5 — VIT attention overlay with HKL annotations using checkpoint `pi7r8pah`
