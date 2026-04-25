@@ -12,14 +12,14 @@ pip install -e .
 
 For TACC-specific notes, see:
 
-- [TACC_ENV.md](/tmp/paper-ai-diffraction/docs/TACC_ENV.md)
+- [TACC_ENV.md](TACC_ENV.md)
 
 ## Included Evaluation Code
 
-- [evaluate_calibration_metrics.py](/tmp/paper-ai-diffraction/src/paper_ai_diffraction/eval/evaluate_calibration_metrics.py)
-- [evaluate_split_head_validity.py](/tmp/paper-ai-diffraction/src/paper_ai_diffraction/eval/evaluate_split_head_validity.py)
-- [compare_325_failure_modes.py](/tmp/paper-ai-diffraction/src/paper_ai_diffraction/topology/compare_325_failure_modes.py)
-- [analyze_topological_error_distance.py](/tmp/paper-ai-diffraction/src/paper_ai_diffraction/topology/analyze_topological_error_distance.py)
+- [evaluate_calibration_metrics.py](../src/paper_ai_diffraction/eval/evaluate_calibration_metrics.py)
+- [evaluate_split_head_validity.py](../src/paper_ai_diffraction/eval/evaluate_split_head_validity.py)
+- [compare_325_failure_modes.py](../src/paper_ai_diffraction/topology/compare_325_failure_modes.py)
+- [analyze_topological_error_distance.py](../src/paper_ai_diffraction/topology/analyze_topological_error_distance.py)
 
 ## Included Evaluation Results
 
@@ -87,7 +87,7 @@ These numbers are included here so the public repo still carries the minimal sci
 
 Use:
 
-- [eval_rruff_325_473.sh](/tmp/paper-ai-diffraction/scripts/eval_rruff_325_473.sh)
+- [eval_rruff_325_473.sh](../scripts/eval_rruff_325_473.sh)
 
 This script expects:
 
@@ -99,8 +99,8 @@ This script expects:
 
 Those variables and their intended roles are documented in:
 
-- [dataset_manifest.csv](/tmp/paper-ai-diffraction/reproducibility/dataset_manifest.csv)
-- [checkpoint_manifest.csv](/tmp/paper-ai-diffraction/reproducibility/checkpoint_manifest.csv)
+- [dataset_manifest.csv](../reproducibility/dataset_manifest.csv)
+- [checkpoint_manifest.csv](../reproducibility/checkpoint_manifest.csv)
 
 and then runs:
 
@@ -112,9 +112,9 @@ and then runs:
 
 Use:
 
-- [make_topology_flow_figure.sh](/tmp/paper-ai-diffraction/scripts/make_topology_flow_figure.sh)
-- [make_calibration_figure.sh](/tmp/paper-ai-diffraction/scripts/make_calibration_figure.sh)
-- [make_main_tables.py](/tmp/paper-ai-diffraction/scripts/make_main_tables.py)
+- [make_topology_flow_figure.sh](../scripts/make_topology_flow_figure.sh)
+- [make_calibration_figure.sh](../scripts/make_calibration_figure.sh)
+- [make_main_tables.py](../scripts/make_main_tables.py)
 
 The topology-flow wrapper renders the staged DAG figure set. The calibration wrapper renders a Top-1/Top-5 versus temperature SVG from a compatible sweep JSON. The table script prints compact CSV rows for the mixed-200k and final mixed champion paper numbers.
 
@@ -122,6 +122,6 @@ The topology-flow wrapper renders the staged DAG figure set. The calibration wra
 
 The original cluster-bound evaluation launchers are preserved under:
 
-- [/tmp/paper-ai-diffraction/scripts/tacc_archive]( /tmp/paper-ai-diffraction/scripts/tacc_archive )
+- [../scripts/tacc_archive]( ../scripts/tacc_archive )
 
 Those scripts are retained for provenance, not as the preferred public interface.

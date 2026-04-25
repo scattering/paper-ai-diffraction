@@ -10,11 +10,11 @@ evaluation sets used in the papers:
 ## What Is Released
 
 - the algorithm for reconstructing `RRUFF-473` from an upstream Cu-like manifest plus raw XY files:
-  - [scripts/reconstruct_rruff_473.py](/tmp/paper-ai-diffraction-fresh/scripts/reconstruct_rruff_473.py)
+  - [scripts/reconstruct_rruff_473.py](../scripts/reconstruct_rruff_473.py)
 - the deterministic `RRUFF-473 -> RRUFF-325` builder:
-  - [scripts/build_rruff_325_from_473.py](/tmp/paper-ai-diffraction-fresh/scripts/build_rruff_325_from_473.py)
+  - [scripts/build_rruff_325_from_473.py](../scripts/build_rruff_325_from_473.py)
 - the expected external file names and example source paths:
-  - [reproducibility/dataset_manifest.csv](/tmp/paper-ai-diffraction-fresh/reproducibility/dataset_manifest.csv)
+  - [reproducibility/dataset_manifest.csv](../reproducibility/dataset_manifest.csv)
 
 ## What Is Not Released
 

@@ -92,7 +92,7 @@ For interactive TACC usage, the intended path is TAP on Stampede3 rather than an
 Validated high-level flow:
 
 1. clone the repo onto Stampede3 storage
-2. create and activate the Python 3.12 train/eval environment described in [TACC_ENV.md](/tmp/paper-ai-diffraction/docs/TACC_ENV.md)
+2. create and activate the Python 3.12 train/eval environment described in [TACC_ENV.md](TACC_ENV.md)
 3. install the repo editable with `pip install -e .`
 4. place the released checkpoint at `external/checkpoints/xrd_model_82ept35h_best.pth`
 5. open [tap.tacc.utexas.edu](https://tap.tacc.utexas.edu)
