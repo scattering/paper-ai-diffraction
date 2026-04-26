@@ -141,8 +141,11 @@ Top-1/3/5 entries of the 4×4 cross-test matrix are produced by `supplemental_rt
 |---------------------|------------|-------|-----------|----------------------|
 | RT-RRUFF (depth=6)  | `hwixtnv7` | 6     | 4         | `RRUFF_low_bkg_full_intensity_cleaned.hdf5` |
 | RT 16-heads         | `7brb1pir` | 6     | 16        | `RRUFF_low_bkg_full_intensity_cleaned.hdf5` |
+| RT-Balanced         | `yv1m76u6` | 8     | 4         | `RRUFF_low_bkg_full_intensity_cleaned.hdf5` |
+| RT-ICSD             | `4hv17ttu` | 6     | 4         | `RRUFF_low_bkg_full_intensity_cleaned.hdf5` |
+| RT-Augmented        | `mq1l94p7` | 6     | 4         | `RRUFF_low_bkg_full_intensity_cleaned.hdf5` |
 
-Additional RT rows for `tab:real_ablation` will be filled in once checkpoint mapping is finalised; the notebook’s `CHECKPOINT_CONFIGS` is the source of truth.
+The notebook's `CHECKPOINT_CONFIGS` block is the source of truth for these RT real-data ablation rows.
 
 ### fig:rt_attention — RT Attention Overlay
 
