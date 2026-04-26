@@ -41,4 +41,4 @@ cnn_cross_eval_icsd,main_archive,,xrd_model_m9mdi5p9.pth,external/checkpoints/xr
 cnn_distribution_augmented,main_archive,,xrd_model_kiifq20z.pth,external/checkpoints/xrd_model_kiifq20z.pth,Table S8 augmented row and CNN saliency figure checkpoint
 cnn_duplicates_nondedup,main_archive,,xrd_model_u9quo4zn.pth,external/checkpoints/xrd_model_u9quo4zn.pth,Table S9 non-deduplicated ICSD checkpoint
 cnn_duplicates_dedup,main_archive,,xrd_model_xhx3ex54.pth,external/checkpoints/xrd_model_xhx3ex54.pth,Table S9 deduplicated ICSD checkpoint
-cnn_fig_s2,main_archive,,xrd_resnet_rbwbgj89.pth,external/checkpoints/xrd_resnet_rbwbgj89.pth,Recovered Fig S2 CNN checkpoint
+cnn_fig_s2,main_archive,,xrd_resnet_rbwbgj89.pth,external/checkpoints/xrd_resnet_rbwbgj89.pth,Recovered Fig S2 / top-10 extinction-group CNN checkpoint; public notebook entrypoint uses the rbwbgj89 model on 500000-Samples_3041-Pts.h5
