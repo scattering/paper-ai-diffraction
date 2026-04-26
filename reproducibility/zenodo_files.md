@@ -1,7 +1,8 @@
 # Zenodo Assets
 
 Zenodo archival package:
-- pending public record / DOI
+- DOI: [10.5281/zenodo.19558452](https://doi.org/10.5281/zenodo.19558452)
+- Record: [zenodo.org/records/19558452](https://zenodo.org/records/19558452)
 
 Final paper repo:
 - [github.com/scattering/paper-ai-diffraction](https://github.com/scattering/paper-ai-diffraction)
@@ -72,7 +73,7 @@ Reviewer workflow from the archival package:
 4. Use checkpoints from Zenodo for live single-pattern inference.
 5. Do not expect the full RRUFF benchmark HDF5s to be redistributed.
 
-After Zenodo publication, update this file with:
-1. the final DOI
-2. the final record URL
-3. any article DOI link
+Published Zenodo identifiers:
+1. version DOI: [10.5281/zenodo.19558452](https://doi.org/10.5281/zenodo.19558452)
+2. concept DOI: [10.5281/zenodo.19558451](https://doi.org/10.5281/zenodo.19558451)
+3. record URL: [zenodo.org/records/19558452](https://zenodo.org/records/19558452)
