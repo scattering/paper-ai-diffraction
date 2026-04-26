@@ -40,6 +40,21 @@ Google Colab is plausible for the lightweight checkpoint-only reviewer demo, but
 Zenodo archival package:
 - pending public record / DOI
 
+Current archive split:
+- GitHub repo:
+  - code
+  - notebooks
+  - benchmark-construction scripts
+  - paper-facing wrappers and docs
+- Zenodo:
+  - checkpoints
+  - compact result JSONs
+  - configs
+  - launchers
+  - short archival manifests/notes
+- reviewer compact assets:
+  - packaged separately in `reviewer_compact_assets.tar.gz`
+
 After publication, replace this placeholder with the final Zenodo DOI and public record URL.
 
 ## Install

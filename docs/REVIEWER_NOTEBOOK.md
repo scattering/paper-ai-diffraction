@@ -9,6 +9,13 @@ It also knows how to browse a precomputed paper-backed `RRUFF-325` summary JSON 
 
 Reviewers do **not** need Box, TACC, or the full RRUFF benchmark to use the shipped notebook examples and bundled compact reviewer assets.
 
+Archive boundary:
+
+- the notebook code and walkthrough stay in GitHub
+- released checkpoints come from the main Zenodo archive
+- compact reviewer examples and precomputed reviewer JSONs come from the
+  separate `reviewer_compact_assets.tar.gz` archive or the mirrored repo files
+
 ## Input Contract
 
 For an arbitrary reviewer-supplied pattern, provide a CSV with:
@@ -156,3 +163,9 @@ Recommended TACC workflow:
 3. optionally precompute benchmark-wide per-example summaries for browsing
 
 Those artifacts are small and are the right candidates for later Zenodo inclusion.
+
+That later inclusion has now been split cleanly:
+
+- the main Zenodo archive carries checkpoints and paper-backed compact model
+  artifacts
+- `reviewer_compact_assets.tar.gz` carries the lightweight reviewer bundle

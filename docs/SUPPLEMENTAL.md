@@ -31,7 +31,21 @@ These notebooks are retained as archival provenance artifacts explaining how sup
 
 ### CNN
 
-*(No provenance notebooks yet — CNN checkpoint mapping still pending.)*
+- [reproducibility/ResNet_Reproduction/reproduce_paper_results.ipynb](../reproducibility/ResNet_Reproduction/reproduce_paper_results.ipynb)
+  - purpose: reproduce the CNN supplemental tables and scaling figure used in the PRX supplement
+  - covered artifacts:
+    - Table I
+    - Fig. S1
+    - Table S2
+    - Table S8
+    - Table S9
+    - Fig. S2
+  - expected inputs: CNN checkpoints from `external/checkpoints/` and the matching HDF5 files listed in `reproducibility/dataset_manifest.csv`
+
+- [src/paper_ai_diffraction/interp-cnn/Interp_CNN_restructured.ipynb](../src/paper_ai_diffraction/interp-cnn/Interp_CNN_restructured.ipynb)
+  - purpose: generate the CNN saliency figure
+  - expected inputs: `src/paper_ai_diffraction/interp-cnn/xrd_model_kiifq20z.pth`, `src/paper_ai_diffraction/interp-cnn/1k_structures.csv`, `src/paper_ai_diffraction/interp-cnn/interp_metadata_clean.csv`, `src/paper_ai_diffraction/interp-cnn/SG_To_Ext_Map.pkl`
+  - note: the notebook uses a manually selected example index
 
 ---
 
@@ -88,12 +102,9 @@ Note: Low accuracy is expected — the run crashed before convergence. The check
 
 ---
 
-## RT Accuracy Reference
-
-*(Pending — RT checkpoint mapping not yet complete.)*
-
----
-
 ## CNN Accuracy Reference
 
-*(Pending — CNN checkpoint mapping not yet complete.)*
+The current supplemental CNN provenance is split across the reproduction notebook, the interpretability notebook, and the archival artifact map in the Zenodo package.
+
+Notes:
+- Table S8 now explicitly uses `---` for the CNN `RRUFF` column because those runs were not completed.
