@@ -1,27 +1,44 @@
 checkpoint_role,zenodo_status,zenodo_record_url,zenodo_filename,expected_local_path,notes
-stage1_base,pending_public_release,TBD,xrd_model_ic6gfmvm_best.pth,external/checkpoints/xrd_model_ic6gfmvm_best.pth,base initialization for later realism runs
-stage2a_decoder_tradeoff,pending_public_release,TBD,xrd_model_h7dqlpfp_best.pth,external/checkpoints/xrd_model_h7dqlpfp_best.pth,Stage-2a checkpoint named in the manuscript decoder tradeoff analysis
-stage2b_decoder_tradeoff,pending_public_release,TBD,xrd_model_guvsasrs_best.pth,external/checkpoints/xrd_model_guvsasrs_best.pth,Stage-2b checkpoint named in the manuscript decoder tradeoff analysis
-legacy_replay_baseline,pending_public_release,TBD,xrd_model_wwuvp1kj_best.pth,external/checkpoints/xrd_model_wwuvp1kj_best.pth,Legacy replay-era baseline named in the supplementary checkpoint map
-baseline_350k,pending_public_release,TBD,xrd_model_7pv3pv3y_best.pth,external/checkpoints/xrd_model_7pv3pv3y_best.pth,350k baseline named in the supplementary checkpoint map
-stage2c_baseline,pending_public_release,TBD,xrd_model_9rwv1qly_best.pth,external/checkpoints/xrd_model_9rwv1qly_best.pth,non-PO baseline used in paper
-stage2c_aux025_ablation,pending_public_release,TBD,xrd_model_0879pvmm_best.pth,external/checkpoints/xrd_model_0879pvmm_best.pth,Stage-2c auxiliary-loss ablation named in the supplement
-po_1epoch,pending_public_release,TBD,xrd_model_cscjfdwk_best.pth,external/checkpoints/xrd_model_cscjfdwk_best.pth,best Top-1 PO ablation
-po_resume2,pending_public_release,TBD,xrd_model_dsi7ehiv_best.pth,external/checkpoints/xrd_model_dsi7ehiv_best.pth,PO continuation comparison
-mixed_200k_pilot,pending_public_release,TBD,xrd_model_eeru8svx_best.pth,external/checkpoints/xrd_model_eeru8svx_best.pth,small mixed pilot
-final_mixed_champion,pending_public_release,TBD,xrd_model_82ept35h_best.pth,external/checkpoints/xrd_model_82ept35h_best.pth,final large mixed champion
-late_uniform_precursor,pending_public_release,TBD,xrd_model_xgy3h6uw_best.pth,external/checkpoints/xrd_model_xgy3h6uw_best.pth,exploratory larger-uniform precursor named in the supplement
-late_stage2_continuation,pending_public_release,TBD,xrd_model_2vegisf1_best.pth,external/checkpoints/xrd_model_2vegisf1_best.pth,exploratory larger-uniform continuation named in the supplement
-wiseft_a03_optional,pending_public_release,TBD,xrd_model_wiseft_9rwv1qly_cscjfdwk_a03_best.pth,external/checkpoints/xrd_model_wiseft_9rwv1qly_cscjfdwk_a03_best.pth,optional WiSE-FT ablation described as exploratory rather than part of the main manuscript lineage
-wiseft_a05_optional,pending_public_release,TBD,xrd_model_wiseft_9rwv1qly_cscjfdwk_a05_best.pth,external/checkpoints/xrd_model_wiseft_9rwv1qly_cscjfdwk_a05_best.pth,optional WiSE-FT ablation described as exploratory rather than part of the main manuscript lineage
-supplemental_vt_balanced,pending_public_release,TBD,xrd_model_tite66yo.pth,external/checkpoints/xrd_model_tite66yo.pth,Table S7 VT-Balanced; wandb_run_id=tite66yo; trained on 10M PyXtal balanced label distribution (5–90°)
-supplemental_vt_icsd,pending_public_release,TBD,xrd_model_k0it6fz2.pth,external/checkpoints/xrd_model_k0it6fz2.pth,Table S7 VT-ICSD; wandb_run_id=k0it6fz2; trained on 10M PyXtal ICSD label distribution (5–90°)
-supplemental_vt_rruff,pending_public_release,TBD,xrd_model_l0yy9wv9.pth,external/checkpoints/xrd_model_l0yy9wv9.pth,Table S7 VT-RRUFF; wandb_run_id=l0yy9wv9; trained on 10M PyXtal RRUFF label distribution (5–90°)
-supplemental_vt_augmented,pending_public_release,TBD,xrd_model_cpv8k8ha.pth,external/checkpoints/xrd_model_cpv8k8ha.pth,Table S7 VT-Augmented; wandb_run_id=cpv8k8ha; trained on 10M PyXtal augmented RRUFF-type distribution (5–90°)
-supplemental_vt_reduced_reflection,pending_public_release,TBD,xrd_model_smqmqi14.pth,external/checkpoints/xrd_model_smqmqi14.pth,Tables S4/S5 VT-Reduced Reflection and Fig S3 confusion matrix source; wandb_run_id=smqmqi14; spec_length=701 (10–80°); crashed run
-supplemental_vt_full_reflection,pending_public_release,TBD,xrd_model_mth7zg2w.pth,external/checkpoints/xrd_model_mth7zg2w.pth,Tables S3/S5 VT-Full Reflection; wandb_run_id=mth7zg2w; spec_length=1000; crashed run
-supplemental_vt_reduced_pyxtal,pending_public_release,TBD,xrd_model_bj1m83oz.pth,external/checkpoints/xrd_model_bj1m83oz.pth,Tables S4/S5 VT-Reduced PyXtal; wandb_run_id=bj1m83oz; spec_length=700 (10–80°)
-supplemental_vt_full_pyxtal,pending_public_release,TBD,xrd_model_3zmiyil8.pth,external/checkpoints/xrd_model_3zmiyil8.pth,Tables S3/S5 VT-Full PyXtal; wandb_run_id=3zmiyil8; spec_length=1000; use_rope=True
-supplemental_vt_biased_reflection,pending_public_release,TBD,xrd_model_f3sdux88.pth,external/checkpoints/xrd_model_f3sdux88.pth,Table S3 VT-Biased Reflection; wandb_run_id=f3sdux88; ICSD-biased label distribution; spec_length=1000; crashed run
-supplemental_vt_biased_pyxtal,pending_public_release,TBD,xrd_model_kd1znx23.pth,external/checkpoints/xrd_model_kd1znx23.pth,Table S3 VT-Biased PyXtal; wandb_run_id=kd1znx23; ICSD-biased label distribution; spec_length=1000
-supplemental_vt_fig_s5_attention,pending_public_release,TBD,xrd_model_pi7r8pah.pth,external/checkpoints/xrd_model_pi7r8pah.pth,Fig S5 VIT attention overlay with HKL annotations; wandb_run_id=pi7r8pah; trained on augmented RRUFF-type distribution; spec_length=8501
+stage1_base,main_archive,,xrd_model_ic6gfmvm_best.pth,external/checkpoints/xrd_model_ic6gfmvm_best.pth,base initialization for later realism runs
+stage2a_decoder_tradeoff,main_archive,,xrd_model_h7dqlpfp_best.pth,external/checkpoints/xrd_model_h7dqlpfp_best.pth,Stage-2a checkpoint named in the manuscript decoder tradeoff analysis
+stage2b_decoder_tradeoff,main_archive,,xrd_model_guvsasrs_best.pth,external/checkpoints/xrd_model_guvsasrs_best.pth,Stage-2b checkpoint named in the manuscript decoder tradeoff analysis
+legacy_replay_baseline,main_archive,,xrd_model_wwuvp1kj_best.pth,external/checkpoints/xrd_model_wwuvp1kj_best.pth,Legacy replay-era baseline named in the supplementary checkpoint map
+baseline_350k,main_archive,,xrd_model_7pv3pv3y_best.pth,external/checkpoints/xrd_model_7pv3pv3y_best.pth,350k baseline named in the supplementary checkpoint map
+stage2c_baseline,main_archive,,xrd_model_9rwv1qly_best.pth,external/checkpoints/xrd_model_9rwv1qly_best.pth,non-PO baseline used in paper
+stage2c_aux025_ablation,main_archive,,xrd_model_0879pvmm_best.pth,external/checkpoints/xrd_model_0879pvmm_best.pth,Stage-2c auxiliary-loss ablation named in the supplement
+po_1epoch,main_archive,,xrd_model_cscjfdwk_best.pth,external/checkpoints/xrd_model_cscjfdwk_best.pth,best Top-1 PO ablation
+po_resume2,main_archive,,xrd_model_dsi7ehiv_best.pth,external/checkpoints/xrd_model_dsi7ehiv_best.pth,PO continuation comparison
+mixed_200k_pilot,main_archive,,xrd_model_eeru8svx_best.pth,external/checkpoints/xrd_model_eeru8svx_best.pth,small mixed pilot
+final_mixed_champion,main_archive,,xrd_model_82ept35h_best.pth,external/checkpoints/xrd_model_82ept35h_best.pth,final large mixed champion
+late_uniform_precursor,main_archive,,xrd_model_xgy3h6uw_best.pth,external/checkpoints/xrd_model_xgy3h6uw_best.pth,exploratory larger-uniform precursor named in the supplement
+late_stage2_continuation,main_archive,,xrd_model_2vegisf1_best.pth,external/checkpoints/xrd_model_2vegisf1_best.pth,exploratory larger-uniform continuation named in the supplement
+wiseft_a03_optional,main_archive,,xrd_model_wiseft_9rwv1qly_cscjfdwk_a03_best.pth,external/checkpoints/xrd_model_wiseft_9rwv1qly_cscjfdwk_a03_best.pth,optional WiSE-FT ablation described as exploratory rather than part of the main manuscript lineage
+wiseft_a05_optional,main_archive,,xrd_model_wiseft_9rwv1qly_cscjfdwk_a05_best.pth,external/checkpoints/xrd_model_wiseft_9rwv1qly_cscjfdwk_a05_best.pth,optional WiSE-FT ablation described as exploratory rather than part of the main manuscript lineage
+supplemental_vt_balanced,main_archive,,xrd_model_tite66yo.pth,external/checkpoints/xrd_model_tite66yo.pth,Table S7 VT-Balanced; wandb_run_id=tite66yo; trained on 10M PyXtal balanced label distribution (5–90°)
+supplemental_vt_icsd,main_archive,,xrd_model_k0it6fz2.pth,external/checkpoints/xrd_model_k0it6fz2.pth,Table S7 VT-ICSD; wandb_run_id=k0it6fz2; trained on 10M PyXtal ICSD label distribution (5–90°)
+supplemental_vt_rruff,main_archive,,xrd_model_l0yy9wv9.pth,external/checkpoints/xrd_model_l0yy9wv9.pth,Table S7 VT-RRUFF; wandb_run_id=l0yy9wv9; trained on 10M PyXtal RRUFF label distribution (5–90°)
+supplemental_vt_augmented,main_archive,,xrd_model_cpv8k8ha.pth,external/checkpoints/xrd_model_cpv8k8ha.pth,Table S7 VT-Augmented; wandb_run_id=cpv8k8ha; trained on 10M PyXtal augmented RRUFF-type distribution (5–90°)
+supplemental_vt_reduced_reflection,main_archive,,xrd_model_smqmqi14.pth,external/checkpoints/xrd_model_smqmqi14.pth,Tables S4/S5 VT-Reduced Reflection and Fig S3 confusion matrix source; wandb_run_id=smqmqi14; spec_length=701 (10–80°); crashed run
+supplemental_vt_full_reflection,main_archive,,xrd_model_mth7zg2w.pth,external/checkpoints/xrd_model_mth7zg2w.pth,Tables S3/S5 VT-Full Reflection; wandb_run_id=mth7zg2w; spec_length=1000; crashed run
+supplemental_vt_reduced_pyxtal,main_archive,,xrd_model_bj1m83oz.pth,external/checkpoints/xrd_model_bj1m83oz.pth,Tables S4/S5 VT-Reduced PyXtal; wandb_run_id=bj1m83oz; spec_length=700 (10–80°)
+supplemental_vt_full_pyxtal,main_archive,,xrd_model_3zmiyil8.pth,external/checkpoints/xrd_model_3zmiyil8.pth,Tables S3/S5 VT-Full PyXtal; wandb_run_id=3zmiyil8; spec_length=1000; use_rope=True
+supplemental_vt_biased_reflection,main_archive,,xrd_model_f3sdux88.pth,external/checkpoints/xrd_model_f3sdux88.pth,Table S3 VT-Biased Reflection; wandb_run_id=f3sdux88; ICSD-biased label distribution; spec_length=1000; crashed run
+supplemental_vt_biased_pyxtal,main_archive,,xrd_model_kd1znx23.pth,external/checkpoints/xrd_model_kd1znx23.pth,Table S3 VT-Biased PyXtal; wandb_run_id=kd1znx23; ICSD-biased label distribution; spec_length=1000
+supplemental_vt_fig_s5_attention,main_archive,,xrd_model_pi7r8pah.pth,external/checkpoints/xrd_model_pi7r8pah.pth,Fig S5 VIT attention overlay with HKL annotations; wandb_run_id=pi7r8pah; trained on augmented RRUFF-type distribution; spec_length=8501
+cnn_spg_table1,main_archive,,xrd_model_ve988dop.pth,external/checkpoints/xrd_model_ve988dop.pth,Table I SPG ResNet-18 baseline
+cnn_eg_table1,main_archive,,xrd_model_t75aaxpz.pth,external/checkpoints/xrd_model_t75aaxpz.pth,Table I EG ResNet-18 baseline and Fig S1 990k checkpoint
+cnn_scaling_99k,main_archive,,xrd_model_d7bovz1p.pth,external/checkpoints/xrd_model_d7bovz1p.pth,Fig S1 99k scaling checkpoint
+cnn_scaling_396k,main_archive,,xrd_model_9ytnffm7.pth,external/checkpoints/xrd_model_9ytnffm7.pth,Fig S1 396k scaling checkpoint
+cnn_scaling_792k,main_archive,,xrd_model_q3hxsqw8.pth,external/checkpoints/xrd_model_q3hxsqw8.pth,Fig S1 792k scaling checkpoint
+cnn_scaling_148m,main_archive,,xrd_model_wj5yemvc.pth,external/checkpoints/xrd_model_wj5yemvc.pth,Fig S1 1.48M scaling checkpoint
+cnn_scaling_217m,main_archive,,xrd_model_fmwj0hcj.pth,external/checkpoints/xrd_model_fmwj0hcj.pth,Fig S1 2.17M scaling checkpoint
+cnn_scaling_316m,main_archive,,xrd_model_ujr9w21e.pth,external/checkpoints/xrd_model_ujr9w21e.pth,Fig S1 3.16M scaling checkpoint
+cnn_scaling_376m,main_archive,,xrd_model_eiyfd7gf.pth,external/checkpoints/xrd_model_eiyfd7gf.pth,Fig S1 3.76M scaling checkpoint
+cnn_scaling_415m,main_archive,,xrd_model_srq8yg04.pth,external/checkpoints/xrd_model_srq8yg04.pth,Fig S1 4.15M scaling checkpoint
+cnn_scaling_514m,main_archive,,xrd_model_jek05aky.pth,external/checkpoints/xrd_model_jek05aky.pth,Fig S1 5.14M scaling checkpoint
+cnn_cross_eval_balanced,main_archive,,xrd_model_ivvi2z1j.pth,external/checkpoints/xrd_model_ivvi2z1j.pth,Table S2 balanced CNN cross-evaluation checkpoint; also used in Table S8 balanced row
+cnn_cross_eval_icsd,main_archive,,xrd_model_m9mdi5p9.pth,external/checkpoints/xrd_model_m9mdi5p9.pth,Table S2 ICSD-biased CNN cross-evaluation checkpoint; also used in Table S8 ICSD row
+cnn_distribution_augmented,main_archive,,xrd_model_kiifq20z.pth,external/checkpoints/xrd_model_kiifq20z.pth,Table S8 augmented row and CNN saliency figure checkpoint
+cnn_duplicates_nondedup,main_archive,,xrd_model_u9quo4zn.pth,external/checkpoints/xrd_model_u9quo4zn.pth,Table S9 non-deduplicated ICSD checkpoint
+cnn_duplicates_dedup,main_archive,,xrd_model_xhx3ex54.pth,external/checkpoints/xrd_model_xhx3ex54.pth,Table S9 deduplicated ICSD checkpoint
+cnn_fig_s2,main_archive,,xrd_resnet_rbwbgj89.pth,external/checkpoints/xrd_resnet_rbwbgj89.pth,Recovered Fig S2 CNN checkpoint

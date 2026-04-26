@@ -18,13 +18,13 @@ module purge
 module load gcc/13.2.0
 module load python/3.12.11
 
-python3 -m venv /scratch/09870/williamratcliff/venvs/paper-ai-diffraction-py312
-source /scratch/09870/williamratcliff/venvs/paper-ai-diffraction-py312/bin/activate
+python3 -m venv /scratch/$USER/venvs/paper-ai-diffraction-py312
+source /scratch/$USER/venvs/paper-ai-diffraction-py312/bin/activate
 
 python -m pip install --upgrade pip setuptools wheel
 python -m pip install numpy scipy pandas matplotlib networkx h5py tqdm
 
-cd /scratch/09870/williamratcliff/paper-ai-diffraction-smoke
+cd /scratch/$USER/paper-ai-diffraction-smoke
 python -m pip install -e .
 ```
 

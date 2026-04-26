@@ -1,24 +1,24 @@
 #!/bin/bash
 #SBATCH -J vista-rruff-mixed-200k
-#SBATCH -A CDA24014
+#SBATCH -A <PROJECT_CODE>
 #SBATCH -p gh-dev
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=8
 #SBATCH -t 02:00:00
-#SBATCH -o /scratch/09870/williamratcliff/vista_rruff_mixed_200k_%j.out
-#SBATCH -e /scratch/09870/williamratcliff/vista_rruff_mixed_200k_%j.err
+#SBATCH -o /scratch/$USER/vista_rruff_mixed_200k_%j.out
+#SBATCH -e /scratch/$USER/vista_rruff_mixed_200k_%j.err
 
 set -euo pipefail
 
 module load gcc/13.2.0 cuda/12.5 python3/3.11.8
-source /scratch/09870/williamratcliff/ai-diffraction-venv/bin/activate
+source /scratch/$USER/ai-diffraction-venv/bin/activate
 
 export WANDB_API_KEY
-WANDB_API_KEY="$(cat /scratch/09870/williamratcliff/ai-diffraction/.wandb_api_key)"
-DATA_PATH="/scratch/09870/williamratcliff/ai_diffraction_generated/rruff_conditioned_mixed_200k_v1_trainready.hdf5"
+WANDB_API_KEY="$(cat /scratch/$USER/ai-diffraction/.wandb_api_key)"
+DATA_PATH="/scratch/$USER/ai_diffraction_generated/rruff_conditioned_mixed_200k_v1_trainready.hdf5"
 
-cd /scratch/09870/williamratcliff/ai-diffraction/Code/ViT_NVIDIA
+cd /scratch/$USER/ai-diffraction/Code/ViT_NVIDIA
 while true; do
   if [[ -f "$DATA_PATH" ]]; then
     echo "[INFO] mixed dataset ready at $DATA_PATH"

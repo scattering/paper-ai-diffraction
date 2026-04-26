@@ -13,7 +13,13 @@ Reviewer archive:
 - `reviewer_compact_assets.tar.gz`
 
 Archive contents:
-- all checkpoints explicitly named in the manuscript main text or supplement
+- final-stage ViT checkpoints named in the manuscript
+- supplemental VT checkpoints
+- positional-ablation checkpoints
+- curated CNN checkpoints for the retained PRX CNN figures and tables
+- `CNN_README.md`
+- `cnn_artifact_map.csv`
+- recovered CNN Fig. S2 checkpoint `xrd_resnet_rbwbgj89.pth`
 - compact result JSONs (under `results/`)
 - paper configs
 - canonical and archived launchers
@@ -35,6 +41,12 @@ Supplemental notebook assets (`assets/figure_data/`) are **bundled in the git re
   - `results/reviewer/rruff325_precomputed_inference.json`
 
 These reviewer assets are small, derived, and paper-backed. They are intended to support the public notebook walkthrough without redistributing the full RRUFF benchmark.
+
+Archive split note:
+- code, notebooks, and paper-facing scripts stay in the GitHub repo
+- Zenodo carries checkpoints, compact derived artifacts, configs, launchers, and
+  short notes
+- reviewer assets remain packaged separately in `reviewer_compact_assets.tar.gz`
 
 Benchmark note:
 - this package releases the paper-facing benchmark-construction scripts and documentation

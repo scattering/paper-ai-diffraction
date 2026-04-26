@@ -1,23 +1,23 @@
 #!/bin/bash
 #SBATCH -J eval-mixed2500k-r325473
-#SBATCH -A CDA24014
+#SBATCH -A <PROJECT_CODE>
 #SBATCH -p gh
 #SBATCH -N 1
 #SBATCH -n 1
 #SBATCH -c 8
 #SBATCH -t 04:00:00
-#SBATCH -o /scratch/09870/williamratcliff/eval-mixed2500k-r325473.%j.out
-#SBATCH -e /scratch/09870/williamratcliff/eval-mixed2500k-r325473.%j.err
+#SBATCH -o /scratch/$USER/eval-mixed2500k-r325473.%j.out
+#SBATCH -e /scratch/$USER/eval-mixed2500k-r325473.%j.err
 
 set -euo pipefail
 module purge
 module load gcc/13.2.0 cuda/12.5 python3/3.11.8
-source /scratch/09870/williamratcliff/ai-diffraction-venv/bin/activate
-cd /scratch/09870/williamratcliff/ai-diffraction/Code/ViT_NVIDIA
+source /scratch/$USER/ai-diffraction-venv/bin/activate
+cd /scratch/$USER/ai-diffraction/Code/ViT_NVIDIA
 
 : "${TRAIN_JOB_ID:?TRAIN_JOB_ID must be set}"
-META="/scratch/09870/williamratcliff/mixed2500k_train_${TRAIN_JOB_ID}.json"
-SPEC="/scratch/09870/williamratcliff/ai-diffraction/docs/review_notes/mixed2500k_r325_specs_${TRAIN_JOB_ID}.json"
+META="/scratch/$USER/mixed2500k_train_${TRAIN_JOB_ID}.json"
+SPEC="/scratch/$USER/ai-diffraction/docs/review_notes/mixed2500k_r325_specs_${TRAIN_JOB_ID}.json"
 export META SPEC
 
 python - <<'PY'
@@ -61,12 +61,12 @@ with open(os.environ["META"], "r") as fh:
 PY
 )"
 
-python evaluate_calibration_metrics.py --checkpoint "$ckpt" --config "$cfg" --eval-data-path /work2/09870/williamratcliff/rruff-benchmark/RRUFF_usable_plus_recoverable_325_with_labels_maxnorm.hdf5 --prior-data-path "$prior" --aux-temperature 5.0 --bootstrap 1000 --output-json "/scratch/09870/williamratcliff/mixed2500k_calibration_metrics_325_${TRAIN_JOB_ID}.json"
+python evaluate_calibration_metrics.py --checkpoint "$ckpt" --config "$cfg" --eval-data-path /work2/<PROJECT_CODE>/$USER/rruff-benchmark/RRUFF_usable_plus_recoverable_325_with_labels_maxnorm.hdf5 --prior-data-path "$prior" --aux-temperature 5.0 --bootstrap 1000 --output-json "/scratch/$USER/mixed2500k_calibration_metrics_325_${TRAIN_JOB_ID}.json"
 
-python evaluate_calibration_metrics.py --checkpoint "$ckpt" --config "$cfg" --eval-data-path /work2/09870/williamratcliff/rruff-benchmark/RRUFF_option1_473_with_buckets_maxnorm.hdf5 --prior-data-path "$prior" --aux-temperature 5.0 --bootstrap 1000 --output-json "/scratch/09870/williamratcliff/mixed2500k_calibration_metrics_473_${TRAIN_JOB_ID}.json"
+python evaluate_calibration_metrics.py --checkpoint "$ckpt" --config "$cfg" --eval-data-path /work2/<PROJECT_CODE>/$USER/rruff-benchmark/RRUFF_option1_473_with_buckets_maxnorm.hdf5 --prior-data-path "$prior" --aux-temperature 5.0 --bootstrap 1000 --output-json "/scratch/$USER/mixed2500k_calibration_metrics_473_${TRAIN_JOB_ID}.json"
 
-python evaluate_split_head_validity.py --checkpoint "$ckpt" --config "$cfg" --eval-data-path /work2/09870/williamratcliff/rruff-benchmark/RRUFF_usable_plus_recoverable_325_with_labels_maxnorm.hdf5 --output-json "/scratch/09870/williamratcliff/mixed2500k_split_validity_325_${TRAIN_JOB_ID}.json"
+python evaluate_split_head_validity.py --checkpoint "$ckpt" --config "$cfg" --eval-data-path /work2/<PROJECT_CODE>/$USER/rruff-benchmark/RRUFF_usable_plus_recoverable_325_with_labels_maxnorm.hdf5 --output-json "/scratch/$USER/mixed2500k_split_validity_325_${TRAIN_JOB_ID}.json"
 
-python evaluate_split_head_validity.py --checkpoint "$ckpt" --config "$cfg" --eval-data-path /work2/09870/williamratcliff/rruff-benchmark/RRUFF_option1_473_with_buckets_maxnorm.hdf5 --output-json "/scratch/09870/williamratcliff/mixed2500k_split_validity_473_${TRAIN_JOB_ID}.json"
+python evaluate_split_head_validity.py --checkpoint "$ckpt" --config "$cfg" --eval-data-path /work2/<PROJECT_CODE>/$USER/rruff-benchmark/RRUFF_option1_473_with_buckets_maxnorm.hdf5 --output-json "/scratch/$USER/mixed2500k_split_validity_473_${TRAIN_JOB_ID}.json"
 
-python compare_325_failure_modes.py --specs-json "$SPEC" --eval-data-path /work2/09870/williamratcliff/rruff-benchmark/RRUFF_usable_plus_recoverable_325_with_labels_maxnorm.hdf5 --prior-data-path "$prior" --output-json "/scratch/09870/williamratcliff/mixed2500k_compare_325_failure_modes_${TRAIN_JOB_ID}.json"
+python compare_325_failure_modes.py --specs-json "$SPEC" --eval-data-path /work2/<PROJECT_CODE>/$USER/rruff-benchmark/RRUFF_usable_plus_recoverable_325_with_labels_maxnorm.hdf5 --prior-data-path "$prior" --output-json "/scratch/$USER/mixed2500k_compare_325_failure_modes_${TRAIN_JOB_ID}.json"

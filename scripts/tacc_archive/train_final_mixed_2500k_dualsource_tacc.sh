@@ -1,31 +1,31 @@
 #!/bin/bash
 #SBATCH -J vista-dualsrc-2500k
-#SBATCH -A CDA24014
+#SBATCH -A <PROJECT_CODE>
 #SBATCH -p gh
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=8
 #SBATCH -t 16:00:00
-#SBATCH -o /scratch/09870/williamratcliff/vista_dualsource_2500k_%j.out
-#SBATCH -e /scratch/09870/williamratcliff/vista_dualsource_2500k_%j.err
+#SBATCH -o /scratch/$USER/vista_dualsource_2500k_%j.out
+#SBATCH -e /scratch/$USER/vista_dualsource_2500k_%j.err
 
 set -euo pipefail
 
 module load gcc/13.2.0 cuda/12.5 python3/3.11.8
-source /scratch/09870/williamratcliff/ai-diffraction-venv/bin/activate
+source /scratch/$USER/ai-diffraction-venv/bin/activate
 
 export WANDB_API_KEY
 export WANDB_NAME="rruff-dualsource-2500k-gh-${SLURM_JOB_ID}"
-WANDB_API_KEY="$(cat /scratch/09870/williamratcliff/ai-diffraction/.wandb_api_key)"
-STD_DATA_PATH="/scratch/09870/williamratcliff/ai_diffraction_generated/rruff_conditioned_2346k_v1_trainready.hdf5"
-PO_DATA_PATH="/scratch/09870/williamratcliff/ai_diffraction_generated/rruff_conditioned_500k_po_v1_trainready.hdf5"
-REMOTE_PO_PATH="/scratch/09870/williamratcliff/ai_diffraction_generated/rruff_conditioned_500k_po_v1_trainready.hdf5"
+WANDB_API_KEY="$(cat /scratch/$USER/ai-diffraction/.wandb_api_key)"
+STD_DATA_PATH="/scratch/$USER/ai_diffraction_generated/rruff_conditioned_2346k_v1_trainready.hdf5"
+PO_DATA_PATH="/scratch/$USER/ai_diffraction_generated/rruff_conditioned_500k_po_v1_trainready.hdf5"
+REMOTE_PO_PATH="/scratch/$USER/ai_diffraction_generated/rruff_conditioned_500k_po_v1_trainready.hdf5"
 REMOTE_HOST="stampede3"
-META_PATH="/scratch/09870/williamratcliff/dualsource2500k_train_${SLURM_JOB_ID}.json"
+META_PATH="/scratch/$USER/dualsource2500k_train_${SLURM_JOB_ID}.json"
 START_TS="$(date +%s)"
 export META_PATH START_TS
 
-cd /scratch/09870/williamratcliff/ai-diffraction/Code/ViT_NVIDIA
+cd /scratch/$USER/ai-diffraction/Code/ViT_NVIDIA
 
 while true; do
   std_ready=0
@@ -67,9 +67,9 @@ import glob
 import json
 import os
 
-model_dir = "/scratch/09870/williamratcliff/ai_diffraction_models"
-cfg_path = "/scratch/09870/williamratcliff/ai-diffraction/Code/ViT_NVIDIA/config_rruff_conditioned_dualsource_2346k_500kpo_from_ic6gfmvm_physpe_coord.json"
-prior_path = "/scratch/09870/williamratcliff/ai_diffraction_generated/rruff_conditioned_500k_po_v1_trainready.hdf5"
+model_dir = "/scratch/$USER/ai_diffraction_models"
+cfg_path = "/scratch/$USER/ai-diffraction/Code/ViT_NVIDIA/config_rruff_conditioned_dualsource_2346k_500kpo_from_ic6gfmvm_physpe_coord.json"
+prior_path = "/scratch/$USER/ai_diffraction_generated/rruff_conditioned_500k_po_v1_trainready.hdf5"
 meta_path = os.environ["META_PATH"]
 start_ts = int(os.environ["START_TS"])
 
