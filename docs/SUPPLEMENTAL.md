@@ -55,7 +55,7 @@ These notebooks are retained as archival provenance artifacts explaining how sup
     - Table S9
     - Fig. S2 / top-10 extinction-group accuracy
   - Fig. S2 provenance:
-    - checkpoint: `xrd_model_rbwbgj89.pth` (`rbwbgj89`)
+    - checkpoint: `xrd_resnet_rbwbgj89.pth` (`rbwbgj89`; the notebook cell names the same run with the `xrd_model_...` prefix)
     - dataset: `500000-Samples_3041-Pts.h5`
     - output figure: `fig_s2_top10_ext_accuracy.pdf`
   - expected inputs: CNN checkpoints from `external/checkpoints/` and the matching HDF5 files listed in `reproducibility/dataset_manifest.csv`
