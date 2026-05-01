@@ -38,7 +38,8 @@ Supported notebook usage paths:
 Google Colab is plausible for the lightweight checkpoint-only reviewer demo, but it is not the primary validated path.
 
 Zenodo archival package:
-- pending public record / DOI
+- DOI: [10.5281/zenodo.19558452](https://doi.org/10.5281/zenodo.19558452)
+- Record: [zenodo.org/records/19558452](https://zenodo.org/records/19558452)
 
 Current archive split:
 - GitHub repo:
@@ -54,8 +55,6 @@ Current archive split:
   - short archival manifests/notes
 - reviewer compact assets:
   - packaged separately in `reviewer_compact_assets.tar.gz`
-
-After publication, replace this placeholder with the final Zenodo DOI and public record URL.
 
 ## Install
 

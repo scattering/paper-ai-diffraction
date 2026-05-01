@@ -27,7 +27,21 @@ These notebooks are retained as archival provenance artifacts explaining how sup
 
 ### RT
 
-*(No provenance notebooks yet — RT checkpoint mapping still pending.)*
+- [notebooks/provenance/supplemental_rt_inference.ipynb](../notebooks/provenance/supplemental_rt_inference.ipynb)
+  - purpose: batch inference for an RT checkpoint against a matching RRUFF benchmark HDF5; reproduces top-1/3/5 numbers for the RT rows of Tables S5/S6 (`tab:real_ablation`)
+  - source: ports `flash_attn_version/test_inference.py`
+  - expected inputs: an RT checkpoint at `external/checkpoints/xrd_model_<run_id>.pth` and a RRUFF intensity HDF5 (e.g. `RRUFF_low_bkg_full_intensity_cleaned.hdf5`)
+  - includes optional W&B-API cell to fetch architecture from the original training run
+
+- [notebooks/provenance/supplemental_rt_cross_test.ipynb](../notebooks/provenance/supplemental_rt_cross_test.ipynb)
+  - purpose: 4×4 RT cross-evaluation matrix (Balanced / ICSD / RRUFF / Augmented training distributions × matching synthetic test sets) backing `tab:rt_distribution`
+  - source: ports `flash_attn_version/cross_test.py`
+  - expected inputs: the four RT checkpoints (`yv1m76u6`, `4hv17ttu`, `hwixtnv7`, `mq1l94p7`) and the four 10M synthetic HDF5 datasets on Stampede3 scratch
+
+- [notebooks/provenance/supplemental_rt_attention.ipynb](../notebooks/provenance/supplemental_rt_attention.ipynb)
+  - purpose: RT attention overlay with HKL annotations (`fig:rt_attention`); loads the eager-attention RT path so attention weights are materialised
+  - source: ports `ai-diffraction/Code/Interpretability/interpret_reg_transformer.py`
+  - expected inputs: checkpoint `xrd_model_hwixtnv7.pth` and pre-generated `gen_output/sample_{16,26}.{npz,json}` from `ai-diffraction/Code/Interpretability/gen_spectrum.py` (cctbx env, run separately)
 
 ### CNN
 
@@ -39,7 +53,11 @@ These notebooks are retained as archival provenance artifacts explaining how sup
     - Table S2
     - Table S8
     - Table S9
-    - Fig. S2
+    - Fig. S2 / top-10 extinction-group accuracy
+  - Fig. S2 provenance:
+    - checkpoint: `xrd_resnet_rbwbgj89.pth` (`rbwbgj89`; the notebook cell names the same run with the `xrd_model_...` prefix)
+    - dataset: `500000-Samples_3041-Pts.h5`
+    - output figure: `fig_s2_top10_ext_accuracy.pdf`
   - expected inputs: CNN checkpoints from `external/checkpoints/` and the matching HDF5 files listed in `reproducibility/dataset_manifest.csv`
 
 - [src/paper_ai_diffraction/interp-cnn/Interp_CNN_restructured.ipynb](../src/paper_ai_diffraction/interp-cnn/Interp_CNN_restructured.ipynb)
@@ -99,6 +117,39 @@ Accuracy on 2,795 test samples (10M_ref_ext_highres test split); checkpoint `smq
 | 7.08% | 14.88% | 19.68% |
 
 Note: Low accuracy is expected — the run crashed before convergence. The checkpoint illustrates confusion matrix format only (Fig. S3), not performance.
+
+---
+
+## RT Accuracy Reference
+
+W&B reference numbers for the supplemental RT checkpoints. These are raw training/inference run values, not reproduced from bundled artifacts. W&B project: `nist-berkeley-ai-diffraction/ai-diffraction`. Checkpoint mapping is in `notebooks/provenance/supplemental_rt_inference.ipynb` (`CHECKPOINT_CONFIGS`) and `supplemental_rt_cross_test.ipynb` (`MODELS`).
+
+### tab:rt_distribution — RT Training-Distribution Cross-Test
+
+| Model       | W&B Run ID | depth | num_heads | spec_length | Notes |
+|-------------|------------|-------|-----------|-------------|-------|
+| RT-Balanced | `yv1m76u6` | 8     | 4         | 8501        | RoPE; trained on 10M PyXtal balanced (5–90°) |
+| RT-ICSD     | `4hv17ttu` | 6     | 4         | 8501        | RoPE; trained on 10M PyXtal ICSD-distrib    |
+| RT-RRUFF    | `hwixtnv7` | 6     | 4         | 8501        | RoPE; trained on 10M PyXtal RRUFF-distrib   |
+| RT-Augmented| `mq1l94p7` | 6     | 4         | 8501        | RoPE; trained on 10M aug RRUFF-type         |
+
+Top-1/3/5 entries of the 4×4 cross-test matrix are produced by `supplemental_rt_cross_test.ipynb`.
+
+### tab:real_ablation — RT Real-RRUFF Ablation
+
+| Model               | W&B Run ID | depth | num_heads | RRUFF benchmark HDF5 |
+|---------------------|------------|-------|-----------|----------------------|
+| RT-RRUFF (depth=6)  | `hwixtnv7` | 6     | 4         | `RRUFF_low_bkg_full_intensity_cleaned.hdf5` |
+| RT 16-heads         | `7brb1pir` | 6     | 16        | `RRUFF_low_bkg_full_intensity_cleaned.hdf5` |
+| RT-Balanced         | `yv1m76u6` | 8     | 4         | `RRUFF_low_bkg_full_intensity_cleaned.hdf5` |
+| RT-ICSD             | `4hv17ttu` | 6     | 4         | `RRUFF_low_bkg_full_intensity_cleaned.hdf5` |
+| RT-Augmented        | `mq1l94p7` | 6     | 4         | `RRUFF_low_bkg_full_intensity_cleaned.hdf5` |
+
+The notebook's `CHECKPOINT_CONFIGS` block is the source of truth for these RT real-data ablation rows.
+
+### fig:rt_attention — RT Attention Overlay
+
+Checkpoint `hwixtnv7` (RT-RRUFF). Sample indices 16 and 26 from `intrep_crystal_xrd.db`; HKL/peak data pre-generated via `gen_spectrum.py` (cctbx env). Attention is read from the final transformer block via the eager `MultiHeadAttentionWithRoPE` path (the Flash Attention path never materialises the matrix).
 
 ---
 
