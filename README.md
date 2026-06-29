@@ -39,8 +39,8 @@ Supported notebook usage paths:
 Google Colab is plausible for the lightweight checkpoint-only reviewer demo, but it is not the primary validated path.
 
 Zenodo archival package:
-- DOI: [10.5281/zenodo.21043734](https://doi.org/10.5281/zenodo.21043734)
-- Record: [zenodo.org/records/21043734](https://zenodo.org/records/21043734)
+- DOI: [10.5281/zenodo.21048093](https://doi.org/10.5281/zenodo.21048093)
+- Record: [zenodo.org/records/21048093](https://zenodo.org/records/21048093)
 
 Current archive split:
 - GitHub repo:

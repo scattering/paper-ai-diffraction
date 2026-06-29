@@ -67,8 +67,8 @@ Numbers are Top-1/3/5 unless otherwise stated.
 
 The current Zenodo package for this release is published as:
 
-- DOI: [10.5281/zenodo.21043734](https://doi.org/10.5281/zenodo.21043734)
-- Record: [zenodo.org/records/21043734](https://zenodo.org/records/21043734)
+- DOI: [10.5281/zenodo.21048093](https://doi.org/10.5281/zenodo.21048093)
+- Record: [zenodo.org/records/21048093](https://zenodo.org/records/21048093)
 - Archive: `paper_ai_diffraction_revised_20260629.tar.gz`
 
 - It includes the final SG-to-EG JSON/CSV outputs:

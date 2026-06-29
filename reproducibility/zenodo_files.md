@@ -1,8 +1,8 @@
 # Zenodo Assets
 
 Current Zenodo archival package:
-- DOI: [10.5281/zenodo.21043734](https://doi.org/10.5281/zenodo.21043734)
-- Record: [zenodo.org/records/21043734](https://zenodo.org/records/21043734)
+- DOI: [10.5281/zenodo.21048093](https://doi.org/10.5281/zenodo.21048093)
+- Record: [zenodo.org/records/21048093](https://zenodo.org/records/21048093)
 - Concept DOI: [10.5281/zenodo.19558451](https://doi.org/10.5281/zenodo.19558451)
 
 Final paper repo:
@@ -88,7 +88,7 @@ Reviewer workflow:
 5. Do not expect the full RRUFF benchmark HDF5s to be redistributed.
 
 Published Zenodo identifiers:
-1. version DOI: [10.5281/zenodo.21043734](https://doi.org/10.5281/zenodo.21043734)
+1. version DOI: [10.5281/zenodo.21048093](https://doi.org/10.5281/zenodo.21048093)
 2. concept DOI: [10.5281/zenodo.19558451](https://doi.org/10.5281/zenodo.19558451)
-3. record URL: [zenodo.org/records/21043734](https://zenodo.org/records/21043734)
+3. record URL: [zenodo.org/records/21048093](https://zenodo.org/records/21048093)
 4. previous version: [10.5281/zenodo.19558452](https://doi.org/10.5281/zenodo.19558452)
