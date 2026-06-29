@@ -1,6 +1,6 @@
 # Evaluation
 
-This prototype contains both the raw evaluation code and the compact JSON outputs used in the paper.
+This repo contains both the raw evaluation code and the compact JSON outputs used in the paper.
 
 Before using the wrappers below:
 

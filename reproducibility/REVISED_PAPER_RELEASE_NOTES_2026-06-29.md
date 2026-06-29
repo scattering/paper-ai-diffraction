@@ -1,18 +1,19 @@
-# Revised Paper Release Notes
+# Current Paper Release Notes
 
 Date: 2026-06-29
 
-This note tracks the public GitHub working-tree update for the revised PRX paper.
+This note documents the current public GitHub artifact surface for the PRX
+paper.
 The paper cites this repository as:
 
 - <https://github.com/scattering/paper-ai-diffraction>
 
-## Updated In This Working Tree
+## Current GitHub Contents
 
-- Revised flat-37 mapping assets:
+- Flat-37 mapping assets:
   - `assets/lookups/eg37_mapping_20260622.json`
   - `assets/lookups/eg37_mapping_20260622.csv`
-- Revised flat-37 ViT configs:
+- Flat-37 ViT configs:
   - `configs/flat37/vit_stage1_uniform_2m_20260622.json`
   - `configs/flat37/vit_stage2c_rruff2346k_20260622.json`
   - `configs/flat37/vit_po200k_20260622.json`
@@ -30,14 +31,14 @@ The paper cites this repository as:
   - `results/flat37/calibration/`
 - Information-channel and topology summaries under:
   - `results/flat37/information_theory/`
-- Revised summary table source:
+- Summary table source:
   - `results/revised_paper_summary.json`
 
-The utility that builds flat-37 targets now derives each space group's canonical
+The utility that builds flat-37 targets derives each space group's canonical
 row from `canonical_extinction_to_space_group.csv` membership and checks the
 lookup-table symbol for consistency.
 
-## Current Revised-Paper Reference Numbers
+## Current Paper Reference Numbers
 
 Stage-2c flat-37 ViT, calibrated Bayesian auxiliary output at `T=5`:
 
@@ -64,16 +65,20 @@ Numbers are Top-1/3/5 unless otherwise stated.
 
 ## Zenodo/Public-Repo Items Still Pending
 
+The Zenodo package for this release should contain the current paper artifact
+set.
+
 - Copy the final SG-to-EG JSON/CSV outputs from Vista:
   - `/scratch/09870/williamratcliff/sg_eg_categorical_referee_20260624/`
 - Copy the final regular-transformer evaluation JSONs from Vista:
   - `/scratch/09870/williamratcliff/rt_flat37_referee_20260624/784439/`
 - Confirm exact Stage-1, PO-only, and large mixed flat-37 checkpoint filenames
   before adding final Zenodo manifest rows.
-- Decide whether the matched regular-transformer checkpoint belongs in Zenodo,
-  or whether configs plus compact evaluation JSONs are sufficient for the paper
-  comparison.
-- Refresh reviewer compact assets if the notebook should browse the revised
+- Include the matched regular-transformer checkpoint in Zenodo with its configs
+  and compact evaluation JSONs, as the architecture-control comparison.
+- Decide whether posterior `.npz` files should be included for exact posterior
+  audit replay. Compact JSON summaries are sufficient for table reproduction.
+- Prepare reviewer compact assets if the notebook should browse the current
   Stage-2c flat-37 outputs rather than the older mixed-curriculum examples.
 
 WiSE-FT is not part of the revised-paper final model package. If kept in the

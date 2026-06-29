@@ -2,9 +2,9 @@
 
 Paper-focused reproducibility repository for *Attention Is Not All You Need for Diffraction*.
 
-This repo reproduces the revised paper-facing table rows and figure layer for the diffraction-symmetry study:
+This repo reproduces the current paper-facing table rows and figure layer for the diffraction-symmetry study:
 - benchmark summary rows from bundled JSON artifacts
-- revised flat-37 ViT configuration and mapping assets
+- flat-37 ViT configuration and mapping assets
 - matched regular-transformer and SG-to-EG control configuration/provenance files
 - topology, calibration, and information-channel summary artifacts
 
@@ -22,7 +22,7 @@ The repo *does* bundle compact reviewer-facing and paper-audit artifacts:
 - two example diffraction CSVs derived from the paper benchmark
 - their paired JSON metadata
 - SG/EG lookup CSVs
-- the revised 99-EG to flat-37 rule-output mapping
+- the 99-EG to flat-37 rule-output mapping
 - a compact prior JSON/CSV
 - a compact precomputed `RRUFF-325` summary JSON
 
@@ -170,7 +170,7 @@ If `results/reviewer/rruff325_precomputed_inference.json` is present, the review
 - `results/figures/` is generated output and is not tracked.
 - `scripts/` contains the canonical paper-facing wrappers.
 - `scripts/tacc_archive/` contains preserved historical campaign launchers for provenance only.
-- [reproducibility/REVISED_PAPER_RELEASE_NOTES_2026-06-29.md](reproducibility/REVISED_PAPER_RELEASE_NOTES_2026-06-29.md) records the copied revised-paper assets and the remaining Zenodo/public-repo staging items.
+- [reproducibility/REVISED_PAPER_RELEASE_NOTES_2026-06-29.md](reproducibility/REVISED_PAPER_RELEASE_NOTES_2026-06-29.md) records the current paper assets and the remaining Zenodo/public-repo staging items.
 
 ## Key References
 

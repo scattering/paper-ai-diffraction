@@ -15,6 +15,7 @@ Reviewer archive:
 
 Archive contents:
 - revised final-stage flat-37 ViT checkpoints named in the manuscript
+- matched regular-transformer architecture-control checkpoint
 - supplemental VT checkpoints
 - positional-ablation checkpoints
 - curated CNN checkpoints for the retained PRX CNN figures and tables
@@ -26,14 +27,19 @@ Archive contents:
 - canonical and archived launchers
 - short reproducibility notes
 
-For the revised paper package, the active final-stage ViT release surface is:
+For the current paper package, the active final-stage ViT release surface is:
 
 - `xrd_model_pubfix_flat37_20260622_stage2c_r2346k_s1337_best.pth`
 - the flat-37 PO-only and large mixed checkpoints after exact filename confirmation
 - `configs/flat37/`
 - `assets/lookups/eg37_mapping_20260622.{json,csv}`
 - `results/flat37/`
-- the matched SG-to-EG and regular-transformer compact outputs after copying them from Vista
+- the matched SG-to-EG compact outputs after copying them from Vista
+- `xrd_model_pubfix_rt_flat37_20260624_stage2c_r2346k_s1337_best.pth`
+- the matched regular-transformer compact outputs after copying them from Vista
+- posterior `.npz` files only if the Zenodo package is meant to support exact
+  posterior audit replay; compact JSON summaries are sufficient for table
+  reproduction
 
 WiSE-FT checkpoints are historical or exploratory archive entries, not part of the revised-paper final model package.
 
@@ -59,7 +65,7 @@ Archive split note:
 - Zenodo carries checkpoints, compact derived artifacts, configs, launchers, and
   short notes
 - reviewer assets remain packaged separately in `reviewer_compact_assets.tar.gz`
-- current release staging status is tracked in [REVISED_PAPER_RELEASE_NOTES_2026-06-29.md](REVISED_PAPER_RELEASE_NOTES_2026-06-29.md)
+- current release status is tracked in [REVISED_PAPER_RELEASE_NOTES_2026-06-29.md](REVISED_PAPER_RELEASE_NOTES_2026-06-29.md)
 
 Benchmark note:
 - this package releases the paper-facing benchmark-construction scripts and documentation

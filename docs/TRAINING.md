@@ -31,7 +31,8 @@ See:
 
 ## External Data
 
-The original paper campaign used external HDF5 datasets that are not bundled here. The current prototype now records them in:
+The paper campaign used external HDF5 datasets that are not bundled here. The
+dataset manifest records them in:
 
 - [dataset_manifest.csv](../reproducibility/dataset_manifest.csv)
 
@@ -56,14 +57,14 @@ The older mixed-200k and `82ept35h` configs remain in `configs/` for provenance.
 
 ## Canonical Training Wrappers
 
-Use these first for the revised flat-37 campaign:
+Use these for the flat-37 paper runs:
 
 - [scripts/tacc_archive/flat37/vista_train_flat37_publication_20260622.sh](../scripts/tacc_archive/flat37/vista_train_flat37_publication_20260622.sh)
 - [scripts/tacc_archive/flat37/submit_flat37_publication_reruns_20260622.sh](../scripts/tacc_archive/flat37/submit_flat37_publication_reruns_20260622.sh)
 - [scripts/tacc_archive/regular_transformer/vista_train_rt_flat37_stage1_20260624.sh](../scripts/tacc_archive/regular_transformer/vista_train_rt_flat37_stage1_20260624.sh)
 - [scripts/tacc_archive/regular_transformer/vista_train_rt_flat37_stage2c_epoch_chunk_ddp_20260624.sh](../scripts/tacc_archive/regular_transformer/vista_train_rt_flat37_stage2c_epoch_chunk_ddp_20260624.sh)
 
-These wrappers are preserved as TACC provenance for the publication runs. The portable wrappers in the top-level `scripts/` directory remain useful for local adaptation, but the revised-paper campaign was run through the TACC wrappers above.
+These wrappers are preserved as TACC provenance for the publication runs. The portable wrappers in the top-level `scripts/` directory remain useful for local adaptation, but the paper campaign was run through the TACC wrappers above.
 
 ## Historical TACC Launchers
 
@@ -76,9 +77,9 @@ Use those only if you need an exact record of the TACC batch jobs.
 ## Paper-Relevant Training Lineage
 
 - `xrd_model_pubfix_flat37_20260622_stage2c_r2346k_s1337_best.pth`
-  - revised non-PO real-benchmark reference
+  - current non-PO real-benchmark reference
 - flat-37 PO-only and large mixed checkpoints
-  - revised preferred-orientation and final mixed-curriculum variants; exact Zenodo filenames remain to be confirmed in the release manifest
+  - current preferred-orientation and final mixed-curriculum variants; exact Zenodo filenames remain to be confirmed in the release manifest
 - `xrd_model_pubfix_rt_flat37_20260624_stage2c_r2346k_s1337_best.pth`
   - matched regular-transformer architecture control
 - `9rwv1qly`, `cscjfdwk`, `dsi7ehiv`, `eeru8svx`, `82ept35h`

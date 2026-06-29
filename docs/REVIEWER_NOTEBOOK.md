@@ -1,6 +1,6 @@
 # Reviewer Notebook
 
-This repo now includes a reviewer-facing notebook:
+This repo includes a reviewer-facing notebook:
 
 - `notebooks/reviewer_walkthrough.ipynb`
 
@@ -39,7 +39,7 @@ The repo also includes two real benchmark-derived examples:
 - `assets/reviewer_examples/correct_case_015_*.csv`
 - `assets/reviewer_examples/failure_case_000_*.csv`
 
-These compact examples were exported from the local `RRUFF-325` benchmark copy using an earlier manuscript-era outcome JSON. They remain useful as lightweight notebook examples; refresh the compact reviewer assets from the revised flat-37 Stage-2c run if the shipped examples need to match the final benchmark table exactly.
+These compact examples are lightweight notebook inputs with paired metadata. For benchmark-table browsing, use the compact precomputed `RRUFF-325` summary JSON rather than treating the two examples as a benchmark summary.
 
 Each CSV has a paired metadata JSON with:
 
@@ -150,7 +150,7 @@ This distinction matters because the paper's final deployed inference uses the t
 
 ## TACC-Side Artifact Generators
 
-To reduce reviewer friction, this repo now includes three compact artifact generators:
+To reduce reviewer friction, this repo includes three compact artifact generators:
 
 - `scripts/export_prior_asset.py`
 - `scripts/export_rruff_examples.py`
@@ -162,9 +162,9 @@ Recommended TACC workflow:
 2. export one correct and one failure example as plain CSV
 3. optionally precompute benchmark-wide per-example summaries for browsing
 
-Those artifacts are small and are the right candidates for later Zenodo inclusion.
+Those artifacts are small and belong in the reviewer compact bundle.
 
-That later inclusion has now been split cleanly:
+Archive split:
 
 - the main Zenodo archive carries checkpoints and paper-backed compact model
   artifacts
