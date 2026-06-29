@@ -1,28 +1,21 @@
 # Zenodo Assets
 
-Zenodo archival package:
-- DOI: [10.5281/zenodo.19558452](https://doi.org/10.5281/zenodo.19558452)
-- Record: [zenodo.org/records/19558452](https://zenodo.org/records/19558452)
+Current Zenodo archival package:
+- DOI: [10.5281/zenodo.21043734](https://doi.org/10.5281/zenodo.21043734)
+- Record: [zenodo.org/records/21043734](https://zenodo.org/records/21043734)
+- Concept DOI: [10.5281/zenodo.19558451](https://doi.org/10.5281/zenodo.19558451)
 
 Final paper repo:
 - [github.com/scattering/paper-ai-diffraction](https://github.com/scattering/paper-ai-diffraction)
 
 Primary archive:
-- `zenodo_paper_repro.tar.gz`
+- `paper_ai_diffraction_revised_20260629.tar.gz`
 
-Reviewer archive:
-- `reviewer_compact_assets.tar.gz`
-
-Archive contents:
-- revised final-stage flat-37 ViT checkpoints named in the manuscript
+Current archive contents:
+- current final-stage flat-37 ViT checkpoints named in the manuscript
 - matched regular-transformer architecture-control checkpoint
-- supplemental VT checkpoints
-- positional-ablation checkpoints
-- curated CNN checkpoints for the retained PRX CNN figures and tables
-- `CNN_README.md`
-- `cnn_artifact_map.csv`
-- recovered CNN Fig. S2 checkpoint `xrd_resnet_rbwbgj89.pth`
-- compact result JSONs (under `results/`)
+- compact result JSON/CSV artifacts under `results/`
+- RRUFF-325 and RRUFF-473 case-ID CSVs under `benchmark_ids/`
 - paper configs
 - canonical and archived launchers
 - short reproducibility notes
@@ -30,16 +23,19 @@ Archive contents:
 For the current paper package, the active final-stage ViT release surface is:
 
 - `xrd_model_pubfix_flat37_20260622_stage2c_r2346k_s1337_best.pth`
-- the flat-37 PO-only and large mixed checkpoints after exact filename confirmation
+- `xrd_model_pubfix_flat37_20260622_stage1_u2m_s1337_best.pth`
+- `xrd_model_pubfix_flat37_20260622_po200k_s1337_best.pth`
+- `xrd_model_pubfix_flat37_20260622_dualsource2500k_s1337_best.pth`
 - `configs/flat37/`
 - `assets/lookups/eg37_mapping_20260622.{json,csv}`
 - `results/flat37/`
-- the matched SG-to-EG compact outputs after copying them from Vista
+- the matched SG-to-EG compact outputs
 - `xrd_model_pubfix_rt_flat37_20260624_stage2c_r2346k_s1337_best.pth`
-- the matched regular-transformer compact outputs after copying them from Vista
-- posterior `.npz` files only if the Zenodo package is meant to support exact
-  posterior audit replay; compact JSON summaries are sufficient for table
-  reproduction
+- the matched regular-transformer compact outputs
+- `benchmark_ids/rruff325_case_ids.csv`
+- `benchmark_ids/rruff473_case_ids.csv`
+- compact information-theory JSON summaries; posterior `.npz` files are not part
+  of the main Zenodo package
 
 WiSE-FT checkpoints are historical or exploratory archive entries, not part of the revised-paper final model package.
 
@@ -47,7 +43,7 @@ Supplemental notebook assets (`assets/figure_data/`) are **bundled in the git re
   - `assets/figure_data/1k_structures.csv` — 1,000 crystal structures for Fig S5 notebook
   - `assets/figure_data/interp_metadata_clean.csv` — HDF5-index-to-structure_id map for Fig S5 notebook
   - `assets/figure_data/conf_mat_top5_copper-sweep-1_table_103_ff53214644fd32c50e63.table.json` — W&B confusion matrix table artifact for Fig S3 notebook
-- compact reviewer assets, packaged separately in `reviewer_compact_assets.tar.gz`:
+- compact reviewer assets are bundled in the GitHub repo:
   - `assets/reviewer_examples/correct_case_015_Arsenopyrite__R050071-1__6130.csv`
   - `assets/reviewer_examples/correct_case_015_Arsenopyrite__R050071-1__6130.json`
   - `assets/reviewer_examples/failure_case_000_Actinolite__R050336-1__5330.csv`
@@ -64,7 +60,7 @@ Archive split note:
 - code, notebooks, and paper-facing scripts stay in the GitHub repo
 - Zenodo carries checkpoints, compact derived artifacts, configs, launchers, and
   short notes
-- reviewer assets remain packaged separately in `reviewer_compact_assets.tar.gz`
+- reviewer assets remain in the GitHub repo
 - current release status is tracked in [REVISED_PAPER_RELEASE_NOTES_2026-06-29.md](REVISED_PAPER_RELEASE_NOTES_2026-06-29.md)
 
 Benchmark note:
@@ -84,14 +80,15 @@ Expected workflow:
 3. Use [checkpoint_manifest.csv](checkpoint_manifest.csv) to match every manuscript-named checkpoint to its archival filename.
 4. Use [dataset_manifest.csv](dataset_manifest.csv) to provide required external benchmark and trainready datasets.
 
-Reviewer workflow from the archival package:
-1. Extract `reviewer_compact_assets.tar.gz` into the repo root, or inspect the same files directly in the GitHub repo.
+Reviewer workflow:
+1. Inspect the reviewer example files directly in the GitHub repo.
 2. Use the shipped reviewer example CSVs and metadata for the notebook walkthrough.
 3. Use the compact reviewer priors and precomputed `RRUFF-325` summary JSON for notebook browsing.
 4. Use checkpoints from Zenodo for live single-pattern inference.
 5. Do not expect the full RRUFF benchmark HDF5s to be redistributed.
 
 Published Zenodo identifiers:
-1. version DOI: [10.5281/zenodo.19558452](https://doi.org/10.5281/zenodo.19558452)
+1. version DOI: [10.5281/zenodo.21043734](https://doi.org/10.5281/zenodo.21043734)
 2. concept DOI: [10.5281/zenodo.19558451](https://doi.org/10.5281/zenodo.19558451)
-3. record URL: [zenodo.org/records/19558452](https://zenodo.org/records/19558452)
+3. record URL: [zenodo.org/records/21043734](https://zenodo.org/records/21043734)
+4. previous version: [10.5281/zenodo.19558452](https://doi.org/10.5281/zenodo.19558452)

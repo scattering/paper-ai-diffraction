@@ -79,7 +79,9 @@ Use those only if you need an exact record of the TACC batch jobs.
 - `xrd_model_pubfix_flat37_20260622_stage2c_r2346k_s1337_best.pth`
   - current non-PO real-benchmark reference
 - flat-37 PO-only and large mixed checkpoints
-  - current preferred-orientation and final mixed-curriculum variants; exact Zenodo filenames remain to be confirmed in the release manifest
+  - current preferred-orientation and final mixed-curriculum variants:
+    `xrd_model_pubfix_flat37_20260622_po200k_s1337_best.pth` and
+    `xrd_model_pubfix_flat37_20260622_dualsource2500k_s1337_best.pth`
 - `xrd_model_pubfix_rt_flat37_20260624_stage2c_r2346k_s1337_best.pth`
   - matched regular-transformer architecture control
 - `9rwv1qly`, `cscjfdwk`, `dsi7ehiv`, `eeru8svx`, `82ept35h`

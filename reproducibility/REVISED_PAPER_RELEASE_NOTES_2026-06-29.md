@@ -63,23 +63,29 @@ Matched SG-to-EG control:
 
 Numbers are Top-1/3/5 unless otherwise stated.
 
-## Zenodo/Public-Repo Items Still Pending
+## Zenodo/Public-Repo Release State
 
-The Zenodo package for this release should contain the current paper artifact
-set.
+The current Zenodo package for this release is published as:
 
-- Copy the final SG-to-EG JSON/CSV outputs from Vista:
+- DOI: [10.5281/zenodo.21043734](https://doi.org/10.5281/zenodo.21043734)
+- Record: [zenodo.org/records/21043734](https://zenodo.org/records/21043734)
+- Archive: `paper_ai_diffraction_revised_20260629.tar.gz`
+
+- It includes the final SG-to-EG JSON/CSV outputs:
   - `/scratch/09870/williamratcliff/sg_eg_categorical_referee_20260624/`
-- Copy the final regular-transformer evaluation JSONs from Vista:
+- It includes the final regular-transformer evaluation JSONs:
   - `/scratch/09870/williamratcliff/rt_flat37_referee_20260624/784439/`
-- Confirm exact Stage-1, PO-only, and large mixed flat-37 checkpoint filenames
-  before adding final Zenodo manifest rows.
-- Include the matched regular-transformer checkpoint in Zenodo with its configs
+- It includes the current Stage-1, PO-only, and large mixed flat-37 checkpoints
+  named in `checkpoint_manifest.csv`.
+- It includes the matched regular-transformer checkpoint with its configs
   and compact evaluation JSONs, as the architecture-control comparison.
-- Decide whether posterior `.npz` files should be included for exact posterior
-  audit replay. Compact JSON summaries are sufficient for table reproduction.
-- Prepare reviewer compact assets if the notebook should browse the current
-  Stage-2c flat-37 outputs rather than the older mixed-curriculum examples.
+- It includes `benchmark_ids/rruff325_case_ids.csv` and
+  `benchmark_ids/rruff473_case_ids.csv`.
+- Do not include posterior `.npz` files in the main Zenodo package. Compact JSON
+  summaries are sufficient for table reproduction; exact posterior audit replay
+  would be a separate audit-companion package.
+- Reviewer notebook examples and lightweight browsing assets are tracked in the
+  GitHub repo with the notebook support files.
 
 WiSE-FT is not part of the revised-paper final model package. If kept in the
 archive, it should be labeled historical or exploratory.

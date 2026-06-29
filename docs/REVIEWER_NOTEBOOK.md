@@ -13,8 +13,8 @@ Archive boundary:
 
 - the notebook code and walkthrough stay in GitHub
 - released checkpoints come from the main Zenodo archive
-- compact reviewer examples and precomputed reviewer JSONs come from the
-  separate `reviewer_compact_assets.tar.gz` archive or the mirrored repo files
+- compact reviewer examples and precomputed reviewer JSONs are tracked in this
+  GitHub repo with the notebook support files
 
 ## Input Contract
 
@@ -168,4 +168,4 @@ Archive split:
 
 - the main Zenodo archive carries checkpoints and paper-backed compact model
   artifacts
-- `reviewer_compact_assets.tar.gz` carries the lightweight reviewer bundle
+- the GitHub repo carries the lightweight reviewer bundle used by the notebook
