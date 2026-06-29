@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "updated": "2026-06-29",
+  "benchmarks": {
+    "flat37_stage2c_vit": {
+      "description": "Physics-informed ViT with auxiliary 99-way extinction-group output and flat 37-bit rule supervision; calibrated Bayesian auxiliary decoding at T=5.",
+      "rruff325": {
+        "top1": 10.77,
+        "top3": 26.15,
+        "top5": 42.46,
+        "ece": 0.059,
+        "nll": 3.69,
+        "brier": 0.960
+      },
+      "rruff473": {
+        "top1": 11.84,
+        "top5": 49.68
+      }
+    },
+    "po_ablation_vit": {
+      "description": "Pure preferred-orientation continuation with the flat-37 rule output.",
+      "rruff325": {
+        "top1": 11.69,
+        "top5": 45.23
+      },
+      "rruff473": {
+        "top1": 12.26,
+        "top5": 53.28
+      }
+    },
+    "large_mixed_vit": {
+      "description": "Large mixed standard plus preferred-orientation curriculum with the flat-37 rule output.",
+      "rruff325": {
+        "top1": 11.69,
+        "top5": 43.69
+      },
+      "rruff473": {
+        "top1": 12.47,
+        "top5": 51.37
+      }
+    },
+    "regular_transformer_flat37": {
+      "description": "Matched regular transformer carrying the same physics inputs, auxiliary extinction-group output, and flat 37-bit rule output.",
+      "rruff325": {
+        "top1": 10.77,
+        "top3": 30.15,
+        "top5": 43.69
+      },
+      "rruff473": {
+        "top1": 12.68,
+        "top3": 34.46,
+        "top5": 51.16
+      },
+      "training_budget_gpu_hours": 71.9
+    }
+  },
+  "matched_sg_to_eg_control": {
+    "full_scale": {
+      "sg230_raw_sg_space": {
+        "top1": 8.54,
+        "top3": 17.89,
+        "top5": 24.15
+      },
+      "sg230_collapsed_to_eg_space": {
+        "top1": 10.22,
+        "top3": 21.67,
+        "top5": 29.30
+      },
+      "direct_eg99": {
+        "top1": 12.05,
+        "top3": 24.17,
+        "top5": 31.96
+      },
+      "direct_eg_minus_collapsed_sg": {
+        "top1": 1.83,
+        "top3": 2.51,
+        "top5": 2.66
+      }
+    },
+    "scale_margins_direct_eg_minus_collapsed_sg": {
+      "1_2": {
+        "top1": 1.38,
+        "top3": 1.86,
+        "top5": 1.74
+      },
+      "1_4": {
+        "top1": 0.28,
+        "top3": 0.19,
+        "top5": 0.22
+      },
+      "1_8": {
+        "top1": 0.22,
+        "top3": 0.55,
+        "top5": 0.90
+      }
+    }
+  }
+}

@@ -1,19 +1,24 @@
 checkpoint_role,zenodo_status,zenodo_record_url,zenodo_filename,expected_local_path,notes
+flat37_stage2c_vit,zenodo_update_pending,,xrd_model_pubfix_flat37_20260622_stage2c_r2346k_s1337_best.pth,external/checkpoints/xrd_model_pubfix_flat37_20260622_stage2c_r2346k_s1337_best.pth,revised-paper non-PO real-benchmark reference; auxiliary 99-way EG output plus flat 37-bit rule supervision
+flat37_stage1_vit,filename_confirmation_pending,,TBD,external/checkpoints/TBD,revised-paper Stage-1 precursor; exact checkpoint filename to confirm before Zenodo update
+flat37_po_only_vit,filename_confirmation_pending,,TBD,external/checkpoints/TBD,revised-paper preferred-orientation ablation; exact checkpoint filename to confirm before Zenodo update
+flat37_large_mixed_vit,filename_confirmation_pending,,TBD,external/checkpoints/TBD,revised-paper large mixed standard plus preferred-orientation model; exact checkpoint filename to confirm before Zenodo update
+rt_flat37_stage2c,zenodo_decision_pending,,xrd_model_pubfix_rt_flat37_20260624_stage2c_r2346k_s1337_best.pth,external/checkpoints/xrd_model_pubfix_rt_flat37_20260624_stage2c_r2346k_s1337_best.pth,matched regular-transformer architecture-control checkpoint; decide whether checkpoint or compact eval outputs are sufficient for Zenodo
 stage1_base,main_archive,,xrd_model_ic6gfmvm_best.pth,external/checkpoints/xrd_model_ic6gfmvm_best.pth,base initialization for later realism runs
 stage2a_decoder_tradeoff,main_archive,,xrd_model_h7dqlpfp_best.pth,external/checkpoints/xrd_model_h7dqlpfp_best.pth,Stage-2a checkpoint named in the manuscript decoder tradeoff analysis
 stage2b_decoder_tradeoff,main_archive,,xrd_model_guvsasrs_best.pth,external/checkpoints/xrd_model_guvsasrs_best.pth,Stage-2b checkpoint named in the manuscript decoder tradeoff analysis
 legacy_replay_baseline,main_archive,,xrd_model_wwuvp1kj_best.pth,external/checkpoints/xrd_model_wwuvp1kj_best.pth,Legacy replay-era baseline named in the supplementary checkpoint map
 baseline_350k,main_archive,,xrd_model_7pv3pv3y_best.pth,external/checkpoints/xrd_model_7pv3pv3y_best.pth,350k baseline named in the supplementary checkpoint map
-stage2c_baseline,main_archive,,xrd_model_9rwv1qly_best.pth,external/checkpoints/xrd_model_9rwv1qly_best.pth,non-PO baseline used in paper
+stage2c_baseline,main_archive,,xrd_model_9rwv1qly_best.pth,external/checkpoints/xrd_model_9rwv1qly_best.pth,historical non-PO baseline retained for provenance; not the revised-paper flat-37 reference
 stage2c_aux025_ablation,main_archive,,xrd_model_0879pvmm_best.pth,external/checkpoints/xrd_model_0879pvmm_best.pth,Stage-2c auxiliary-loss ablation named in the supplement
 po_1epoch,main_archive,,xrd_model_cscjfdwk_best.pth,external/checkpoints/xrd_model_cscjfdwk_best.pth,best Top-1 PO ablation
 po_resume2,main_archive,,xrd_model_dsi7ehiv_best.pth,external/checkpoints/xrd_model_dsi7ehiv_best.pth,PO continuation comparison
 mixed_200k_pilot,main_archive,,xrd_model_eeru8svx_best.pth,external/checkpoints/xrd_model_eeru8svx_best.pth,small mixed pilot
-final_mixed_champion,main_archive,,xrd_model_82ept35h_best.pth,external/checkpoints/xrd_model_82ept35h_best.pth,final large mixed champion
+final_mixed_champion,main_archive,,xrd_model_82ept35h_best.pth,external/checkpoints/xrd_model_82ept35h_best.pth,historical large mixed champion retained for provenance; revised large mixed flat-37 filename pending confirmation
 late_uniform_precursor,main_archive,,xrd_model_xgy3h6uw_best.pth,external/checkpoints/xrd_model_xgy3h6uw_best.pth,exploratory larger-uniform precursor named in the supplement
 late_stage2_continuation,main_archive,,xrd_model_2vegisf1_best.pth,external/checkpoints/xrd_model_2vegisf1_best.pth,exploratory larger-uniform continuation named in the supplement
-wiseft_a03_optional,main_archive,,xrd_model_wiseft_9rwv1qly_cscjfdwk_a03_best.pth,external/checkpoints/xrd_model_wiseft_9rwv1qly_cscjfdwk_a03_best.pth,optional WiSE-FT ablation described as exploratory rather than part of the main manuscript lineage
-wiseft_a05_optional,main_archive,,xrd_model_wiseft_9rwv1qly_cscjfdwk_a05_best.pth,external/checkpoints/xrd_model_wiseft_9rwv1qly_cscjfdwk_a05_best.pth,optional WiSE-FT ablation described as exploratory rather than part of the main manuscript lineage
+wiseft_a03_optional,main_archive,,xrd_model_wiseft_9rwv1qly_cscjfdwk_a03_best.pth,external/checkpoints/xrd_model_wiseft_9rwv1qly_cscjfdwk_a03_best.pth,historical/exploratory WiSE-FT ablation; not part of the revised-paper final model package
+wiseft_a05_optional,main_archive,,xrd_model_wiseft_9rwv1qly_cscjfdwk_a05_best.pth,external/checkpoints/xrd_model_wiseft_9rwv1qly_cscjfdwk_a05_best.pth,historical/exploratory WiSE-FT ablation; not part of the revised-paper final model package
 supplemental_vt_balanced,main_archive,,xrd_model_tite66yo.pth,external/checkpoints/xrd_model_tite66yo.pth,Table S7 VT-Balanced; wandb_run_id=tite66yo; trained on 10M PyXtal balanced label distribution (5–90°)
 supplemental_vt_icsd,main_archive,,xrd_model_k0it6fz2.pth,external/checkpoints/xrd_model_k0it6fz2.pth,Table S7 VT-ICSD; wandb_run_id=k0it6fz2; trained on 10M PyXtal ICSD label distribution (5–90°)
 supplemental_vt_rruff,main_archive,,xrd_model_l0yy9wv9.pth,external/checkpoints/xrd_model_l0yy9wv9.pth,Table S7 VT-RRUFF; wandb_run_id=l0yy9wv9; trained on 10M PyXtal RRUFF label distribution (5–90°)

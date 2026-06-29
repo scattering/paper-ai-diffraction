@@ -151,6 +151,14 @@ def build_extinction_templates(
         for row in reader:
             canonical_rows[int(row["Index"])] = row
 
+    sg_to_canonical_index: Dict[int, int] = {}
+    for canonical_index, row in canonical_rows.items():
+        for space_group in ast.literal_eval(row["Space Group Numbers"]):
+            space_group = int(space_group)
+            if space_group in sg_to_canonical_index:
+                raise ValueError(f"Space group {space_group} appears in multiple canonical extinction rows")
+            sg_to_canonical_index[space_group] = canonical_index
+
     sg_to_lookup: Dict[int, Dict[str, str]] = {}
     with sg_lookup_path.open(newline="") as handle:
         reader = csv.DictReader(handle)
@@ -163,9 +171,16 @@ def build_extinction_templates(
         for row in reader:
             ext_group = int(row["Extinction Group"])
             space_group = int(row["Space Group"])
-            lookup = sg_to_lookup[space_group]
-            canonical_index = int(lookup["Index"])
+            if space_group not in sg_to_canonical_index:
+                raise ValueError(f"Space group {space_group} missing from canonical extinction table")
+            canonical_index = sg_to_canonical_index[space_group]
             canonical_row = canonical_rows[canonical_index]
+            lookup = sg_to_lookup.get(space_group)
+            if lookup is not None and lookup["Canonical Extinction Group"] != canonical_row["Canonical Extinction Group"]:
+                raise ValueError(
+                    f"Space group {space_group} lookup symbol disagrees with canonical table: "
+                    f"{lookup['Canonical Extinction Group']} != {canonical_row['Canonical Extinction Group']}"
+                )
             sg_numbers = ast.literal_eval(canonical_row["Space Group Numbers"])
             crystal_system = _get_crystal_system_from_sg(sg_numbers[0])
             vector = _symbol_to_feature_vector(canonical_row["Canonical Extinction Group"], crystal_system)

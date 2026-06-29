@@ -39,7 +39,7 @@ The repo also includes two real benchmark-derived examples:
 - `assets/reviewer_examples/correct_case_015_*.csv`
 - `assets/reviewer_examples/failure_case_000_*.csv`
 
-These were exported from the local `RRUFF-325` benchmark copy using the final mixed paper model's per-example outcome JSON.
+These compact examples were exported from the local `RRUFF-325` benchmark copy using an earlier manuscript-era outcome JSON. They remain useful as lightweight notebook examples; refresh the compact reviewer assets from the revised flat-37 Stage-2c run if the shipped examples need to match the final benchmark table exactly.
 
 Each CSV has a paired metadata JSON with:
 
@@ -47,7 +47,7 @@ Each CSV has a paired metadata JSON with:
 - case ID
 - mineral name
 - true extinction group
-- the paper model's stored top-5 prediction summary
+- stored top-5 prediction summary
 
 In addition, if `results/reviewer/rruff325_precomputed_inference.json` is present, the notebook can inspect the full 325-example summary directly. That summary is compact, paper-backed, and intended for TAP/Zenodo distribution.
 
@@ -73,7 +73,7 @@ mkdir -p external/checkpoints
 Then place the released checkpoint under:
 
 ```text
-external/checkpoints/xrd_model_82ept35h_best.pth
+external/checkpoints/xrd_model_pubfix_flat37_20260622_stage2c_r2346k_s1337_best.pth
 ```
 
 Start Jupyter from the repo root:
@@ -101,7 +101,7 @@ Validated high-level flow:
 1. clone the repo onto Stampede3 storage
 2. create and activate the Python 3.12 train/eval environment described in [TACC_ENV.md](TACC_ENV.md)
 3. install the repo editable with `pip install -e .`
-4. place the released checkpoint at `external/checkpoints/xrd_model_82ept35h_best.pth`
+4. place the released checkpoint at `external/checkpoints/xrd_model_pubfix_flat37_20260622_stage2c_r2346k_s1337_best.pth`
 5. open [tap.tacc.utexas.edu](https://tap.tacc.utexas.edu)
 6. launch a Jupyter session on Stampede3
 7. open `notebooks/reviewer_walkthrough.ipynb`

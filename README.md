@@ -2,11 +2,11 @@
 
 Paper-focused reproducibility repository for *Attention Is Not All You Need for Diffraction*.
 
-This repo reproduces the paper-facing table rows and figure layer for the mixed-curriculum results:
+This repo reproduces the revised paper-facing table rows and figure layer for the diffraction-symmetry study:
 - benchmark summary rows from bundled JSON artifacts
-- supplemental positional-ablation benchmark rows from bundled JSON artifacts
-- topology-distance figure
-- topology-flow figure set
+- revised flat-37 ViT configuration and mapping assets
+- matched regular-transformer and SG-to-EG control configuration/provenance files
+- topology, calibration, and information-channel summary artifacts
 
 The repo does **not** bundle model checkpoints or benchmark HDF5 files. Those come from:
 - Zenodo checkpoints: see [reproducibility/checkpoint_manifest.csv](reproducibility/checkpoint_manifest.csv)
@@ -18,10 +18,11 @@ publishes the benchmark-construction algorithms instead:
 - [scripts/reconstruct_rruff_473.py](scripts/reconstruct_rruff_473.py)
 - [scripts/build_rruff_325_from_473.py](scripts/build_rruff_325_from_473.py)
 
-The repo *does* bundle compact reviewer-facing artifacts:
+The repo *does* bundle compact reviewer-facing and paper-audit artifacts:
 - two example diffraction CSVs derived from the paper benchmark
 - their paired JSON metadata
 - SG/EG lookup CSVs
+- the revised 99-EG to flat-37 rule-output mapping
 - a compact prior JSON/CSV
 - a compact precomputed `RRUFF-325` summary JSON
 
@@ -82,8 +83,8 @@ TACC-specific notes are in:
 Checkpoints are downloaded from Zenodo and should be placed under:
 
 ```text
-external/checkpoints/                         # core paper checkpoints (flat)
-external/checkpoints/                         # supplemental ViT checkpoints (Tables S3–S7, Figs S3/S5)
+external/checkpoints/                         # core paper checkpoints
+external/checkpoints/                         # supplemental ViT/RT/CNN checkpoints
 ```
 
 The exact filenames and expected local paths are listed in:
@@ -101,6 +102,8 @@ Table rows from bundled paper JSONs:
 ```bash
 python scripts/make_main_tables.py
 ```
+
+The default table script reads [results/revised_paper_summary.json](results/revised_paper_summary.json), which carries the revised flat-37 ViT, regular-transformer, and matched SG-to-EG control numbers.
 
 Topology-distance figure from bundled failure JSONs:
 
@@ -156,7 +159,7 @@ Reviewer-support artifact generation:
 ```bash
 python scripts/export_prior_asset.py --prior-h5 /path/to/trainready.hdf5 --output-csv results/reviewer/ext_group_priors.csv --output-json results/reviewer/ext_group_priors.json
 python scripts/export_rruff_examples.py --benchmark-h5 /path/to/RRUFF_usable_plus_recoverable_325_with_labels_maxnorm.hdf5 --failure-json results/mixed2500k_compare_325_failure_modes_655279.json --output-dir assets/reviewer_examples
-python scripts/precompute_benchmark_inference.py --checkpoint external/checkpoints/xrd_model_82ept35h_best.pth --config configs/final_mixed_2500k_dualsource.json --benchmark-h5 /path/to/RRUFF_usable_plus_recoverable_325_with_labels_maxnorm.hdf5 --prior-h5 /path/to/trainready.hdf5 --output-json results/reviewer/rruff325_precomputed_inference.json
+python scripts/precompute_benchmark_inference.py --checkpoint external/checkpoints/xrd_model_pubfix_flat37_20260622_stage2c_r2346k_s1337_best.pth --config configs/flat37/vit_stage2c_rruff2346k_20260622.json --benchmark-h5 /path/to/RRUFF_usable_plus_recoverable_325_with_labels_maxnorm.hdf5 --prior-h5 /path/to/trainready.hdf5 --output-json results/reviewer/rruff325_precomputed_inference.json
 ```
 
 If `results/reviewer/rruff325_precomputed_inference.json` is present, the reviewer notebook can browse the full paper-backed 325-example summary directly instead of recomputing it inside Jupyter.
@@ -167,6 +170,7 @@ If `results/reviewer/rruff325_precomputed_inference.json` is present, the review
 - `results/figures/` is generated output and is not tracked.
 - `scripts/` contains the canonical paper-facing wrappers.
 - `scripts/tacc_archive/` contains preserved historical campaign launchers for provenance only.
+- [reproducibility/REVISED_PAPER_RELEASE_NOTES_2026-06-29.md](reproducibility/REVISED_PAPER_RELEASE_NOTES_2026-06-29.md) records the copied revised-paper assets and the remaining Zenodo/public-repo staging items.
 
 ## Key References
 

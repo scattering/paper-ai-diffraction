@@ -18,12 +18,9 @@ Expected local checkpoint placement:
 
 ```text
 external/checkpoints/
-  xrd_model_ic6gfmvm_best.pth
-  xrd_model_9rwv1qly_best.pth
-  xrd_model_cscjfdwk_best.pth
-  xrd_model_dsi7ehiv_best.pth
-  xrd_model_eeru8svx_best.pth
-  xrd_model_82ept35h_best.pth
+  xrd_model_pubfix_flat37_20260622_stage2c_r2346k_s1337_best.pth
+  xrd_model_pubfix_rt_flat37_20260624_stage2c_r2346k_s1337_best.pth
+  # additional supplemental and historical checkpoints listed in the manifests
 ```
 
 See:
@@ -48,44 +45,44 @@ The main expected dataset roles are:
 
 ## Included Training Configs
 
-- [final_mixed_2500k_dualsource.json](../configs/final_mixed_2500k_dualsource.json)
-- [mixed_200k_pilot.json](../configs/mixed_200k_pilot.json)
-- [po_1epoch.json](../configs/po_1epoch.json)
-- [po_resume2.json](../configs/po_resume2.json)
+- [flat37/vit_stage1_uniform_2m_20260622.json](../configs/flat37/vit_stage1_uniform_2m_20260622.json)
+- [flat37/vit_stage2c_rruff2346k_20260622.json](../configs/flat37/vit_stage2c_rruff2346k_20260622.json)
+- [flat37/vit_po200k_20260622.json](../configs/flat37/vit_po200k_20260622.json)
+- [flat37/vit_dualsource2346k_500kpo_20260622.json](../configs/flat37/vit_dualsource2346k_500kpo_20260622.json)
+- [regular_transformer/rt_stage1_uniform_2m_flat37_20260624.json](../configs/regular_transformer/rt_stage1_uniform_2m_flat37_20260624.json)
+- [regular_transformer/rt_stage2c_rruff2346k_flat37_20260624.json](../configs/regular_transformer/rt_stage2c_rruff2346k_flat37_20260624.json)
+
+The older mixed-200k and `82ept35h` configs remain in `configs/` for provenance.
 
 ## Canonical Training Wrappers
 
-Use these first:
+Use these first for the revised flat-37 campaign:
 
-- [train_po_1epoch.sh](../scripts/train_po_1epoch.sh)
-- [train_po_resume2.sh](../scripts/train_po_resume2.sh)
-- [train_mixed_200k.sh](../scripts/train_mixed_200k.sh)
-- [train_final_mixed.sh](../scripts/train_final_mixed.sh)
+- [scripts/tacc_archive/flat37/vista_train_flat37_publication_20260622.sh](../scripts/tacc_archive/flat37/vista_train_flat37_publication_20260622.sh)
+- [scripts/tacc_archive/flat37/submit_flat37_publication_reruns_20260622.sh](../scripts/tacc_archive/flat37/submit_flat37_publication_reruns_20260622.sh)
+- [scripts/tacc_archive/regular_transformer/vista_train_rt_flat37_stage1_20260624.sh](../scripts/tacc_archive/regular_transformer/vista_train_rt_flat37_stage1_20260624.sh)
+- [scripts/tacc_archive/regular_transformer/vista_train_rt_flat37_stage2c_epoch_chunk_ddp_20260624.sh](../scripts/tacc_archive/regular_transformer/vista_train_rt_flat37_stage2c_epoch_chunk_ddp_20260624.sh)
 
-These wrappers accept data and checkpoint locations through environment variables, write a temporary config with local overrides, and then call [train.py](../src/paper_ai_diffraction/core/train.py) through the installed package without assuming a specific cluster path layout.
+These wrappers are preserved as TACC provenance for the publication runs. The portable wrappers in the top-level `scripts/` directory remain useful for local adaptation, but the revised-paper campaign was run through the TACC wrappers above.
 
 ## Historical TACC Launchers
 
-The original campaign launchers are preserved under:
+The original and revision campaign launchers are preserved under:
 
 - [../scripts/tacc_archive]( ../scripts/tacc_archive )
 
-Use those only if you need an exact record of the April 2026 TACC batch jobs.
+Use those only if you need an exact record of the TACC batch jobs.
 
 ## Paper-Relevant Training Lineage
 
-- `ic6gfmvm`
-  - Stage-1 base checkpoint
-- `9rwv1qly`
-  - Stage-2c no-PO baseline
-- `cscjfdwk`
-  - PO-only 1-epoch ablation
-- `dsi7ehiv`
-  - PO continuation / effective 2-epoch comparison
-- `eeru8svx`
-  - mixed-200k pilot
-- `82ept35h`
-  - final large mixed dual-source champion
+- `xrd_model_pubfix_flat37_20260622_stage2c_r2346k_s1337_best.pth`
+  - revised non-PO real-benchmark reference
+- flat-37 PO-only and large mixed checkpoints
+  - revised preferred-orientation and final mixed-curriculum variants; exact Zenodo filenames remain to be confirmed in the release manifest
+- `xrd_model_pubfix_rt_flat37_20260624_stage2c_r2346k_s1337_best.pth`
+  - matched regular-transformer architecture control
+- `9rwv1qly`, `cscjfdwk`, `dsi7ehiv`, `eeru8svx`, `82ept35h`
+  - historical archive checkpoints retained for provenance
 
 ## Preferred-Orientation And Mixed-Curriculum Summary
 
@@ -98,17 +95,9 @@ The public repo keeps only the essential paper-facing lineage.
 The practical implication is:
 
 - use the PO runs as ablations showing the effect of explicit texture modeling
-- use the dual-source large mixed run as the recommended final balanced model
+- use the dual-source large mixed flat-37 run as the recommended final balanced model
 
 The detailed dated handoff notes remain in the private source repository, not in this public paper repo.
-- `cscjfdwk`
-  - PO-only 1-epoch checkpoint
-- `dsi7ehiv`
-  - PO continuation checkpoint
-- `eeru8svx`
-  - mixed-200k pilot
-- `82ept35h`
-  - final large mixed champion
 
 ## Practical Advice
 

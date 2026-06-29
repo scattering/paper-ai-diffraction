@@ -81,7 +81,7 @@ mkdir -p external/checkpoints
 Then place the released checkpoint at:
 
 ```text
-external/checkpoints/xrd_model_82ept35h_best.pth
+external/checkpoints/xrd_model_pubfix_flat37_20260622_stage2c_r2346k_s1337_best.pth
 ```
 
 After that:

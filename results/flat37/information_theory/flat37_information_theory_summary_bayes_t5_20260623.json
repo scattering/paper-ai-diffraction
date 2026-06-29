@@ -1,0 +1,518 @@
+{
+  "corrected_flat37_stage2c_rruff325_t13": {
+    "bits_over_prior_bits": -0.5108036399660127,
+    "bits_over_prior_null_mean": -0.5325796214379047,
+    "top1": 0.12923076923076923,
+    "top1_null_mean": 0.1239876923076923,
+    "top5": 0.4369230769230769,
+    "top5_null_mean": 0.43538153846153854,
+    "top5_pattern_conditional_lift": 0.001541538461538372,
+    "mean_true_rank": 13.246153846153845,
+    "mean_true_rank_null_mean": 13.347766153846154
+  },
+  "corrected_flat37_stage2c_rruff325_t5": {
+    "bits_over_prior_bits": -0.5931501755938546,
+    "bits_over_prior_null_mean": -0.6498837323798338,
+    "top1": 0.1076923076923077,
+    "top1_null_mean": 0.115,
+    "top5": 0.4246153846153846,
+    "top5_null_mean": 0.4288338461538461,
+    "top5_pattern_conditional_lift": -0.004218461538461504,
+    "mean_true_rank": 13.347692307692308,
+    "mean_true_rank_null_mean": 13.627516923076925
+  },
+  "corrected_flat37_stage2c_rruff473_t5": {
+    "bits_over_prior_bits": -0.41777563287606156,
+    "bits_over_prior_null_mean": -0.4588730773396881,
+    "top1": 0.11839323467230443,
+    "top1_null_mean": 0.12345454545454544,
+    "top5": 0.49682875264270615,
+    "top5_null_mean": 0.49700634249471454,
+    "top5_pattern_conditional_lift": -0.00017758985200838628,
+    "mean_true_rank": 11.60676532769556,
+    "mean_true_rank_null_mean": 11.80799577167019
+  },
+  "corrected_flat37_stage2c_rruff325_t5_bits_over_prior.json": {
+    "posterior_npz": "/scratch/09870/williamratcliff/corrected_flat_information_theory_20260623/corrected_flat37_stage2c_rruff325_t5_posteriors.npz",
+    "posterior_key": "calibrated_probs",
+    "point_estimate": {
+      "n_examples": 325,
+      "num_classes": 99,
+      "h_prior_bits": 4.726958484309087,
+      "nll_prior_bits": 4.726958484309087,
+      "nll_model_bits": 5.3201086599029415,
+      "bits_over_prior_bits": -0.5931501755938546,
+      "top1": 0.1076923076923077,
+      "top5": 0.4246153846153846,
+      "mean_posterior_entropy_bits": 4.3957947267335395,
+      "plugin_mi_bits": 0.3311637575755473,
+      "effective_candidates": 21.05067700050981,
+      "delta_i": {
+        "mean_bits": -0.5931501755938542,
+        "std_bits": 2.7429289752084007,
+        "p05_bits": -2.706144961681937,
+        "p25_bits": -1.1788677790152944,
+        "median_bits": -0.3215368860589587,
+        "p75_bits": 0.3811835797504255,
+        "p95_bits": 1.1585631819420972,
+        "min_bits": -32.518841230732534,
+        "max_bits": 2.2835695870440613,
+        "fraction_positive": 0.44
+      },
+      "kl_i": {
+        "mean_bits": 1.60210522604797,
+        "std_bits": 0.263944453258921,
+        "p05_bits": 1.1637207593314727,
+        "p25_bits": 1.3423124790185865,
+        "median_bits": 1.664553282623129,
+        "p75_bits": 1.8052261911653158,
+        "p95_bits": 1.9769959226747442,
+        "min_bits": 1.0342577594636582,
+        "max_bits": 2.1159172860692492
+      },
+      "empirical_prior": [
+        0.0,
+        0.03076923076923077,
+        0.024615384615384615,
+        0.12615384615384614,
+        0.07692307692307693,
+        0.06153846153846154,
+        0.0,
+        0.0,
+        0.0,
+        0.006153846153846154,
+        0.009230769230769232,
+        0.027692307692307693,
+        0.0,
+        0.012307692307692308,
+        0.0,
+        0.006153846153846154,
+        0.11692307692307692,
+        0.015384615384615385,
+        0.0,
+        0.0,
+        0.015384615384615385,
+        0.03076923076923077,
+        0.0,
+        0.006153846153846154,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.018461538461538463,
+        0.015384615384615385,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.006153846153846154,
+        0.0,
+        0.0,
+        0.012307692307692308,
+        0.0,
+        0.006153846153846154,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.012307692307692308,
+        0.006153846153846154,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.003076923076923077,
+        0.003076923076923077,
+        0.003076923076923077,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.003076923076923077,
+        0.0,
+        0.009230769230769232,
+        0.006153846153846154,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.012307692307692308,
+        0.0,
+        0.012307692307692308,
+        0.006153846153846154,
+        0.015384615384615385,
+        0.052307692307692305,
+        0.0,
+        0.043076923076923075,
+        0.033846153846153845,
+        0.027692307692307693,
+        0.0,
+        0.0,
+        0.021538461538461538,
+        0.0,
+        0.006153846153846154,
+        0.0,
+        0.0,
+        0.0,
+        0.006153846153846154,
+        0.0,
+        0.0,
+        0.003076923076923077,
+        0.0,
+        0.0,
+        0.0,
+        0.006153846153846154,
+        0.003076923076923077,
+        0.006153846153846154,
+        0.0,
+        0.018461538461538463,
+        0.0,
+        0.055384615384615386
+      ]
+    },
+    "bootstrap_bits_over_prior": {
+      "mean_bits": -0.6843449047080825,
+      "ci95_low_bits": -1.040223731175769,
+      "ci95_high_bits": -0.4505289425635216
+    },
+    "permutation_null_bits_over_prior": {
+      "mean_bits": -0.6498837323798338,
+      "ci95_low_bits": -0.6899782467830616,
+      "ci95_high_bits": -0.6091438271680616
+    },
+    "gate1_decision_rule": {
+      "source": "Information Theory/AGENTS.md",
+      "summary": "GO only if bits_over_prior is positive, the bootstrap CI sits above the permutation-null band, and KL_i shows real spread."
+    },
+    "gate1_checks": {
+      "bits_over_prior_positive": false,
+      "bootstrap_ci_above_permutation_null": false,
+      "kl_i_nonflat": true,
+      "kl_i_spread_width_bits": 0.8132751633432715,
+      "passes": false
+    },
+    "gate1_passes": false,
+    "oracle_temperature_nll_diagnostic": {
+      "temperature_grid": [
+        1.0,
+        2.0,
+        3.0,
+        4.0,
+        5.0,
+        6.0,
+        7.5,
+        8.5,
+        10.0,
+        13.0,
+        16.0,
+        18.0,
+        30.0,
+        50.0,
+        75.0,
+        100.0,
+        150.0,
+        200.0
+      ],
+      "best_by_nll": {
+        "temperature": 150.0,
+        "nll_model_bits": 5.225177227561793,
+        "bits_over_prior_bits": -0.4982187432527061,
+        "top1": 0.12615384615384614,
+        "top5": 0.4369230769230769,
+        "delta_i_median_bits": -0.04421622906035516,
+        "delta_i_fraction_positive": 0.37538461538461537
+      },
+      "sweep": [
+        {
+          "temperature": 1.0,
+          "nll_model_bits": 7.500904075222433,
+          "bits_over_prior_bits": -2.773945590913346,
+          "top1": 0.05846153846153846,
+          "top5": 0.29846153846153844,
+          "delta_i_median_bits": -2.7946063564120776,
+          "delta_i_fraction_positive": 0.2276923076923077
+        },
+        {
+          "temperature": 2.0,
+          "nll_model_bits": 5.829062962109776,
+          "bits_over_prior_bits": -1.1021044778006894,
+          "top1": 0.06461538461538462,
+          "top5": 0.36923076923076925,
+          "delta_i_median_bits": -0.9966307835018604,
+          "delta_i_fraction_positive": 0.36615384615384616
+        },
+        {
+          "temperature": 3.0,
+          "nll_model_bits": 5.494366754635749,
+          "bits_over_prior_bits": -0.767408270326662,
+          "top1": 0.10153846153846154,
+          "top5": 0.4369230769230769,
+          "delta_i_median_bits": -0.5558140286949689,
+          "delta_i_fraction_positive": 0.4
+        },
+        {
+          "temperature": 4.0,
+          "nll_model_bits": 5.37527057854128,
+          "bits_over_prior_bits": -0.6483120942321934,
+          "top1": 0.11384615384615385,
+          "top5": 0.4307692307692308,
+          "delta_i_median_bits": -0.3976935714131704,
+          "delta_i_fraction_positive": 0.4246153846153846
+        },
+        {
+          "temperature": 5.0,
+          "nll_model_bits": 5.320108657964268,
+          "bits_over_prior_bits": -0.5931501736551814,
+          "top1": 0.1076923076923077,
+          "top5": 0.4246153846153846,
+          "delta_i_median_bits": -0.3215364806883354,
+          "delta_i_fraction_positive": 0.44
+        },
+        {
+          "temperature": 6.0,
+          "nll_model_bits": 5.2902601727198295,
+          "bits_over_prior_bits": -0.5633016884107427,
+          "top1": 0.11076923076923077,
+          "top5": 0.4246153846153846,
+          "delta_i_median_bits": -0.23697305797894153,
+          "delta_i_fraction_positive": 0.4430769230769231
+        },
+        {
+          "temperature": 7.5,
+          "nll_model_bits": 5.266002926719538,
+          "bits_over_prior_bits": -0.539044442410451,
+          "top1": 0.11076923076923077,
+          "top5": 0.4307692307692308,
+          "delta_i_median_bits": -0.2117713025306207,
+          "delta_i_fraction_positive": 0.4430769230769231
+        },
+        {
+          "temperature": 8.5,
+          "nll_model_bits": 5.256530832998697,
+          "bits_over_prior_bits": -0.5295723486896105,
+          "top1": 0.11384615384615385,
+          "top5": 0.4338461538461538,
+          "delta_i_median_bits": -0.20627428889407629,
+          "delta_i_fraction_positive": 0.4430769230769231
+        },
+        {
+          "temperature": 10.0,
+          "nll_model_bits": 5.247364777813998,
+          "bits_over_prior_bits": -0.5204062935049114,
+          "top1": 0.12615384615384614,
+          "top5": 0.4369230769230769,
+          "delta_i_median_bits": -0.15729402546125693,
+          "delta_i_fraction_positive": 0.4430769230769231
+        },
+        {
+          "temperature": 13.0,
+          "nll_model_bits": 5.237762124076623,
+          "bits_over_prior_bits": -0.510803639767536,
+          "top1": 0.12923076923076923,
+          "top5": 0.4369230769230769,
+          "delta_i_median_bits": -0.12885980637981564,
+          "delta_i_fraction_positive": 0.4584615384615385
+        },
+        {
+          "temperature": 16.0,
+          "nll_model_bits": 5.233133488441495,
+          "bits_over_prior_bits": -0.506175004132408,
+          "top1": 0.12923076923076923,
+          "top5": 0.4369230769230769,
+          "delta_i_median_bits": -0.1196735208262103,
+          "delta_i_fraction_positive": 0.4676923076923077
+        },
+        {
+          "temperature": 18.0,
+          "nll_model_bits": 5.231281713751182,
+          "bits_over_prior_bits": -0.504323229442095,
+          "top1": 0.12923076923076923,
+          "top5": 0.4369230769230769,
+          "delta_i_median_bits": -0.13090524158350192,
+          "delta_i_fraction_positive": 0.4707692307692308
+        },
+        {
+          "temperature": 30.0,
+          "nll_model_bits": 5.227002178790535,
+          "bits_over_prior_bits": -0.5000436944814481,
+          "top1": 0.12615384615384614,
+          "top5": 0.4369230769230769,
+          "delta_i_median_bits": -0.06966483803206946,
+          "delta_i_fraction_positive": 0.48923076923076925
+        },
+        {
+          "temperature": 50.0,
+          "nll_model_bits": 5.225638374375128,
+          "bits_over_prior_bits": -0.4986798900660414,
+          "top1": 0.12615384615384614,
+          "top5": 0.4369230769230769,
+          "delta_i_median_bits": -0.055984519406780286,
+          "delta_i_fraction_positive": 0.4646153846153846
+        },
+        {
+          "temperature": 75.0,
+          "nll_model_bits": 5.225294989334858,
+          "bits_over_prior_bits": -0.49833650502577154,
+          "top1": 0.12615384615384614,
+          "top5": 0.4369230769230769,
+          "delta_i_median_bits": -0.04986715108249529,
+          "delta_i_fraction_positive": 0.39692307692307693
+        },
+        {
+          "temperature": 100.0,
+          "nll_model_bits": 5.225207908511185,
+          "bits_over_prior_bits": -0.49824942420209783,
+          "top1": 0.12615384615384614,
+          "top5": 0.4369230769230769,
+          "delta_i_median_bits": -0.04698410571525047,
+          "delta_i_fraction_positive": 0.38461538461538464
+        },
+        {
+          "temperature": 150.0,
+          "nll_model_bits": 5.225177227561793,
+          "bits_over_prior_bits": -0.4982187432527061,
+          "top1": 0.12615384615384614,
+          "top5": 0.4369230769230769,
+          "delta_i_median_bits": -0.04421622906035516,
+          "delta_i_fraction_positive": 0.37538461538461537
+        },
+        {
+          "temperature": 200.0,
+          "nll_model_bits": 5.2251830350291435,
+          "bits_over_prior_bits": -0.49822455072005667,
+          "top1": 0.12615384615384614,
+          "top5": 0.4369230769230769,
+          "delta_i_median_bits": -0.042875028943225146,
+          "delta_i_fraction_positive": 0.37538461538461537
+        }
+      ]
+    }
+  },
+  "corrected_flat37_gate2_background_noise_like_bayes_t5_summary.json": {
+    "checkpoint": "/scratch/09870/williamratcliff/ai_diffraction_models/xrd_model_pubfix_flat37_20260622_stage2c_r2346k_s1337_best.pth",
+    "config": "/scratch/09870/williamratcliff/corrected_split_publication/pubfix_flat37_20260622_stage2c_r2346k_s1337_config.json",
+    "eval_h5": "/scratch/09870/williamratcliff/gate2_decoder_control/rruff473_background_noise_like_decoder_control.hdf5",
+    "posterior_npz": "/scratch/09870/williamratcliff/corrected_flat_information_theory_20260623/corrected_flat37_gate2_background_noise_like_bayes_t5_posteriors.npz",
+    "n": 473,
+    "top1": 0.12896405919661733,
+    "top5": 0.4630021141649049,
+    "mean_max_prob": 0.12090300300786662,
+    "aux_temperature": 5.0,
+    "mode": "calibrated_bayesian_aux_with_training_prior",
+    "label_indexing": "gate2_benchmark_npz_labels",
+    "target_range": [
+      1,
+      98
+    ]
+  },
+  "corrected_flat37_gate2_background_noise_like_bayes_t5_comparison.json": {
+    "benchmark_npz": "/scratch/09870/williamratcliff/gate2_decoder_control/rruff473_background_noise_like_decoder_control.npz",
+    "symbols_key": "symbols_background_noise_like",
+    "decoder_summary": "/scratch/09870/williamratcliff/corrected_flat_information_theory_20260623/corrected_flat37_gate2_background_noise_like_bayes_t5_summary.json",
+    "n_examples": 473,
+    "support": 46,
+    "n_classes_dense": 99,
+    "n_symbols": 723,
+    "alpha": 0.0013831258644536654,
+    "ceiling": {
+      "top1_bayes_exact": 0.6737726848597474,
+      "top3_bayes_exact": 0.8016238393027134,
+      "top5_bayes_exact": 0.8571002689233245,
+      "top1_exact_from_joint": 0.6737726848597492,
+      "H_G_given_Mhat_bits": 1.555457066898278,
+      "effective_candidates": 2.9392683222742777,
+      "top1_minentropy_lower_bound": 0.34022072514504004
+    },
+    "decoder": {
+      "checkpoint": "/scratch/09870/williamratcliff/ai_diffraction_models/xrd_model_pubfix_flat37_20260622_stage2c_r2346k_s1337_best.pth",
+      "config": "/scratch/09870/williamratcliff/corrected_split_publication/pubfix_flat37_20260622_stage2c_r2346k_s1337_config.json",
+      "eval_h5": "/scratch/09870/williamratcliff/gate2_decoder_control/rruff473_background_noise_like_decoder_control.hdf5",
+      "posterior_npz": "/scratch/09870/williamratcliff/corrected_flat_information_theory_20260623/corrected_flat37_gate2_background_noise_like_bayes_t5_posteriors.npz",
+      "n": 473,
+      "top1": 0.12896405919661733,
+      "top5": 0.4630021141649049,
+      "mean_max_prob": 0.12090300300786662,
+      "aux_temperature": 5.0,
+      "mode": "calibrated_bayesian_aux_with_training_prior",
+      "label_indexing": "gate2_benchmark_npz_labels",
+      "target_range": [
+        1,
+        98
+      ]
+    },
+    "gap_top1_points": 54.48086256631301,
+    "gap_top5_points": 39.40981547584196
+  },
+  "corrected_flat37_gate2_two_stage_decomposition_bayes_t5.json": {
+    "benchmark_h5": "/Users/williamratcliff/ai-diffraction/tmp/information_theory_artifacts/gate2_benchmark/rruff473_background_noise_like_decoder_control.hdf5",
+    "benchmark_npz": "/Users/williamratcliff/ai-diffraction/tmp/information_theory_artifacts/gate2_benchmark/rruff473_background_noise_like_decoder_control.npz",
+    "symbols_key": "symbols_background_noise_like",
+    "n_examples": 473,
+    "n_splits": 5,
+    "seed": 123,
+    "pca_components": 64,
+    "absence_reader": {
+      "exact_symbol_accuracy": 0.13742071881606766,
+      "all_family_states_exact_accuracy": 0.13742071881606766,
+      "family_state_accuracy": [
+        0.627906976744186,
+        0.8118393234672304,
+        0.718816067653277,
+        0.45454545454545453,
+        0.6871035940803383,
+        0.5052854122621564
+      ],
+      "unique_true_symbols": 93,
+      "unique_recovered_symbols": 98
+    },
+    "absence_to_eg_ceiling": {
+      "top1": 0.6737728324393354,
+      "top5": 0.8571005111682194
+    },
+    "eg_given_recovered_absence": {
+      "top1": 0.1416490486257928,
+      "top5": 0.42283298097251587
+    },
+    "stage2c_end_to_end": {
+      "top1": 0.12896405919661733,
+      "top5": 0.4630021141649049
+    },
+    "decomposition_points": {
+      "top1_upstream_total_gap": 54.4808773242718,
+      "top1_absence_recovery_loss": 53.21237838135426,
+      "top1_residual_decoder_gap": 1.2684989429175482,
+      "top5_upstream_total_gap": 39.40983970033145,
+      "top5_absence_recovery_loss": 43.426753019570356,
+      "top5_residual_decoder_gap": -4.016913319238902
+    },
+    "stage2c_end_to_end_source": "/scratch/09870/williamratcliff/corrected_flat_information_theory_20260623/corrected_flat37_gate2_background_noise_like_bayes_t5_summary.json"
+  },
+  "corrected_flat37_stage2c_rruff325_topology.json": {
+    "graph_json": "/scratch/09870/williamratcliff/ai-diffraction/artifacts/topology_graphs/extinction_group_adjacency.json",
+    "failure_json": "/scratch/09870/williamratcliff/corrected_split_publication/pubfix_flat37_20260622_stage2c_r2346k_s1337_eval_781247/pubfix_flat37_20260622_stage2c_r2346k_s1337_compare_325_failure_modes.json",
+    "models": {
+      "pubfix_flat37_20260622_stage2c_r2346k_s1337_aux_bayes_t5": {
+        "top1_pct": 10.76923076923077,
+        "correct": 35,
+        "wrong_n": 290,
+        "distance_buckets": {
+          "1": 80,
+          "2": 89,
+          "3": 92,
+          "4plus": 29,
+          "inf": 0
+        },
+        "pct_wrong_le2": 58.275862068965516,
+        "mean_wrong_dist": 2.268965517241379,
+        "directionality": {
+          "branch_jump": 110,
+          "descendant_pred_lower_sym": 147,
+          "ancestor_pred_higher_sym": 33,
+          "correct": 35
+        }
+      }
+    }
+  }
+}

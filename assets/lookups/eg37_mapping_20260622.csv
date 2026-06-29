@@ -1,0 +1,100 @@
+extinction_group,canonical_index,canonical_symbol,crystal_system,bitstring,active_features
+1,0,"P - 1 1 (equiv: P 1 - 1, P 1 1 -)",Monoclinic,0100000100000000000000000000000000000,Sys_Monoclinic;Lattice_P
+2,1,"P 21 1 1 (equiv: P 1 21 1, P 1 1 21)",Monoclinic,0100000100001000000000000000000000000,Sys_Monoclinic;Lattice_P;Pos1_21
+3,2,"P b 1 1 (equiv: P c 1 1, P n 1 1, P 1 a 1, P 1 c 1, P 1 n 1, P 1 1 a, P 1 1 b, P 1 1 n)",Monoclinic,0100000100000000000010000000000000000,Sys_Monoclinic;Lattice_P;Pos1_b
+4,3,"P 21/b 1 1 (equiv: P 21/c 1 1, P 21/n 1 1, P 1 21/a 1, P 1 21/c 1, P 1 21/n 1, P 1 1 21/a, P 1 1 21/b, P 1 1 21/n)",Monoclinic,0100000100001000000010000000000000000,Sys_Monoclinic;Lattice_P;Pos1_21;Pos1_b
+5,4,"C - 1 1 (equiv: B - 1 1, I - 1 1, C 1 - 1, A 1 - 1, I 1 - 1, B 1 1 -, A 1 1 -, I 1 1 -)",Monoclinic,0100000000100000000000000000000000000,Sys_Monoclinic;Lattice_C
+6,5,"C n 1 1 (equiv: B b 1 1, I c 1 1, C 1 c 1, A 1 n 1, I 1 a 1, B 1 1 n, A 1 1 a, I 1 1 b)",Monoclinic,0100000000100000000000010000000000000,Sys_Monoclinic;Lattice_C;Pos1_n
+7,6,P - - -,Orthorhombic,0010000100000000000000000000000000000,Sys_Orthorhombic;Lattice_P
+8,7,"P - - 21 (equiv: P - 21 -, P 21 - -)",Orthorhombic,0010000100000000000000000000001000000,Sys_Orthorhombic;Lattice_P;Pos3_21
+9,8,"P - 21 21 (equiv: P 21 - 21, P 21 21 -)",Orthorhombic,0010000100000000000000001000001000000,Sys_Orthorhombic;Lattice_P;Pos2_21;Pos3_21
+10,9,P 21 21 21,Orthorhombic,0010000100001000000000001000001000000,Sys_Orthorhombic;Lattice_P;Pos1_21;Pos2_21;Pos3_21
+11,10,"P - - a (equiv: P - - b, P - a -, P - c -, P b - -, P c - -)",Orthorhombic,0010000100000000000000000000000100000,Sys_Orthorhombic;Lattice_P;Pos3_a
+12,11,"P - - n (equiv: P - n -, P n - -)",Orthorhombic,0010000100000000000000000000000000010,Sys_Orthorhombic;Lattice_P;Pos3_n
+13,12,"P - a a (equiv: P b - b, P c c -)",Orthorhombic,0010000100000000000000000100000100000,Sys_Orthorhombic;Lattice_P;Pos2_a;Pos3_a
+14,13,"P - a b (equiv: P - c a, P b - a, P b c -, P c - b, P c a -)",Orthorhombic,0010000100000000000000000100000010000,Sys_Orthorhombic;Lattice_P;Pos2_a;Pos3_b
+15,14,"P - a n (equiv: P - n a, P b - n, P c n -, P n - b, P n c -)",Orthorhombic,0010000100000000000000000100000000010,Sys_Orthorhombic;Lattice_P;Pos2_a;Pos3_n
+16,15,"P - c b (equiv: P b a -, P c - a)",Orthorhombic,0010000100000000000000000001000010000,Sys_Orthorhombic;Lattice_P;Pos2_c;Pos3_b
+17,16,"P - c n (equiv: P - n b, P b n -, P c - n, P n - a, P n a -)",Orthorhombic,0010000100000000000000000001000000010,Sys_Orthorhombic;Lattice_P;Pos2_c;Pos3_n
+18,17,"P - n n (equiv: P n - n, P n n -)",Orthorhombic,0010000100000000000000000000010000010,Sys_Orthorhombic;Lattice_P;Pos2_n;Pos3_n
+19,18,"P b a a (equiv: P b a b, P b c b, P c a a, P c c a, P c c b)",Orthorhombic,0010000100000000000010000100000100000,Sys_Orthorhombic;Lattice_P;Pos1_b;Pos2_a;Pos3_a
+20,19,"P b a n (equiv: P c n a, P n c b)",Orthorhombic,0010000100000000000010000100000000010,Sys_Orthorhombic;Lattice_P;Pos1_b;Pos2_a;Pos3_n
+21,20,P b c a (equiv: P c a b),Orthorhombic,0010000100000000000010000001000100000,Sys_Orthorhombic;Lattice_P;Pos1_b;Pos2_c;Pos3_a
+22,21,"P b c n (equiv: P b n a, P c a n, P c n b, P n a b, P n c a)",Orthorhombic,0010000100000000000010000001000000010,Sys_Orthorhombic;Lattice_P;Pos1_b;Pos2_c;Pos3_n
+23,22,"P b n b (equiv: P c c n, P n a a)",Orthorhombic,0010000100000000000010000000010010000,Sys_Orthorhombic;Lattice_P;Pos1_b;Pos2_n;Pos3_b
+24,23,"P b n n (equiv: P c n n, P n a n, P n c n, P n n a, P n n b)",Orthorhombic,0010000100000000000010000000010000010,Sys_Orthorhombic;Lattice_P;Pos1_b;Pos2_n;Pos3_n
+25,24,P n n n,Orthorhombic,0010000100000000000000010000010000010,Sys_Orthorhombic;Lattice_P;Pos1_n;Pos2_n;Pos3_n
+26,25,"C - - - (equiv: B - - -, A - - -)",Orthorhombic,0010000000100000000000000000000000000,Sys_Orthorhombic;Lattice_C
+27,26,"C - - 21 (equiv: B - 21 -, A 21 - -)",Orthorhombic,0010000000100000000000000000001000000,Sys_Orthorhombic;Lattice_C;Pos3_21
+28,27,"C - - (ab) (equiv: B - (ac)-, A(bc)- -)",Orthorhombic,0010000000100000000000000000000000001,Sys_Orthorhombic;Lattice_C;Pos3_ab
+29,28,"C - c - (equiv: C c - -, B - - b, B b - -, A - - a, A - a -)",Orthorhombic,0010000000100000000000000001000000000,Sys_Orthorhombic;Lattice_C;Pos2_c
+30,29,"C - c (ab) (equiv: C c - (ab), B - (ac)b, B b (ac)-, A(bc)- a, A(bc)a -)",Orthorhombic,0010000000100000000000000001000000001,Sys_Orthorhombic;Lattice_C;Pos2_c;Pos3_ab
+31,30,"C c c - (equiv: B b - b, A - a a)",Orthorhombic,0010000000100000000001000001000000000,Sys_Orthorhombic;Lattice_C;Pos1_c;Pos2_c
+32,31,"C c c (ab) (equiv: B b (ac)b, A(bc)a a)",Orthorhombic,0010000000100000000001000001000000001,Sys_Orthorhombic;Lattice_C;Pos1_c;Pos2_c;Pos3_ab
+33,32,I - - -,Orthorhombic,0010000010000000000000000000000000000,Sys_Orthorhombic;Lattice_I
+34,33,"I - - (ab) (equiv: I - (ac)-, I(bc)- -)",Orthorhombic,0010000010000000000000000000000000001,Sys_Orthorhombic;Lattice_I;Pos3_ab
+35,34,"I - c b (equiv: I c - a, I b a -)",Orthorhombic,0010000010000000000000000001000010000,Sys_Orthorhombic;Lattice_I;Pos2_c;Pos3_b
+36,35,I b c a,Orthorhombic,0010000010000000000010000001000100000,Sys_Orthorhombic;Lattice_I;Pos1_b;Pos2_c;Pos3_a
+37,36,F - - -,Orthorhombic,0010000001000000000000000000000000000,Sys_Orthorhombic;Lattice_F
+38,37,"F - d d (equiv: F d - d, F d d -)",Orthorhombic,0010000001000000000000000000100000100,Sys_Orthorhombic;Lattice_F;Pos2_d;Pos3_d
+39,38,F d d d,Orthorhombic,0010000001000000000000100000100000100,Sys_Orthorhombic;Lattice_F;Pos1_d;Pos2_d;Pos3_d
+40,39,P - - -,Tetragonal,0001000100000000000000000000000000000,Sys_Tetragonal;Lattice_P
+41,40,P - 21 -,Tetragonal,0001000100000000000000001000000000000,Sys_Tetragonal;Lattice_P;Pos2_21
+42,41,P 42 - -,Tetragonal,0001000100000001000000000000000000000,Sys_Tetragonal;Lattice_P;Pos1_42
+43,42,P 42 21 -,Tetragonal,0001000100000001000000001000000000000,Sys_Tetragonal;Lattice_P;Pos1_42;Pos2_21
+44,43,P 41 - -,Tetragonal,0001000100000010000000000000000000000,Sys_Tetragonal;Lattice_P;Pos1_41
+45,44,P 41 21 -,Tetragonal,0001000100000010000000001000000000000,Sys_Tetragonal;Lattice_P;Pos1_41;Pos2_21
+46,45,P - - c,Tetragonal,0001000100000000000000000000000001000,Sys_Tetragonal;Lattice_P;Pos3_c
+47,46,P - 21 c,Tetragonal,0001000100000000000000001000000001000,Sys_Tetragonal;Lattice_P;Pos2_21;Pos3_c
+48,47,P - b -,Tetragonal,0001000100000000000000000010000000000,Sys_Tetragonal;Lattice_P;Pos2_b
+49,48,P - b c,Tetragonal,0001000100000000000000000010000001000,Sys_Tetragonal;Lattice_P;Pos2_b;Pos3_c
+50,49,P - c -,Tetragonal,0001000100000000000000000001000000000,Sys_Tetragonal;Lattice_P;Pos2_c
+51,50,P - c c,Tetragonal,0001000100000000000000000001000001000,Sys_Tetragonal;Lattice_P;Pos2_c;Pos3_c
+52,51,P - n -,Tetragonal,0001000100000000000000000000010000000,Sys_Tetragonal;Lattice_P;Pos2_n
+53,52,P - n c,Tetragonal,0001000100000000000000000000010001000,Sys_Tetragonal;Lattice_P;Pos2_n;Pos3_c
+54,53,P n - -,Tetragonal,0001000100000000000000010000000000000,Sys_Tetragonal;Lattice_P;Pos1_n
+55,54,P 42/n - -,Tetragonal,0001000100000001000000010000000000000,Sys_Tetragonal;Lattice_P;Pos1_42;Pos1_n
+56,55,P n - c,Tetragonal,0001000100000000000000010000000001000,Sys_Tetragonal;Lattice_P;Pos1_n;Pos3_c
+57,56,P n b -,Tetragonal,0001000100000000000000010010000000000,Sys_Tetragonal;Lattice_P;Pos1_n;Pos2_b
+58,57,P n b c,Tetragonal,0001000100000000000000010010000001000,Sys_Tetragonal;Lattice_P;Pos1_n;Pos2_b;Pos3_c
+59,58,P n c -,Tetragonal,0001000100000000000000010001000000000,Sys_Tetragonal;Lattice_P;Pos1_n;Pos2_c
+60,59,P n c c,Tetragonal,0001000100000000000000010001000001000,Sys_Tetragonal;Lattice_P;Pos1_n;Pos2_c;Pos3_c
+61,60,P n n -,Tetragonal,0001000100000000000000010000010000000,Sys_Tetragonal;Lattice_P;Pos1_n;Pos2_n
+62,61,P n n c,Tetragonal,0001000100000000000000010000010001000,Sys_Tetragonal;Lattice_P;Pos1_n;Pos2_n;Pos3_c
+63,62,I - - -,Tetragonal,0001000010000000000000000000000000000,Sys_Tetragonal;Lattice_I
+64,63,I 41 - -,Tetragonal,0001000010000010000000000000000000000,Sys_Tetragonal;Lattice_I;Pos1_41
+65,64,I - - d,Tetragonal,0001000010000000000000000000000000100,Sys_Tetragonal;Lattice_I;Pos3_d
+66,65,I - c -,Tetragonal,0001000010000000000000000001000000000,Sys_Tetragonal;Lattice_I;Pos2_c
+67,66,I - c d,Tetragonal,0001000010000000000000000001000000100,Sys_Tetragonal;Lattice_I;Pos2_c;Pos3_d
+68,67,I 41/a - -,Tetragonal,0001000010000010000100000000000000000,Sys_Tetragonal;Lattice_I;Pos1_41;Pos1_a
+69,68,I a - d,Tetragonal,0001000010000000000100000000000000100,Sys_Tetragonal;Lattice_I;Pos1_a;Pos3_d
+70,69,I a c d,Tetragonal,0001000010000000000100000001000000100,Sys_Tetragonal;Lattice_I;Pos1_a;Pos2_c;Pos3_d
+71,70,P - - -,Trigonal,0000100100000000000000000000000000000,Sys_Trigonal;Lattice_P
+72,71,P 31 - -,Trigonal,0000100100000100000000000000000000000,Sys_Trigonal;Lattice_P;Pos1_31
+73,72,P - - c,Trigonal,0000100100000000000000000000000001000,Sys_Trigonal;Lattice_P;Pos3_c
+74,73,P - c -,Trigonal,0000100100000000000000000001000000000,Sys_Trigonal;Lattice_P;Pos2_c
+75,74,"R (obv) - - (equiv: R (rev) - -, R - - -)",Trigonal,0000100000010000000000000000000000000,Sys_Trigonal;Lattice_R
+76,75,"R (obv)- - c (equiv: R (rev)- - c, R - - c)",Trigonal,0000100000010000000000000001000000000,Sys_Trigonal;Lattice_R;Pos2_c
+77,76,P 63 - -,Hexagonal,0000010100000000001000000000000000000,Sys_Hexagonal;Lattice_P;Pos1_63
+78,77,P 62 - -,Hexagonal,0000010100000000010000000000000000000,Sys_Hexagonal;Lattice_P;Pos1_62
+79,78,P 61 - -,Hexagonal,0000010100000000100000000000000000000,Sys_Hexagonal;Lattice_P;Pos1_61
+80,79,P - c c,Hexagonal,0000010100000000000000000001000001000,Sys_Hexagonal;Lattice_P;Pos2_c;Pos3_c
+81,80,P - - -,Cubic,0000001100000000000000000000000000000,Sys_Cubic;Lattice_P
+82,81,P 21 - -,Cubic,0000001100001000000000000000000000000,Sys_Cubic;Lattice_P;Pos1_21
+83,82,P 42 - -,Cubic,0000001100000001000000000000000000000,Sys_Cubic;Lattice_P;Pos1_42
+84,83,P 41 - -,Cubic,0000001100000010000000000000000000000,Sys_Cubic;Lattice_P;Pos1_41
+85,84,P - - n,Cubic,0000001100000000000000000000000000010,Sys_Cubic;Lattice_P;Pos3_n
+86,85,P a - -,Cubic,0000001100000000000100000000000000000,Sys_Cubic;Lattice_P;Pos1_a
+87,86,P n - -,Cubic,0000001100000000000000010000000000000,Sys_Cubic;Lattice_P;Pos1_n
+88,87,P n - n,Cubic,0000001100000000000000010000000000010,Sys_Cubic;Lattice_P;Pos1_n;Pos3_n
+89,88,I - - -,Cubic,0000001010000000000000000000000000000,Sys_Cubic;Lattice_I
+90,89,I 41 - -,Cubic,0000001010000010000000000000000000000,Sys_Cubic;Lattice_I;Pos1_41
+91,90,I - - d,Cubic,0000001010000000000000000000000000100,Sys_Cubic;Lattice_I;Pos3_d
+92,91,I a - -,Cubic,0000001010000000000100000000000000000,Sys_Cubic;Lattice_I;Pos1_a
+93,92,I a - d,Cubic,0000001010000000000100000000000000100,Sys_Cubic;Lattice_I;Pos1_a;Pos3_d
+94,93,F - - -,Cubic,0000001001000000000000000000000000000,Sys_Cubic;Lattice_F
+95,94,F 41 - -,Cubic,0000001001000010000000000000000000000,Sys_Cubic;Lattice_F;Pos1_41
+96,95,F - - c,Cubic,0000001001000000000000000000000001000,Sys_Cubic;Lattice_F;Pos3_c
+97,96,F d - -,Cubic,0000001001000000000000100000000000000,Sys_Cubic;Lattice_F;Pos1_d
+98,97,F d - c,Cubic,0000001001000000000000100000000001000,Sys_Cubic;Lattice_F;Pos1_d;Pos3_c
+99,98,P -,Triclinic,1000000100000000000000000000000000000,Sys_Triclinic;Lattice_P

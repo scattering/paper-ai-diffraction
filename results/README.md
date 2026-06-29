@@ -1,15 +1,11 @@
 # Results
 
-This directory intentionally contains only compact JSON artifacts that back the paper narrative:
+This directory intentionally contains compact artifacts that back the paper narrative:
 
-- mixed-200k pilot calibration metrics
-- mixed-200k pilot split-validity summaries
-- mixed-200k positional-ablation calibration metrics
-- mixed-200k positional-ablation split-validity summaries
-- mixed-200k pilot failure-mode JSON
-- final mixed champion calibration metrics
-- final mixed champion split-validity summaries
-- final mixed champion failure-mode JSON
+- `revised_paper_summary.json`: revised flat-37 ViT, matched regular-transformer, and matched SG-to-EG control rows
+- `flat37/calibration/`: grouped mineral-family temperature-sweep assets
+- `flat37/information_theory/`: information-channel, Gate-2, and topology summary artifacts
+- legacy mixed-curriculum and positional-ablation JSONs retained for provenance
 
 Generated outputs such as:
 

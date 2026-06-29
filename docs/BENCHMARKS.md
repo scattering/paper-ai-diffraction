@@ -37,7 +37,7 @@ The released reconstruction script follows the final benchmark rule used in the 
 6. Resolve residual partial clusters primarily by within-cluster medoid coherence, using similarity to the main family cluster as a secondary tie-break when those rankings disagree strongly.
 
 The current frozen rule reproduces the released `RRUFF-473` benchmark exactly when run
-against the corrected upstream manifest used in the final paper workflow.
+against the final upstream manifest used in the paper workflow.
 
 ## RRUFF-325
 

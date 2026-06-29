@@ -1,0 +1,17 @@
+{
+  "checkpoint": "/scratch/09870/williamratcliff/ai_diffraction_models/xrd_model_pubfix_flat37_20260622_stage2c_r2346k_s1337_best.pth",
+  "config": "/scratch/09870/williamratcliff/corrected_split_publication/pubfix_flat37_20260622_stage2c_r2346k_s1337_config.json",
+  "eval_h5": "/scratch/09870/williamratcliff/gate2_decoder_control/rruff473_background_noise_like_decoder_control.hdf5",
+  "posterior_npz": "/scratch/09870/williamratcliff/corrected_flat_information_theory_20260623/corrected_flat37_gate2_background_noise_like_bayes_t5_posteriors.npz",
+  "n": 473,
+  "top1": 0.12896405919661733,
+  "top5": 0.4630021141649049,
+  "mean_max_prob": 0.12090300300786662,
+  "aux_temperature": 5.0,
+  "mode": "calibrated_bayesian_aux_with_training_prior",
+  "label_indexing": "gate2_benchmark_npz_labels",
+  "target_range": [
+    1,
+    98
+  ]
+}

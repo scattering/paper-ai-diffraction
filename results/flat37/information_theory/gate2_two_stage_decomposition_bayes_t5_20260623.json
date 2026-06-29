@@ -1,0 +1,44 @@
+{
+  "benchmark_h5": "/Users/williamratcliff/ai-diffraction/tmp/information_theory_artifacts/gate2_benchmark/rruff473_background_noise_like_decoder_control.hdf5",
+  "benchmark_npz": "/Users/williamratcliff/ai-diffraction/tmp/information_theory_artifacts/gate2_benchmark/rruff473_background_noise_like_decoder_control.npz",
+  "symbols_key": "symbols_background_noise_like",
+  "n_examples": 473,
+  "n_splits": 5,
+  "seed": 123,
+  "pca_components": 64,
+  "absence_reader": {
+    "exact_symbol_accuracy": 0.13742071881606766,
+    "all_family_states_exact_accuracy": 0.13742071881606766,
+    "family_state_accuracy": [
+      0.627906976744186,
+      0.8118393234672304,
+      0.718816067653277,
+      0.45454545454545453,
+      0.6871035940803383,
+      0.5052854122621564
+    ],
+    "unique_true_symbols": 93,
+    "unique_recovered_symbols": 98
+  },
+  "absence_to_eg_ceiling": {
+    "top1": 0.6737728324393354,
+    "top5": 0.8571005111682194
+  },
+  "eg_given_recovered_absence": {
+    "top1": 0.1416490486257928,
+    "top5": 0.42283298097251587
+  },
+  "stage2c_end_to_end": {
+    "top1": 0.12896405919661733,
+    "top5": 0.4630021141649049
+  },
+  "decomposition_points": {
+    "top1_upstream_total_gap": 54.4808773242718,
+    "top1_absence_recovery_loss": 53.21237838135426,
+    "top1_residual_decoder_gap": 1.2684989429175482,
+    "top5_upstream_total_gap": 39.40983970033145,
+    "top5_absence_recovery_loss": 43.426753019570356,
+    "top5_residual_decoder_gap": -4.016913319238902
+  },
+  "stage2c_end_to_end_source": "/scratch/09870/williamratcliff/corrected_flat_information_theory_20260623/corrected_flat37_gate2_background_noise_like_bayes_t5_summary.json"
+}

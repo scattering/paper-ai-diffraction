@@ -32,6 +32,11 @@ For the validated Stampede figure path, see:
 - [stage2c_r325_temp_sweep.json](../assets/figure_data/stage2c_r325_temp_sweep.json)
 - [physics_pe_curve_82ept35h.json](../assets/figure_data/physics_pe_curve_82ept35h.json)
 
+Those two compact inputs are retained for legacy figure regeneration. Revised flat-37
+calibration artifacts are bundled under:
+
+- [results/flat37/calibration](../results/flat37/calibration)
+
 ## Figure Wrappers
 
 - [make_topology_flow_figure.sh](../scripts/make_topology_flow_figure.sh)
@@ -61,9 +66,9 @@ What still remains incomplete:
 - attention or curriculum plots retained in the manuscript
 - any figure paths that still depend on unreduced source-project scripts
 
-Current paper plots now source-backed directly in this repo are:
+Current source-backed plot assets in this repo include:
 
 - curriculum holdout
 - RRUFF-473 decoder tradeoffs
-- calibration sweep from the bundled Stage-2c JSON
-- physics-PE ruler supplementary figure
+- grouped-CV flat-37 calibration assets
+- historical Stage-2c calibration-sweep and physics-PE ruler inputs

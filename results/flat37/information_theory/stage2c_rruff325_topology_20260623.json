@@ -1,0 +1,26 @@
+{
+  "graph_json": "/scratch/09870/williamratcliff/ai-diffraction/artifacts/topology_graphs/extinction_group_adjacency.json",
+  "failure_json": "/scratch/09870/williamratcliff/corrected_split_publication/pubfix_flat37_20260622_stage2c_r2346k_s1337_eval_781247/pubfix_flat37_20260622_stage2c_r2346k_s1337_compare_325_failure_modes.json",
+  "models": {
+    "pubfix_flat37_20260622_stage2c_r2346k_s1337_aux_bayes_t5": {
+      "top1_pct": 10.76923076923077,
+      "correct": 35,
+      "wrong_n": 290,
+      "distance_buckets": {
+        "1": 80,
+        "2": 89,
+        "3": 92,
+        "4plus": 29,
+        "inf": 0
+      },
+      "pct_wrong_le2": 58.275862068965516,
+      "mean_wrong_dist": 2.268965517241379,
+      "directionality": {
+        "branch_jump": 110,
+        "descendant_pred_lower_sym": 147,
+        "ancestor_pred_higher_sym": 33,
+        "correct": 35
+      }
+    }
+  }
+}
