@@ -16,7 +16,7 @@ set -euo pipefail
 
 RESUME_WEIGHTS_ONLY="${RESUME_WEIGHTS_ONLY:-0}"
 BASE_CONFIG="${BASE_CONFIG:-config_rruff_conditioned_2346k_rt_flat37_stage2c_20260624.json}"
-CONFIG_DIR="/scratch/09870/williamratcliff/rt_flat37_referee_20260624/configs"
+CONFIG_DIR="/scratch/09870/williamratcliff/rt_flat37_20260624/configs"
 CONFIG_OUT="${CONFIG_DIR}/rt_stage2c_epoch${TARGET_NUM_EPOCHS}_${SLURM_JOB_ID}.json"
 
 module purge

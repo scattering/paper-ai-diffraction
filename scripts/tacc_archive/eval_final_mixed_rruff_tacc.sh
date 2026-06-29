@@ -17,7 +17,7 @@ cd /scratch/$USER/ai-diffraction/Code/ViT_NVIDIA
 
 : "${TRAIN_JOB_ID:?TRAIN_JOB_ID must be set}"
 META="/scratch/$USER/mixed2500k_train_${TRAIN_JOB_ID}.json"
-SPEC="/scratch/$USER/ai-diffraction/docs/review_notes/mixed2500k_r325_specs_${TRAIN_JOB_ID}.json"
+SPEC="/scratch/$USER/ai-diffraction/results/provenance_specs/mixed2500k_r325_specs_${TRAIN_JOB_ID}.json"
 export META SPEC
 
 python - <<'PY'

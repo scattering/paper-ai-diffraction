@@ -19,7 +19,7 @@ source /scratch/09870/williamratcliff/ai-diffraction-venv/bin/activate
 
 cd /scratch/09870/williamratcliff/ai-diffraction/Code/ViT_NVIDIA
 
-RESULT_DIR="/scratch/09870/williamratcliff/sg_eg_categorical_referee_20260624"
+RESULT_DIR="/scratch/09870/williamratcliff/sg_eg_categorical_20260624"
 SG_TAG="pubfix_sgeg_scale_20260624_sg_${SCALE_FRACTION}_s1337"
 EG_TAG="pubfix_sgeg_scale_20260624_eg_${SCALE_FRACTION}_s1337"
 

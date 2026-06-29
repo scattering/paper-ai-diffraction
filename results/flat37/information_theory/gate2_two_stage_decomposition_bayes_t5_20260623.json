@@ -40,5 +40,5 @@
     "top5_absence_recovery_loss": 43.426753019570356,
     "top5_residual_decoder_gap": -4.016913319238902
   },
-  "stage2c_end_to_end_source": "/scratch/09870/williamratcliff/corrected_flat_information_theory_20260623/corrected_flat37_gate2_background_noise_like_bayes_t5_summary.json"
+  "stage2c_end_to_end_source": "/scratch/09870/williamratcliff/flat37_information_theory_20260623/flat37_gate2_background_noise_like_bayes_t5_summary.json"
 }

@@ -14,7 +14,7 @@ set -euo pipefail
 : "${TARGET_NUM_EPOCHS:?TARGET_NUM_EPOCHS must be set to the cumulative epoch target}"
 
 BASE_CONFIG="${BASE_CONFIG:-config_rruff_conditioned_2346k_rt_flat37_stage2c_20260624.json}"
-CONFIG_DIR="/scratch/09870/williamratcliff/rt_flat37_referee_20260624/configs"
+CONFIG_DIR="/scratch/09870/williamratcliff/rt_flat37_20260624/configs"
 CONFIG_OUT="${CONFIG_DIR}/rt_stage2c_ddp_epoch${TARGET_NUM_EPOCHS}_${SLURM_JOB_ID}.json"
 GLOBAL_BATCH_SIZE="${GLOBAL_BATCH_SIZE:-128}"
 BATCH_SIZE_PER_RANK="${BATCH_SIZE_PER_RANK:-$(( GLOBAL_BATCH_SIZE / SLURM_NNODES ))}"

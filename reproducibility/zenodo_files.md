@@ -37,7 +37,7 @@ For the current paper package, the active final-stage ViT release surface is:
 - compact information-theory JSON summaries; posterior `.npz` files are not part
   of the main Zenodo package
 
-WiSE-FT checkpoints are historical or exploratory archive entries, not part of the revised-paper final model package.
+WiSE-FT checkpoints are historical or exploratory archive entries, not part of the current-paper final model package.
 
 Supplemental notebook assets (`assets/figure_data/`) are **bundled in the git repo**, not in the Zenodo archive:
   - `assets/figure_data/1k_structures.csv` — 1,000 crystal structures for Fig S5 notebook
@@ -61,7 +61,7 @@ Archive split note:
 - Zenodo carries checkpoints, compact derived artifacts, configs, launchers, and
   short notes
 - reviewer assets remain in the GitHub repo
-- current release status is tracked in [REVISED_PAPER_RELEASE_NOTES_2026-06-29.md](REVISED_PAPER_RELEASE_NOTES_2026-06-29.md)
+- current release status is tracked in [CURRENT_PAPER_RELEASE_NOTES_2026-06-29.md](CURRENT_PAPER_RELEASE_NOTES_2026-06-29.md)
 
 Benchmark note:
 - this package releases the paper-facing benchmark-construction scripts and documentation

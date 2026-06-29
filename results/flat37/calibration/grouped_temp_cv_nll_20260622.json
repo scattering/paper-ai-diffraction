@@ -1,6 +1,6 @@
 {
   "checkpoint": "/scratch/09870/williamratcliff/ai_diffraction_models/xrd_model_pubfix_flat37_20260622_stage2c_r2346k_s1337_best.pth",
-  "config": "/scratch/09870/williamratcliff/corrected_split_publication/pubfix_flat37_20260622_stage2c_r2346k_s1337_config.json",
+  "config": "/scratch/09870/williamratcliff/flat37_publication/pubfix_flat37_20260622_stage2c_r2346k_s1337_config.json",
   "eval_data_path": "/work2/09870/williamratcliff/rruff-benchmark/RRUFF_usable_plus_recoverable_325_with_labels_maxnorm.hdf5",
   "prior_data_path": "/scratch/09870/williamratcliff/ai_diffraction_generated/rruff_conditioned_2346k_v1_trainready.hdf5",
   "group_key": "minerals",

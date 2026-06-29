@@ -103,7 +103,7 @@ Table rows from bundled paper JSONs:
 python scripts/make_main_tables.py
 ```
 
-The default table script reads [results/revised_paper_summary.json](results/revised_paper_summary.json), which carries the revised flat-37 ViT, regular-transformer, and matched SG-to-EG control numbers.
+The default table script reads [results/revised_paper_summary.json](results/revised_paper_summary.json), which carries the current flat-37 ViT, regular-transformer, and matched SG-to-EG control numbers.
 
 Topology-distance figure from bundled failure JSONs:
 
@@ -170,7 +170,7 @@ If `results/reviewer/rruff325_precomputed_inference.json` is present, the review
 - `results/figures/` is generated output and is not tracked.
 - `scripts/` contains the canonical paper-facing wrappers.
 - `scripts/tacc_archive/` contains preserved historical campaign launchers for provenance only.
-- [reproducibility/REVISED_PAPER_RELEASE_NOTES_2026-06-29.md](reproducibility/REVISED_PAPER_RELEASE_NOTES_2026-06-29.md) records the current paper assets and the remaining Zenodo/public-repo staging items.
+- [reproducibility/CURRENT_PAPER_RELEASE_NOTES_2026-06-29.md](reproducibility/CURRENT_PAPER_RELEASE_NOTES_2026-06-29.md) records the current paper assets and Zenodo package layout.
 
 ## Key References
 

@@ -19,8 +19,8 @@ The paper cites this repository as:
   - `configs/flat37/vit_po200k_20260622.json`
   - `configs/flat37/vit_dualsource2346k_500kpo_20260622.json`
 - Matched SG-to-EG control configs:
-  - `configs/flat37/sg230_categorical_referee_20260624.json`
-  - `configs/flat37/eg99_categorical_referee_20260624.json`
+  - `configs/flat37/sg230_categorical_control_20260624.json`
+  - `configs/flat37/eg99_categorical_control_20260624.json`
 - Matched regular-transformer configs:
   - `configs/regular_transformer/rt_stage1_uniform_2m_flat37_20260624.json`
   - `configs/regular_transformer/rt_stage2c_rruff2346k_flat37_20260624.json`
@@ -72,9 +72,9 @@ The current Zenodo package for this release is published as:
 - Archive: `paper_ai_diffraction_revised_20260629.tar.gz`
 
 - It includes the final SG-to-EG JSON/CSV outputs:
-  - `/scratch/09870/williamratcliff/sg_eg_categorical_referee_20260624/`
+  - `/scratch/09870/williamratcliff/sg_eg_categorical_20260624/`
 - It includes the final regular-transformer evaluation JSONs:
-  - `/scratch/09870/williamratcliff/rt_flat37_referee_20260624/784439/`
+  - `/scratch/09870/williamratcliff/rt_flat37_20260624/784439/`
 - It includes the current Stage-1, PO-only, and large mixed flat-37 checkpoints
   named in `checkpoint_manifest.csv`.
 - It includes the matched regular-transformer checkpoint with its configs
@@ -87,5 +87,5 @@ The current Zenodo package for this release is published as:
 - Reviewer notebook examples and lightweight browsing assets are tracked in the
   GitHub repo with the notebook support files.
 
-WiSE-FT is not part of the revised-paper final model package. If kept in the
+WiSE-FT is not part of the current-paper final model package. If kept in the
 archive, it should be labeled historical or exploratory.

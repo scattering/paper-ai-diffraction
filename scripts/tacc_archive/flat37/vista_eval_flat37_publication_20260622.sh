@@ -17,7 +17,7 @@ TEMPS="${TEMPS:-5.0 7.5}"
 TEMP_GRID="${TEMP_GRID:-1.0 1.5 2.0 2.5 3.0 3.5 4.0 4.5 5.0 5.5 6.0 6.5 7.0 7.5 8.0 8.5 9.0 9.5 10.0 11.0 12.0 13.0 14.0 15.0 16.0 18.0 20.0 25.0 30.0 40.0 50.0 75.0 100.0 150.0 200.0}"
 R325="/work2/09870/williamratcliff/rruff-benchmark/RRUFF_usable_plus_recoverable_325_with_labels_maxnorm.hdf5"
 R473="/work2/09870/williamratcliff/rruff-benchmark/RRUFF_option1_473_with_buckets_maxnorm.hdf5"
-RESULT_ROOT="/scratch/09870/williamratcliff/corrected_split_publication"
+RESULT_ROOT="/scratch/09870/williamratcliff/flat37_publication"
 
 module purge
 module load gcc/13.2.0 cuda/12.5 python3/3.11.8

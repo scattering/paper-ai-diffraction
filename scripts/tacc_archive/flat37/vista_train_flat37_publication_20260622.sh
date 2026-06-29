@@ -28,7 +28,7 @@ REMOTE_DATA_HOST="${REMOTE_DATA_HOST:-stampede3}"
 NUM_WORKERS_OVERRIDE="${NUM_WORKERS_OVERRIDE:-}"
 PREFETCH_FACTOR_OVERRIDE="${PREFETCH_FACTOR_OVERRIDE:-}"
 MODEL_DIR="/scratch/09870/williamratcliff/ai_diffraction_models"
-RESULT_ROOT="/scratch/09870/williamratcliff/corrected_split_publication"
+RESULT_ROOT="/scratch/09870/williamratcliff/flat37_publication"
 
 module purge
 module load gcc/13.2.0 cuda/12.5 python3/3.11.8

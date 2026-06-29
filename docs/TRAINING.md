@@ -68,7 +68,7 @@ These wrappers are preserved as TACC provenance for the publication runs. The po
 
 ## Historical TACC Launchers
 
-The original and revision campaign launchers are preserved under:
+The original and publication campaign launchers are preserved under:
 
 - [../scripts/tacc_archive]( ../scripts/tacc_archive )
 

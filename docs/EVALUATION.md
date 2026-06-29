@@ -24,7 +24,7 @@ For TACC-specific notes, see:
 
 The `results/` directory intentionally contains compact paper-backed outputs:
 
-- revised summary rows in [revised_paper_summary.json](../results/revised_paper_summary.json)
+- current summary rows in [revised_paper_summary.json](../results/revised_paper_summary.json)
 - grouped mineral-family calibration assets under [flat37/calibration](../results/flat37/calibration)
 - information-channel and topology summaries under [flat37/information_theory](../results/flat37/information_theory)
 - older mixed-curriculum and positional-ablation JSONs retained for provenance
@@ -93,7 +93,7 @@ Use:
 - [make_calibration_figure.sh](../scripts/make_calibration_figure.sh)
 - [make_main_tables.py](../scripts/make_main_tables.py)
 
-The topology-flow wrapper renders the staged DAG figure set. The calibration wrapper renders a Top-1/Top-5 versus temperature SVG from a compatible sweep JSON. The table script prints compact CSV rows from the revised summary JSON.
+The topology-flow wrapper renders the staged DAG figure set. The calibration wrapper renders a Top-1/Top-5 versus temperature SVG from a compatible sweep JSON. The table script prints compact CSV rows from the current summary JSON.
 
 ## Historical TACC Evaluation Launchers
 

@@ -21,8 +21,8 @@ source /scratch/09870/williamratcliff/ai-diffraction-venv/bin/activate
 cd /scratch/09870/williamratcliff/ai-diffraction/Code/ViT_NVIDIA
 
 case "$SCALE_MODE" in
-  sg) TEMPLATE="config_uniform_2m_blackbird_sg230_categorical_referee_20260624.json" ;;
-  eg) TEMPLATE="config_uniform_2m_blackbird_eg99_categorical_referee_20260624.json" ;;
+  sg) TEMPLATE="sg230_categorical_control_20260624.json" ;;
+  eg) TEMPLATE="eg99_categorical_control_20260624.json" ;;
   *) echo "Unsupported SCALE_MODE=$SCALE_MODE" >&2; exit 1 ;;
 esac
 
@@ -33,7 +33,7 @@ case "$SCALE_FRACTION" in
   *) echo "Unsupported SCALE_FRACTION=$SCALE_FRACTION" >&2; exit 1 ;;
 esac
 
-RESULT_DIR="/scratch/09870/williamratcliff/sg_eg_categorical_referee_20260624"
+RESULT_DIR="/scratch/09870/williamratcliff/sg_eg_categorical_20260624"
 CONFIG_DIR="${RESULT_DIR}/configs"
 RUN_TAG="pubfix_sgeg_scale_20260624_${SCALE_MODE}_${SCALE_FRACTION}_s1337"
 CONFIG_OUT="${CONFIG_DIR}/${RUN_TAG}.json"

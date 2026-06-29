@@ -18,7 +18,7 @@ CONFIG="config_rruff_conditioned_2346k_rt_flat37_stage2c_20260624.json"
 PRIOR="/scratch/09870/williamratcliff/ai_diffraction_generated/rruff_conditioned_2346k_v1_trainready.hdf5"
 R325="/work2/09870/williamratcliff/rruff-benchmark/RRUFF_usable_plus_recoverable_325_with_labels_maxnorm.hdf5"
 R473="/work2/09870/williamratcliff/rruff-benchmark/RRUFF_option1_473_with_buckets_maxnorm.hdf5"
-RESULT_DIR="/scratch/09870/williamratcliff/rt_flat37_referee_20260624/${SLURM_JOB_ID}"
+RESULT_DIR="/scratch/09870/williamratcliff/rt_flat37_20260624/${SLURM_JOB_ID}"
 
 module purge
 module load gcc/13.2.0 cuda/12.5 python3/3.11.8

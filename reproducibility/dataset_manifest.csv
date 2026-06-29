@@ -1,7 +1,7 @@
 logical_name,asset_class,redistributed_in_repo,expected_env_var,example_filename,expected_local_path_or_source,required_for,notes
-flat37_mapping_json,bundled_asset,yes,,eg37_mapping_20260622.json,assets/lookups/eg37_mapping_20260622.json,revised flat-37 target mapping,99 extinction groups to 37-bit rule-output vectors
-flat37_mapping_csv,bundled_asset,yes,,eg37_mapping_20260622.csv,assets/lookups/eg37_mapping_20260622.csv,revised flat-37 target mapping,Human-readable mapping companion
-revised_paper_summary_json,bundled_result_json,yes,,revised_paper_summary.json,results/revised_paper_summary.json,main table summaries,Compact revised-paper benchmark/control numbers used by scripts/make_main_tables.py
+flat37_mapping_json,bundled_asset,yes,,eg37_mapping_20260622.json,assets/lookups/eg37_mapping_20260622.json,current flat-37 target mapping,99 extinction groups to 37-bit rule-output vectors
+flat37_mapping_csv,bundled_asset,yes,,eg37_mapping_20260622.csv,assets/lookups/eg37_mapping_20260622.csv,current flat-37 target mapping,Human-readable mapping companion
+revised_paper_summary_json,bundled_result_json,yes,,revised_paper_summary.json,results/revised_paper_summary.json,main table summaries,Compact current-paper benchmark/control numbers used by scripts/make_main_tables.py
 flat37_grouped_cv_json,bundled_result_json,yes,,grouped_temp_cv_nll_20260622.json,results/flat37/calibration/grouped_temp_cv_nll_20260622.json,calibration audit,Grouped mineral-family temperature sweep
 flat37_information_summary_json,bundled_result_json,yes,,flat37_information_theory_summary_bayes_t5_20260623.json,results/flat37/information_theory/flat37_information_theory_summary_bayes_t5_20260623.json,information-channel analysis,Summary-level information-channel artifact
 rruff325_case_ids,zenodo_metadata_current,no,,rruff325_case_ids.csv,https://zenodo.org/records/21043734/files/paper_ai_diffraction_revised_20260629.tar.gz::benchmark_ids/rruff325_case_ids.csv,RRUFF-325 benchmark provenance,Zenodo package metadata file listing row index case_id RRUFF ID mineral and extinction-group label; included in Zenodo record https://zenodo.org/records/21043734
@@ -14,7 +14,7 @@ stage2a_checkpoint,zenodo_checkpoint,no,,xrd_model_h7dqlpfp_best.pth,external/ch
 stage2b_checkpoint,zenodo_checkpoint,no,,xrd_model_guvsasrs_best.pth,external/checkpoints/xrd_model_guvsasrs_best.pth,decoder tradeoff reproduction,Named manuscript checkpoint for the Stage-2b decoder comparison.
 legacy_replay_checkpoint,zenodo_checkpoint,no,,xrd_model_wwuvp1kj_best.pth,external/checkpoints/xrd_model_wwuvp1kj_best.pth,supplementary baselines,Named supplementary replay-era baseline checkpoint.
 baseline_350k_checkpoint,zenodo_checkpoint,no,,xrd_model_7pv3pv3y_best.pth,external/checkpoints/xrd_model_7pv3pv3y_best.pth,supplementary baselines,Named supplementary 350k baseline checkpoint.
-stage2c_baseline_checkpoint,zenodo_checkpoint,no,,xrd_model_9rwv1qly_best.pth,external/checkpoints/xrd_model_9rwv1qly_best.pth,historical baseline comparison,Retained for manuscript-history provenance; not the revised flat-37 reference checkpoint.
+stage2c_baseline_checkpoint,zenodo_checkpoint,no,,xrd_model_9rwv1qly_best.pth,external/checkpoints/xrd_model_9rwv1qly_best.pth,historical baseline comparison,Retained for manuscript-history provenance; not the current flat-37 reference checkpoint.
 stage2c_aux025_checkpoint,zenodo_checkpoint,no,,xrd_model_0879pvmm_best.pth,external/checkpoints/xrd_model_0879pvmm_best.pth,supplementary ablation,Named supplementary Stage-2c-aux025 ablation checkpoint.
 po_1epoch_checkpoint,zenodo_checkpoint,no,,xrd_model_cscjfdwk_best.pth,external/checkpoints/xrd_model_cscjfdwk_best.pth,PO ablation,Download from Zenodo if reproducing the PO-only ablation.
 po_resume2_checkpoint,zenodo_checkpoint,no,,xrd_model_dsi7ehiv_best.pth,external/checkpoints/xrd_model_dsi7ehiv_best.pth,PO continuation,Download from Zenodo if reproducing the continuation comparison.

@@ -18,5 +18,5 @@ source /scratch/09870/williamratcliff/ai-diffraction-venv/bin/activate
 cd /scratch/09870/williamratcliff/ai-diffraction/Code/ViT_NVIDIA
 
 python train.py \
-  --config config_uniform_2m_blackbird_eg99_categorical_referee_20260624.json \
+  --config eg99_categorical_control_20260624.json \
   --disable_wandb
