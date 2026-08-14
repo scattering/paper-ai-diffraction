@@ -1,0 +1,302 @@
+{
+  "RRUFF-325": {
+    "all_model_residual": {
+      "curve": [
+        {
+          "intensity_high": 0.001,
+          "intensity_low": 0.0,
+          "median_intensity": 0.0,
+          "n_pairs": 704135,
+          "sigma_estimate": 2.9235961578603708e-09,
+          "variance_estimate": 8.547414494255921e-18
+        },
+        {
+          "intensity_high": 0.003,
+          "intensity_low": 0.001,
+          "median_intensity": NaN,
+          "n_pairs": 0,
+          "sigma_estimate": NaN,
+          "variance_estimate": NaN
+        },
+        {
+          "intensity_high": 0.01,
+          "intensity_low": 0.003,
+          "median_intensity": 0.004999999888241291,
+          "n_pairs": 24340,
+          "sigma_estimate": 6.866614004281805e-06,
+          "variance_estimate": 4.715038788379901e-11
+        },
+        {
+          "intensity_high": 0.03,
+          "intensity_low": 0.01,
+          "median_intensity": 0.019999999552965164,
+          "n_pairs": 26645,
+          "sigma_estimate": 1.044761448745485e-05,
+          "variance_estimate": 1.0915264847847648e-10
+        },
+        {
+          "intensity_high": 0.1,
+          "intensity_low": 0.03,
+          "median_intensity": 0.05999999865889549,
+          "n_pairs": 41341,
+          "sigma_estimate": 1.5494826035010173e-05,
+          "variance_estimate": 2.4008963385522905e-10
+        },
+        {
+          "intensity_high": 0.3,
+          "intensity_low": 0.1,
+          "median_intensity": 0.1850000023841858,
+          "n_pairs": 59085,
+          "sigma_estimate": 3.14522939398393e-05,
+          "variance_estimate": 9.892467940780522e-10
+        },
+        {
+          "intensity_high": 1.000001,
+          "intensity_low": 0.3,
+          "median_intensity": 0.5900000035762787,
+          "n_pairs": 101094,
+          "sigma_estimate": 7.313094727979885e-05,
+          "variance_estimate": 5.3481354500407174e-09
+        }
+      ],
+      "variance_model": {
+        "additive_like_a": 1.4923685993545168e-12,
+        "component_fraction_at_unit_intensity": {
+          "additive_like": 0.00011624240415043343,
+          "poisson_like": 0.28275534641827454,
+          "signal_relative_like": 0.7171284111775751
+        },
+        "fit_success": true,
+        "n_intensity_bins_fit": 6,
+        "poisson_like_b": 3.6301313911930835e-09,
+        "signal_relative_like_c": 9.206794459975192e-09,
+        "unweighted_r2_over_binned_curve": 0.9999148410160228,
+        "weighted_nnls_residual_norm": 8.617213374424497e-12
+      }
+    },
+    "off_peak_only": {
+      "curve": [
+        {
+          "intensity_high": 0.001,
+          "intensity_low": 0.0,
+          "median_intensity": 0.0,
+          "n_pairs": 638360,
+          "sigma_estimate": 1.5718053864599498e-09,
+          "variance_estimate": 2.4705721729045123e-18
+        },
+        {
+          "intensity_high": 0.003,
+          "intensity_low": 0.001,
+          "median_intensity": NaN,
+          "n_pairs": 0,
+          "sigma_estimate": NaN,
+          "variance_estimate": NaN
+        },
+        {
+          "intensity_high": 0.01,
+          "intensity_low": 0.003,
+          "median_intensity": 0.004999999888241291,
+          "n_pairs": 12164,
+          "sigma_estimate": 8.614546797021941e-06,
+          "variance_estimate": 7.421041651808098e-11
+        },
+        {
+          "intensity_high": 0.03,
+          "intensity_low": 0.01,
+          "median_intensity": 0.019999999552965164,
+          "n_pairs": 13467,
+          "sigma_estimate": 1.0483580560237779e-05,
+          "variance_estimate": 1.0990546136299545e-10
+        },
+        {
+          "intensity_high": 0.1,
+          "intensity_low": 0.03,
+          "median_intensity": 0.06000000052154064,
+          "n_pairs": 21398,
+          "sigma_estimate": 2.0967161120475558e-05,
+          "variance_estimate": 4.396218454519818e-10
+        },
+        {
+          "intensity_high": 0.3,
+          "intensity_low": 0.1,
+          "median_intensity": 0.1850000023841858,
+          "n_pairs": 32111,
+          "sigma_estimate": 4.1934322240951115e-05,
+          "variance_estimate": 1.7584873818079272e-09
+        },
+        {
+          "intensity_high": 1.000001,
+          "intensity_low": 0.3,
+          "median_intensity": 0.5850000083446503,
+          "n_pairs": 53674,
+          "sigma_estimate": 9.435380781250218e-05,
+          "variance_estimate": 8.902641048718596e-09
+        }
+      ],
+      "variance_model": {
+        "additive_like_a": 0.0,
+        "component_fraction_at_unit_intensity": {
+          "additive_like": 0.0,
+          "poisson_like": 0.32120553952129216,
+          "signal_relative_like": 0.6787944604787077
+        },
+        "fit_success": true,
+        "n_intensity_bins_fit": 6,
+        "poisson_like_b": 6.805445407968919e-09,
+        "signal_relative_like_c": 1.438175272725439e-08,
+        "unweighted_r2_over_binned_curve": 0.9999503057846763,
+        "weighted_nnls_residual_norm": 8.275619745139638e-12
+      }
+    }
+  },
+  "RRUFF-473": {
+    "all_model_residual": {
+      "curve": [
+        {
+          "intensity_high": 0.001,
+          "intensity_low": 0.0,
+          "median_intensity": 0.0,
+          "n_pairs": 846933,
+          "sigma_estimate": 4.732340360538274e-09,
+          "variance_estimate": 2.2395045287979528e-17
+        },
+        {
+          "intensity_high": 0.003,
+          "intensity_low": 0.001,
+          "median_intensity": NaN,
+          "n_pairs": 0,
+          "sigma_estimate": NaN,
+          "variance_estimate": NaN
+        },
+        {
+          "intensity_high": 0.01,
+          "intensity_low": 0.003,
+          "median_intensity": 0.004999999888241291,
+          "n_pairs": 31672,
+          "sigma_estimate": 6.8543415152654615e-06,
+          "variance_estimate": 4.698199760789162e-11
+        },
+        {
+          "intensity_high": 0.03,
+          "intensity_low": 0.01,
+          "median_intensity": 0.019999999552965164,
+          "n_pairs": 35360,
+          "sigma_estimate": 1.0435363749544363e-05,
+          "variance_estimate": 1.0889681658530458e-10
+        },
+        {
+          "intensity_high": 0.1,
+          "intensity_low": 0.03,
+          "median_intensity": 0.06000000052154064,
+          "n_pairs": 58254,
+          "sigma_estimate": 1.24298961143504e-05,
+          "variance_estimate": 1.5450231741354315e-10
+        },
+        {
+          "intensity_high": 0.3,
+          "intensity_low": 0.1,
+          "median_intensity": 0.1850000023841858,
+          "n_pairs": 86267,
+          "sigma_estimate": 3.091166535108232e-05,
+          "variance_estimate": 9.555310547773033e-10
+        },
+        {
+          "intensity_high": 1.000001,
+          "intensity_low": 0.3,
+          "median_intensity": 0.5900000035762787,
+          "n_pairs": 151731,
+          "sigma_estimate": 6.289827205384911e-05,
+          "variance_estimate": 3.956192627360016e-09
+        }
+      ],
+      "variance_model": {
+        "additive_like_a": 0.0,
+        "component_fraction_at_unit_intensity": {
+          "additive_like": 0.0,
+          "poisson_like": 0.4998737391137214,
+          "signal_relative_like": 0.5001262608862788
+        },
+        "fit_success": true,
+        "n_intensity_bins_fit": 6,
+        "poisson_like_b": 4.217810374234784e-09,
+        "signal_relative_like_c": 4.219941090190979e-09,
+        "unweighted_r2_over_binned_curve": 0.9987495696719347,
+        "weighted_nnls_residual_norm": 3.2151987880396983e-11
+      }
+    },
+    "off_peak_only": {
+      "curve": [
+        {
+          "intensity_high": 0.001,
+          "intensity_low": 0.0,
+          "median_intensity": 0.0,
+          "n_pairs": 762471,
+          "sigma_estimate": 2.599414276515886e-09,
+          "variance_estimate": 6.756954580954607e-18
+        },
+        {
+          "intensity_high": 0.003,
+          "intensity_low": 0.001,
+          "median_intensity": NaN,
+          "n_pairs": 0,
+          "sigma_estimate": NaN,
+          "variance_estimate": NaN
+        },
+        {
+          "intensity_high": 0.01,
+          "intensity_low": 0.003,
+          "median_intensity": 0.004999999888241291,
+          "n_pairs": 15641,
+          "sigma_estimate": 8.204273008122653e-06,
+          "variance_estimate": 6.731009559180992e-11
+        },
+        {
+          "intensity_high": 0.03,
+          "intensity_low": 0.01,
+          "median_intensity": 0.019999999552965164,
+          "n_pairs": 18080,
+          "sigma_estimate": 1.0483580560237779e-05,
+          "variance_estimate": 1.0990546136299545e-10
+        },
+        {
+          "intensity_high": 0.1,
+          "intensity_low": 0.03,
+          "median_intensity": 0.06000000052154064,
+          "n_pairs": 31828,
+          "sigma_estimate": 2.077697695936205e-05,
+          "variance_estimate": 4.316827715698615e-10
+        },
+        {
+          "intensity_high": 0.3,
+          "intensity_low": 0.1,
+          "median_intensity": 0.1850000023841858,
+          "n_pairs": 48297,
+          "sigma_estimate": 3.348095550301233e-05,
+          "variance_estimate": 1.1209743813946916e-09
+        },
+        {
+          "intensity_high": 1.000001,
+          "intensity_low": 0.3,
+          "median_intensity": 0.5800000131130219,
+          "n_pairs": 81751,
+          "sigma_estimate": 8.381336575027626e-05,
+          "variance_estimate": 7.024680278389582e-09
+        }
+      ],
+      "variance_model": {
+        "additive_like_a": 5.458037366243685e-12,
+        "component_fraction_at_unit_intensity": {
+          "additive_like": 0.00029847807994183795,
+          "poisson_like": 0.19472741725112358,
+          "signal_relative_like": 0.8049741046689345
+        },
+        "fit_success": true,
+        "n_intensity_bins_fit": 6,
+        "poisson_like_b": 3.560829390874743e-09,
+        "signal_relative_like_c": 1.4719937701950314e-08,
+        "unweighted_r2_over_binned_curve": 0.9992048314033972,
+        "weighted_nnls_residual_norm": 3.592081871732941e-11
+      }
+    }
+  }
+}

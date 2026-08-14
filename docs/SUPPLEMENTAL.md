@@ -7,6 +7,25 @@ Provenance notebooks and accuracy reference numbers for the paper supplemental. 
 
 ---
 
+## Quantitative Nuisance Characterization
+
+Compact outputs backing the supplemental quantitative nuisance section are bundled under:
+
+- [results/flat37/information_theory/nuisance_characterization](../results/flat37/information_theory/nuisance_characterization)
+
+The files have the following roles:
+
+- `synthetic_nuisance_summary.json`: deterministic audit of the Stage-1 and Stage-2 generating distributions over the saved 9,818-structure bank
+- `channel_summary.json`: paired clean-versus-nuisance six-family channel results and nuisance-level strata
+- `marginal_comparison.json`: the same paired channel evaluated under uniform 99-class and empirical RRUFF-473 class marginals
+- `rruff_fit_summary.json`: observational RRUFF-473 and RRUFF-325 background, feature-count, peak-to-background, and angle-resolved width summaries
+- `rruff_intensity_noise_summary.json`: intensity-dependent residual-variance summary
+- `rruff_intensity_noise_curve.csv`: compact binned residual-noise curve
+
+The benchmark case identifiers remain in the RRUFF-325 and RRUFF-473 CSV manifests distributed through Zenodo and referenced by `reproducibility/dataset_manifest.csv`.
+
+---
+
 ## Provenance Notebooks
 
 These notebooks are retained as archival provenance artifacts explaining how supplemental figures and tables were generated. They are not the primary paper-facing reproduction path.

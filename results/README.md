@@ -5,6 +5,7 @@ This directory intentionally contains compact artifacts that back the paper narr
 - `revised_paper_summary.json`: revised flat-37 ViT, matched regular-transformer, and matched SG-to-EG control rows
 - `flat37/calibration/`: grouped mineral-family temperature-sweep assets
 - `flat37/information_theory/`: information-channel, Gate-2, and topology summary artifacts
+- `flat37/information_theory/nuisance_characterization/`: compact synthetic-nuisance and observational RRUFF summaries
 - legacy mixed-curriculum and positional-ablation JSONs retained for provenance
 
 Generated outputs such as:

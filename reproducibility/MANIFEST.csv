@@ -8,6 +8,7 @@ scripts/tacc_archive/flat37/,directory,Flat-37 TACC provenance wrappers,/Users/w
 scripts/tacc_archive/regular_transformer/,directory,Matched regular-transformer TACC provenance wrappers,/Users/williamratcliff/ai-diffraction/Code/Reg_Transformer_FlashAttn,copied,,,
 results/flat37/calibration/,directory,Grouped mineral-family calibration assets,/Users/williamratcliff/ai-diffraction-release-workspace,copied,,,
 results/flat37/information_theory/,directory,Information-channel and topology summary artifacts,paper release analysis workspace,copied,,,
+results/flat37/information_theory/nuisance_characterization/,directory,Quantitative synthetic-nuisance and observational RRUFF summary artifacts,paper analysis workspace,copied,,,
 reproducibility/CURRENT_PAPER_RELEASE_NOTES_2026-06-29.md,doc,Current public release note,,authored,,,
 src/paper_ai_diffraction/core/model.py,source,Core model definition,,copied,,,
 src/paper_ai_diffraction/core/dataset.py,source,Dataset loading including mixed dual-source support,,copied,,,

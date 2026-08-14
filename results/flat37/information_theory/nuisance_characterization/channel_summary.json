@@ -1,0 +1,905 @@
+{
+  "conditions": {
+    "additive_gaussian": {
+      "H_G_given_Mhat_bits": 3.2872138722815216,
+      "H_prior_bits": 6.626567264462484,
+      "I_G_Mhat_bits": 3.339353392180966,
+      "any_state_change_rate": 0.007842737828478306,
+      "effective_candidates": 9.762251179535546,
+      "family_transition_to_unresolved": {
+        "001": 0.0,
+        "010": 0.0,
+        "011": 0.00030556121409655736,
+        "100": 0.00010185373803218578,
+        "101": 0.000509268690160929,
+        "110": 0.000509268690160929
+      },
+      "heldout": {
+        "top1_heldout": 0.2161723365247505,
+        "top1_heldout_95": [
+          0.208993685068242,
+          0.2240782236708087
+        ],
+        "top1_lift": 0.20658993685068247,
+        "top1_null_95": [
+          0.007323283764514158,
+          0.01223263393766551
+        ],
+        "top1_null_mean": 0.009582399674068038,
+        "top3_heldout": 0.42239559991851705,
+        "top3_heldout_95": [
+          0.41422387451619475,
+          0.4325881034833978
+        ],
+        "top3_lift": 0.3935200651863924,
+        "top3_null_95": [
+          0.025259727031982072,
+          0.03240985944184151
+        ],
+        "top3_null_mean": 0.028875534732124675,
+        "top5_heldout": 0.5133896924017111,
+        "top5_heldout_95": [
+          0.5064167854960278,
+          0.5227133835811775
+        ],
+        "top5_lift": 0.4650234263597473,
+        "top5_null_95": [
+          0.04327256060297413,
+          0.05388572010592788
+        ],
+        "top5_null_mean": 0.04836626604196374
+      },
+      "log2_n_classes": 6.6293566200796095,
+      "mi_permutation": {
+        "null_95_bits": [
+          0.4222603431110733,
+          0.440777833263216
+        ],
+        "null_corrected_bits": 2.9077686373340974,
+        "null_mean_bits": 0.4315847548468687,
+        "observed_bits": 3.339353392180966
+      },
+      "nuisance_strata": [
+        {
+          "median_value": 1.4429210393811402,
+          "n": 2455,
+          "n_classes_present": 99,
+          "state_change_rate": 0.001629327902240326,
+          "uniform_class_reweighted_state_change_rate": 0.001636758690050226,
+          "value_high": 2.3750206282506783,
+          "value_low": 0.5000092590291201
+        },
+        {
+          "median_value": 3.3167407221428764,
+          "n": 2454,
+          "n_classes_present": 99,
+          "state_change_rate": 0.0032599837000814994,
+          "uniform_class_reweighted_state_change_rate": 0.003326665369676122,
+          "value_high": 4.271692189883041,
+          "value_low": 2.3750206282506783
+        },
+        {
+          "median_value": 5.220385675220161,
+          "n": 2454,
+          "n_classes_present": 99,
+          "state_change_rate": 0.004074979625101874,
+          "uniform_class_reweighted_state_change_rate": 0.004295316772451411,
+          "value_high": 6.171905213827964,
+          "value_low": 4.271692189883041
+        },
+        {
+          "median_value": 7.0914329849247935,
+          "n": 2455,
+          "n_classes_present": 99,
+          "state_change_rate": 0.02240325865580448,
+          "uniform_class_reweighted_state_change_rate": 0.02425717918873607,
+          "value_high": 7.999306864158684,
+          "value_low": 6.171905213827964
+        }
+      ],
+      "paired_delta_from_reference": {
+        "I_G_Mhat_bits": {
+          "ci95": [
+            -0.0008101845822218845,
+            0.0029848255899687292
+          ],
+          "mean": 0.0009780411856497473
+        },
+        "top1_bayes_exact": {
+          "ci95": [
+            -0.0007053873582198056,
+            0.001309873679886192
+          ],
+          "mean": 0.0003284322855583922
+        },
+        "top5_bayes_exact": {
+          "ci95": [
+            -0.00015378898352813304,
+            0.001263086394980462
+          ],
+          "mean": 0.0005156558077030026
+        }
+      },
+      "state_counts": {
+        "absent": 43747,
+        "present": 742,
+        "unresolved": 14419
+      },
+      "top1_bayes_exact": 0.23949974711119676,
+      "top1_exact_from_joint": 0.239499747111196,
+      "top1_minentropy_lower_bound": 0.10243538929794024,
+      "top3_bayes_exact": 0.4518364713434996,
+      "top5_bayes_exact": 0.5456214715337957
+    },
+    "background": {
+      "H_G_given_Mhat_bits": 3.28778141079199,
+      "H_prior_bits": 6.626567264462484,
+      "I_G_Mhat_bits": 3.3387858536704993,
+      "any_state_change_rate": 0.0013240985944184152,
+      "effective_candidates": 9.766092284725685,
+      "family_transition_to_unresolved": {
+        "001": 0.00010185373803218578,
+        "010": 0.00010185373803218578,
+        "011": 0.00020370747606437156,
+        "100": 0.00020370747606437156,
+        "101": 0.00040741495212874313,
+        "110": 0.00030556121409655736
+      },
+      "heldout": {
+        "top1_heldout": 0.21632511713179878,
+        "top1_heldout_95": [
+          0.20930433896924017,
+          0.22471990222041147
+        ],
+        "top1_lift": 0.2067040130372785,
+        "top1_null_95": [
+          0.007226522713383581,
+          0.012125687512731716
+        ],
+        "top1_null_mean": 0.009621104094520268,
+        "top3_heldout": 0.42217355876960694,
+        "top3_heldout_95": [
+          0.4121766143817478,
+          0.42893155428804236
+        ],
+        "top3_lift": 0.39323283764514166,
+        "top3_null_95": [
+          0.025045834182114483,
+          0.032700142595233246
+        ],
+        "top3_null_mean": 0.028940721124465267,
+        "top5_heldout": 0.513047463841923,
+        "top5_heldout_95": [
+          0.5050875942147076,
+          0.5202892646160114
+        ],
+        "top5_lift": 0.46445100835200653,
+        "top5_null_95": [
+          0.043583214503972297,
+          0.05500101853738032
+        ],
+        "top5_null_mean": 0.04859645548991649
+      },
+      "log2_n_classes": 6.6293566200796095,
+      "mi_permutation": {
+        "null_95_bits": [
+          0.4111883965708103,
+          0.4272799878400354
+        ],
+        "null_corrected_bits": 2.919906157106565,
+        "null_mean_bits": 0.41887969656393403,
+        "observed_bits": 3.3387858536704993
+      },
+      "nuisance_strata": [
+        {
+          "median_value": 2.310532536201151e-05,
+          "n": 2455,
+          "n_classes_present": 99,
+          "state_change_rate": 0.0,
+          "uniform_class_reweighted_state_change_rate": 0.0,
+          "value_high": 5.885768064308665e-05,
+          "value_low": 0.0
+        },
+        {
+          "median_value": 0.00013681523650198725,
+          "n": 2454,
+          "n_classes_present": 99,
+          "state_change_rate": 0.0,
+          "uniform_class_reweighted_state_change_rate": 0.0,
+          "value_high": 0.00038190258688666247,
+          "value_low": 5.885768064308665e-05
+        },
+        {
+          "median_value": 0.001804103837988044,
+          "n": 2454,
+          "n_classes_present": 92,
+          "state_change_rate": 0.0008149959250203749,
+          "uniform_class_reweighted_state_change_rate": 0.0006302521008403362,
+          "value_high": 0.19251629856463712,
+          "value_low": 0.00038190258688666247
+        },
+        {
+          "median_value": 0.4400844105760209,
+          "n": 2455,
+          "n_classes_present": 81,
+          "state_change_rate": 0.004480651731160896,
+          "uniform_class_reweighted_state_change_rate": 0.00475524758505817,
+          "value_high": 0.956945329874177,
+          "value_low": 0.19251629856463712
+        }
+      ],
+      "paired_delta_from_reference": {
+        "I_G_Mhat_bits": {
+          "ci95": [
+            -0.0006440761483289537,
+            0.0004965848675413717
+          ],
+          "mean": -1.524207683127147e-05
+        },
+        "top1_bayes_exact": {
+          "ci95": [
+            -0.0005042264259019081,
+            0.0003025358555412007
+          ],
+          "mean": -8.202083194669595e-05
+        },
+        "top5_bayes_exact": {
+          "ci95": [
+            -0.00020169057036067972,
+            0.0001008452851805064
+          ],
+          "mean": -1.344603802357162e-06
+        }
+      },
+      "state_counts": {
+        "absent": 43747,
+        "present": 678,
+        "unresolved": 14483
+      },
+      "top1_bayes_exact": 0.2391972112556556,
+      "top1_exact_from_joint": 0.23919721125565485,
+      "top1_minentropy_lower_bound": 0.10239510039896049,
+      "top3_bayes_exact": 0.4513322449175975,
+      "top5_bayes_exact": 0.5451172451078945
+    },
+    "broadening": {
+      "H_G_given_Mhat_bits": 3.2878680981388,
+      "H_prior_bits": 6.626567264462484,
+      "I_G_Mhat_bits": 3.3386991663236874,
+      "any_state_change_rate": 0.00010185373803218578,
+      "effective_candidates": 9.766679118422443,
+      "family_transition_to_unresolved": {
+        "001": 0.0,
+        "010": 0.0,
+        "011": 0.00010185373803218578,
+        "100": 0.0,
+        "101": 0.0,
+        "110": 0.0
+      },
+      "heldout": {
+        "top1_heldout": 0.21562843756365863,
+        "top1_heldout_95": [
+          0.20747097168466083,
+          0.22327357914035445
+        ],
+        "top1_lift": 0.20619474434711757,
+        "top1_null_95": [
+          0.0071195762884497865,
+          0.011203911183540437
+        ],
+        "top1_null_mean": 0.009433693216541045,
+        "top3_heldout": 0.42108983499694447,
+        "top3_heldout_95": [
+          0.4123905072316154,
+          0.43118252189855366
+        ],
+        "top3_lift": 0.3924994907313099,
+        "top3_null_95": [
+          0.02463841922998574,
+          0.03300061112242819
+        ],
+        "top3_null_mean": 0.028590344265634546,
+        "top5_heldout": 0.5126991240578529,
+        "top5_heldout_95": [
+          0.5041556325117131,
+          0.522509676105113
+        ],
+        "top5_lift": 0.46460378895905474,
+        "top5_null_95": [
+          0.04297209207577918,
+          0.053478305153799144
+        ],
+        "top5_null_mean": 0.048095335098798125
+      },
+      "log2_n_classes": 6.6293566200796095,
+      "mi_permutation": {
+        "null_95_bits": [
+          0.41501850589139466,
+          0.433520633281799
+        ],
+        "null_corrected_bits": 2.91527657887619,
+        "null_mean_bits": 0.4234225874474973,
+        "observed_bits": 3.3386991663236874
+      },
+      "nuisance_strata": [
+        {
+          "median_value": 0.07756031926106581,
+          "n": 2455,
+          "n_classes_present": 99,
+          "state_change_rate": 0.0,
+          "uniform_class_reweighted_state_change_rate": 0.0,
+          "value_high": 0.08232729525143073,
+          "value_low": 0.0202641006351817
+        },
+        {
+          "median_value": 0.08815513450795626,
+          "n": 2454,
+          "n_classes_present": 99,
+          "state_change_rate": 0.00040749796251018743,
+          "uniform_class_reweighted_state_change_rate": 0.0003741114852225963,
+          "value_high": 0.10242115862332074,
+          "value_low": 0.08232729525143073
+        },
+        {
+          "median_value": 0.10847922908786006,
+          "n": 2454,
+          "n_classes_present": 99,
+          "state_change_rate": 0.0,
+          "uniform_class_reweighted_state_change_rate": 0.0,
+          "value_high": 0.11303590247721688,
+          "value_low": 0.10242115862332074
+        },
+        {
+          "median_value": 0.11799058507304817,
+          "n": 2455,
+          "n_classes_present": 99,
+          "state_change_rate": 0.0,
+          "uniform_class_reweighted_state_change_rate": 0.0,
+          "value_high": 0.14466805925457238,
+          "value_low": 0.11303590247721688
+        }
+      ],
+      "paired_delta_from_reference": {
+        "I_G_Mhat_bits": {
+          "ci95": [
+            0.0,
+            6.970419479196406e-05
+          ],
+          "mean": 3.340906815673339e-05
+        },
+        "top1_bayes_exact": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "mean": 0.0
+        },
+        "top5_bayes_exact": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "mean": 0.0
+        }
+      },
+      "state_counts": {
+        "absent": 43747,
+        "present": 690,
+        "unresolved": 14471
+      },
+      "top1_bayes_exact": 0.2390963659704752,
+      "top1_exact_from_joint": 0.2390963659704745,
+      "top1_minentropy_lower_bound": 0.10238894796018694,
+      "top3_bayes_exact": 0.4513322449175975,
+      "top5_bayes_exact": 0.5451172451078944
+    },
+    "clean": {
+      "H_G_given_Mhat_bits": 3.2879215498780803,
+      "H_prior_bits": 6.626567264462484,
+      "I_G_Mhat_bits": 3.3386457145844073,
+      "effective_candidates": 9.7670409798291,
+      "heldout": {
+        "top1_heldout": 0.21590140558158485,
+        "top1_heldout_95": [
+          0.20960480749643512,
+          0.2229629252393563
+        ],
+        "top1_lift": 0.2065369729069057,
+        "top1_null_95": [
+          0.0071195762884497865,
+          0.012426156039926665
+        ],
+        "top1_null_mean": 0.00936443267467916,
+        "top3_heldout": 0.4208739050723161,
+        "top3_heldout_95": [
+          0.41199327765328986,
+          0.4302505601955592
+        ],
+        "top3_lift": 0.39225096761051126,
+        "top3_null_95": [
+          0.024949073130983906,
+          0.033204318598492565
+        ],
+        "top3_null_mean": 0.028622937461804845,
+        "top5_heldout": 0.5123772662456711,
+        "top5_heldout_95": [
+          0.5030861682623752,
+          0.5217457730698717
+        ],
+        "top5_lift": 0.4644265634548787,
+        "top5_null_95": [
+          0.0420503157465879,
+          0.05368201262986352
+        ],
+        "top5_null_mean": 0.04795070279079242
+      },
+      "log2_n_classes": 6.6293566200796095,
+      "mi_permutation": {
+        "null_95_bits": [
+          0.41482826780536675,
+          0.4312682321659634
+        ],
+        "null_corrected_bits": 2.9151623912241567,
+        "null_mean_bits": 0.42348332336025085,
+        "observed_bits": 3.3386457145844073
+      },
+      "state_counts": {
+        "absent": 43747,
+        "present": 691,
+        "unresolved": 14470
+      },
+      "top1_bayes_exact": 0.2390963659704752,
+      "top1_exact_from_joint": 0.2390963659704745,
+      "top1_minentropy_lower_bound": 0.10238515452788627,
+      "top3_bayes_exact": 0.4513322449175975,
+      "top5_bayes_exact": 0.5451172451078944
+    },
+    "impurity": {
+      "H_G_given_Mhat_bits": 3.2878846536121564,
+      "H_prior_bits": 6.626567264462484,
+      "I_G_Mhat_bits": 3.3386826108503307,
+      "any_state_change_rate": 0.00020370747606437156,
+      "effective_candidates": 9.7667911954166,
+      "family_transition_to_unresolved": {
+        "001": 0.0,
+        "010": 0.0,
+        "011": 0.0,
+        "100": 0.0,
+        "101": 0.0,
+        "110": 0.0
+      },
+      "heldout": {
+        "top1_heldout": 0.2154410266856794,
+        "top1_heldout_95": [
+          0.2080719087390507,
+          0.22316663271542067
+        ],
+        "top1_lift": 0.20593603585251583,
+        "top1_null_95": [
+          0.007022815237319209,
+          0.012125687512731716
+        ],
+        "top1_null_mean": 0.009504990833163578,
+        "top3_heldout": 0.420657975147688,
+        "top3_heldout_95": [
+          0.41198309227948665,
+          0.43106539009981665
+        ],
+        "top3_lift": 0.39189447952739875,
+        "top3_null_95": [
+          0.024220818904053778,
+          0.033204318598492565
+        ],
+        "top3_null_mean": 0.028763495620289264,
+        "top5_heldout": 0.5122713383581177,
+        "top5_heldout_95": [
+          0.503050519454064,
+          0.52189855367692
+        ],
+        "top5_lift": 0.46375840293338755,
+        "top5_null_95": [
+          0.04317579955184355,
+          0.05409961295579547
+        ],
+        "top5_null_mean": 0.0485129354247301
+      },
+      "log2_n_classes": 6.6293566200796095,
+      "mi_permutation": {
+        "null_95_bits": [
+          0.4150608466996907,
+          0.4309247377730085
+        ],
+        "null_corrected_bits": 2.9156724926649025,
+        "null_mean_bits": 0.42301011818542844,
+        "observed_bits": 3.3386826108503307
+      },
+      "nuisance_strata": [
+        {
+          "median_value": 0.0,
+          "n": 7363,
+          "n_classes_present": 99,
+          "state_change_rate": 0.0,
+          "uniform_class_reweighted_state_change_rate": 0.0,
+          "value_high": 0.01164540643097517,
+          "value_low": 0.0
+        },
+        {
+          "median_value": 0.026773099857638004,
+          "n": 2455,
+          "n_classes_present": 99,
+          "state_change_rate": 0.000814663951120163,
+          "uniform_class_reweighted_state_change_rate": 0.0008132858374404268,
+          "value_high": 0.09997520756361149,
+          "value_low": 0.01164540643097517
+        }
+      ],
+      "paired_delta_from_reference": {
+        "I_G_Mhat_bits": {
+          "ci95": [
+            -0.000304297074240345,
+            0.0004881429527538447
+          ],
+          "mean": 3.75152837516716e-05
+        },
+        "top1_bayes_exact": {
+          "ci95": [
+            -0.0003025358555411306,
+            0.000201690570360763
+          ],
+          "mean": -3.361509506012707e-05
+        },
+        "top5_bayes_exact": {
+          "ci95": [
+            -1.1102230246251565e-16,
+            0.0003025358555411861
+          ],
+          "mean": 6.286022776241648e-05
+        }
+      },
+      "state_counts": {
+        "absent": 43747,
+        "present": 693,
+        "unresolved": 14468
+      },
+      "top1_bayes_exact": 0.23899552068529484,
+      "top1_exact_from_joint": 0.23899552068529412,
+      "top1_minentropy_lower_bound": 0.10238777301487557,
+      "top3_bayes_exact": 0.4512313996324171,
+      "top5_bayes_exact": 0.5452180903930748
+    },
+    "multiplicative_gaussian": {
+      "H_G_given_Mhat_bits": 3.2830471589217094,
+      "H_prior_bits": 6.626567264462484,
+      "I_G_Mhat_bits": 3.343520105540774,
+      "any_state_change_rate": 0.3201262986351599,
+      "effective_candidates": 9.734097052753203,
+      "family_transition_to_unresolved": {
+        "001": 0.00020370747606437156,
+        "010": 0.00010185373803218578,
+        "011": 0.00040741495212874313,
+        "100": 0.0,
+        "101": 0.00020370747606437156,
+        "110": 0.000916683642289672
+      },
+      "heldout": {
+        "top1_heldout": 0.20964554899164803,
+        "top1_heldout_95": [
+          0.20095233245060093,
+          0.2173762477082909
+        ],
+        "top1_lift": 0.2000774088409045,
+        "top1_null_95": [
+          0.007129761662253004,
+          0.012339580362599302
+        ],
+        "top1_null_mean": 0.009568140150743533,
+        "top3_heldout": 0.40949276838459975,
+        "top3_heldout_95": [
+          0.39850784273782847,
+          0.419550825015278
+        ],
+        "top3_lift": 0.3806314931757996,
+        "top3_null_95": [
+          0.025056019555917703,
+          0.03351497249949073
+        ],
+        "top3_null_mean": 0.02886127520880017,
+        "top5_heldout": 0.5023283764514158,
+        "top5_heldout_95": [
+          0.4928040334080261,
+          0.5112090038704421
+        ],
+        "top5_lift": 0.4540924831941333,
+        "top5_null_95": [
+          0.04297209207577918,
+          0.05318802200040741
+        ],
+        "top5_null_mean": 0.04823589325728253
+      },
+      "log2_n_classes": 6.6293566200796095,
+      "mi_permutation": {
+        "null_95_bits": [
+          0.8056169230748879,
+          0.8220672261533898
+        ],
+        "null_corrected_bits": 2.5296880532887114,
+        "null_mean_bits": 0.813832052252063,
+        "observed_bits": 3.343520105540774
+      },
+      "nuisance_strata": [
+        {
+          "median_value": 0.01640806034723332,
+          "n": 2455,
+          "n_classes_present": 99,
+          "state_change_rate": 0.007331975560081467,
+          "uniform_class_reweighted_state_change_rate": 0.007546594179826929,
+          "value_high": 0.033433820406632064,
+          "value_low": 3.1117729284058097e-06
+        },
+        {
+          "median_value": 0.0519766077026754,
+          "n": 2454,
+          "n_classes_present": 99,
+          "state_change_rate": 0.22616136919315402,
+          "uniform_class_reweighted_state_change_rate": 0.2247597145374514,
+          "value_high": 0.07014505769331336,
+          "value_low": 0.033433820406632064
+        },
+        {
+          "median_value": 0.0878561841610699,
+          "n": 2454,
+          "n_classes_present": 99,
+          "state_change_rate": 0.48859005704971475,
+          "uniform_class_reweighted_state_change_rate": 0.4852889132476199,
+          "value_high": 0.10529120598944905,
+          "value_low": 0.07014505769331336
+        },
+        {
+          "median_value": 0.12264142812001579,
+          "n": 2455,
+          "n_classes_present": 99,
+          "state_change_rate": 0.5584521384928717,
+          "uniform_class_reweighted_state_change_rate": 0.5512864426273232,
+          "value_high": 0.1399919312428357,
+          "value_low": 0.10529120598944905
+        }
+      ],
+      "paired_delta_from_reference": {
+        "I_G_Mhat_bits": {
+          "ci95": [
+            0.008862505546576893,
+            0.02168895268725924
+          ],
+          "mean": 0.014945214828912045
+        },
+        "top1_bayes_exact": {
+          "ci95": [
+            0.013297034974550835,
+            0.020300866079009407
+          ],
+          "mean": 0.016780994939864843
+        },
+        "top5_bayes_exact": {
+          "ci95": [
+            0.0060986055235262345,
+            0.013109868896971322
+          ],
+          "mean": 0.009653567969404715
+        }
+      },
+      "state_counts": {
+        "absent": 43747,
+        "present": 5155,
+        "unresolved": 10006
+      },
+      "top1_bayes_exact": 0.2502768199331662,
+      "top1_exact_from_joint": 0.2502768199331663,
+      "top1_minentropy_lower_bound": 0.10273166525673369,
+      "top3_bayes_exact": 0.4557682995265516,
+      "top5_bayes_exact": 0.5499577958850255
+    },
+    "po_backend_reference": {
+      "H_G_given_Mhat_bits": 3.2879215498780803,
+      "H_prior_bits": 6.626567264462484,
+      "I_G_Mhat_bits": 3.3386457145844073,
+      "effective_candidates": 9.7670409798291,
+      "heldout": {
+        "top1_heldout": 0.21543695253615808,
+        "top1_heldout_95": [
+          0.20653900998166633,
+          0.22277958851089835
+        ],
+        "top1_lift": 0.20592992462823387,
+        "top1_null_95": [
+          0.007333469138317376,
+          0.011921980036667345
+        ],
+        "top1_null_mean": 0.009507027907924221,
+        "top3_heldout": 0.42098798125891224,
+        "top3_heldout_95": [
+          0.4112853941739662,
+          0.4276889386840497
+        ],
+        "top3_lift": 0.39211244652678756,
+        "top3_null_95": [
+          0.024531472805051944,
+          0.03340802607455694
+        ],
+        "top3_null_mean": 0.02887553473212467,
+        "top5_heldout": 0.5125422693012833,
+        "top5_heldout_95": [
+          0.5029435730291302,
+          0.5213943776736606
+        ],
+        "top5_lift": 0.4641189651660216,
+        "top5_null_95": [
+          0.04285496027704217,
+          0.05391627622733753
+        ],
+        "top5_null_mean": 0.048423304135261774
+      },
+      "log2_n_classes": 6.6293566200796095,
+      "mi_permutation": {
+        "null_95_bits": [
+          0.4159334430830962,
+          0.4321205951386005
+        ],
+        "null_corrected_bits": 2.915121273220465,
+        "null_mean_bits": 0.4235244413639425,
+        "observed_bits": 3.3386457145844073
+      },
+      "state_counts": {
+        "absent": 43747,
+        "present": 691,
+        "unresolved": 14470
+      },
+      "top1_bayes_exact": 0.2390963659704752,
+      "top1_exact_from_joint": 0.2390963659704745,
+      "top1_minentropy_lower_bound": 0.10238515452788627,
+      "top3_bayes_exact": 0.4513322449175975,
+      "top5_bayes_exact": 0.5451172451078944
+    },
+    "preferred_orientation": {
+      "H_G_given_Mhat_bits": 3.2891493923667854,
+      "H_prior_bits": 6.626567264462484,
+      "I_G_Mhat_bits": 3.3374178720957035,
+      "any_state_change_rate": 0.01089834996944388,
+      "effective_candidates": 9.7753570079751,
+      "family_transition_to_unresolved": {
+        "001": 0.001018537380321858,
+        "010": 0.00020370747606437156,
+        "011": 0.0006111224281931147,
+        "100": 0.000916683642289672,
+        "101": 0.001425952332450601,
+        "110": 0.002750050926869016
+      },
+      "heldout": {
+        "top1_heldout": 0.21576084742310045,
+        "top1_heldout_95": [
+          0.20889692401711143,
+          0.2229832959869627
+        ],
+        "top1_lift": 0.20633530250560198,
+        "top1_null_95": [
+          0.007216337339580363,
+          0.012018741087797923
+        ],
+        "top1_null_mean": 0.00942554491749847,
+        "top3_heldout": 0.42113668771643925,
+        "top3_heldout_95": [
+          0.413398859238134,
+          0.4290385007129761
+        ],
+        "top3_lift": 0.3924159706661235,
+        "top3_null_95": [
+          0.02515278060704828,
+          0.03340802607455694
+        ],
+        "top3_null_mean": 0.028720717050315748,
+        "top5_heldout": 0.5122652271338357,
+        "top5_heldout_95": [
+          0.5011000203707476,
+          0.5197647178651457
+        ],
+        "top5_lift": 0.4641719291097982,
+        "top5_null_95": [
+          0.042875331024648605,
+          0.054186188633122835
+        ],
+        "top5_null_mean": 0.04809329802403748
+      },
+      "log2_n_classes": 6.6293566200796095,
+      "mi_permutation": {
+        "null_95_bits": [
+          0.4099695669281081,
+          0.4278952988900674
+        ],
+        "null_corrected_bits": 2.91840534856693,
+        "null_mean_bits": 0.4190125235287738,
+        "observed_bits": 3.3374178720957035
+      },
+      "nuisance_strata": [
+        {
+          "median_value": 0.7751076744962531,
+          "n": 2455,
+          "n_classes_present": 99,
+          "state_change_rate": 0.02240325865580448,
+          "uniform_class_reweighted_state_change_rate": 0.01931287089364062,
+          "value_high": 0.9138909234964897,
+          "value_low": 0.5518110897256435
+        },
+        {
+          "median_value": 0.9328046714684247,
+          "n": 289,
+          "n_classes_present": 90,
+          "state_change_rate": 0.0034602076124567475,
+          "uniform_class_reweighted_state_change_rate": 0.002777777777777778,
+          "value_high": 1.0,
+          "value_low": 0.9138909234964897
+        },
+        {
+          "median_value": 1.0,
+          "n": 4619,
+          "n_classes_present": 99,
+          "state_change_rate": 0.0,
+          "uniform_class_reweighted_state_change_rate": 0.0,
+          "value_high": 1.0909001936668061,
+          "value_low": 1.0
+        },
+        {
+          "median_value": 1.326210707090378,
+          "n": 2455,
+          "n_classes_present": 99,
+          "state_change_rate": 0.020773930753564155,
+          "uniform_class_reweighted_state_change_rate": 0.01981476029865026,
+          "value_high": 1.7999796803713792,
+          "value_low": 1.0909001936668061
+        }
+      ],
+      "paired_delta_from_reference": {
+        "I_G_Mhat_bits": {
+          "ci95": [
+            -0.0032170833324229988,
+            0.0009658986697624978
+          ],
+          "mean": -0.001215785335057517
+        },
+        "top1_bayes_exact": {
+          "ci95": [
+            -0.0015110353377356146,
+            0.000908722594082173
+          ],
+          "mean": -0.0002455905388295514
+        },
+        "top5_bayes_exact": {
+          "ci95": [
+            -0.0011092966095488017,
+            0.0003025373829758732
+          ],
+          "mean": -0.0003321165689514834
+        }
+      },
+      "state_counts": {
+        "absent": 43747,
+        "present": 666,
+        "unresolved": 14495
+      },
+      "top1_bayes_exact": 0.23929917156829467,
+      "top1_exact_from_joint": 0.239299171568294,
+      "top1_minentropy_lower_bound": 0.10229805409502311,
+      "top3_bayes_exact": 0.4507271747339503,
+      "top5_bayes_exact": 0.5447138654946078
+    }
+  },
+  "dirichlet_alpha": 0.0013717421124828531,
+  "n_classes_observed": 99,
+  "n_complete_pairs": 9818,
+  "n_dropped": 0,
+  "n_requested": 9818,
+  "n_symbols": 729,
+  "paired_bootstrap": {
+    "method": "paired within-EG resampling; each EG sample count and the class marginal remain fixed",
+    "n_bootstrap": 300,
+    "seed": 20260807
+  }
+}

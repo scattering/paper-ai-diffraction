@@ -7,6 +7,7 @@ This repo reproduces the current paper-facing table rows and figure layer for th
 - flat-37 ViT configuration and mapping assets
 - matched regular-transformer and SG-to-EG control configuration/provenance files
 - topology, calibration, and information-channel summary artifacts
+- quantitative synthetic-nuisance and RRUFF observational summaries
 
 The repo does **not** bundle model checkpoints or benchmark HDF5 files. Those come from:
 - Zenodo checkpoints: see [reproducibility/checkpoint_manifest.csv](reproducibility/checkpoint_manifest.csv)
@@ -141,6 +142,12 @@ Physics-PE supplementary ruler figure from the bundled checkpoint-curve JSON:
 ```bash
 python scripts/make_physics_pe_q2_ruler.py
 ```
+
+Compact outputs for the supplemental quantitative nuisance characterization are bundled under:
+
+- [results/flat37/information_theory/nuisance_characterization](results/flat37/information_theory/nuisance_characterization)
+
+These files contain the synthetic generating-distribution summary, paired six-family channel results under uniform and RRUFF-473 class marginals, observational RRUFF fit summaries, and the intensity-dependent residual-noise summary.
 
 Reconstruct the frozen `RRUFF-473` benchmark from an upstream manifest plus raw XY files:
 
